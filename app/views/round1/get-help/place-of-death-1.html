@@ -1,0 +1,72 @@
+
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+      <!-- Heading -->
+      <h1 class="govuk-heading-l">
+         Place of death</h1>
+
+      <!-- Guidance -->
+      <p class="govuk-body">Providing as many details as possible will help our search.
+      </p>
+  <!-- Form start -->
+      <form action="/round1/get-help/place-of-death-1" method="post" class="form">
+     <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                 Which of the following do you know about John Joe Smith?
+              </h2>
+           </legend>
+        <div id="countries-hint" class="govuk-hint">
+              Select all that apply.
+           </div>
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="death-place" name="death-place" type="checkbox" value="">
+                     <label class="govuk-label govuk-checkboxes__label" for="death-place">
+                        Place of death
+                     </label>
+                     <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                        This could be the city, town or county.
+                     </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="death-place" name="death-place" type="checkbox" value="Last known address">
+                     <label class="govuk-label govuk-checkboxes__label" for="death-place">
+                        Last known address
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+         </div>
+
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+               Continue
+            </button>
+            <a class="govuk-link" href="#">Cancel</a>
+         </div>
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}

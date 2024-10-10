@@ -1,0 +1,227 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Search results – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Search results
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <h2 class="search-headings govuk-heading-m">Search</h2>     
+        <a class="govuk-link change-link-search" href="#">Change</a>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2009 
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Middle names
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Smith
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Surname
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Joe
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sex
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Male
+            </dd>
+          </div>
+        </dl>
+
+    
+        <h2 class="search-headings govuk-heading-m">Add more details</h2>     
+          <a class="govuk-link change-link-search" href="#">Change</a>
+    
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              District
+            </dt>
+            <dd class="govuk-summary-list__value">
+              tbc (need to add logic to update)
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Month
+            </dt>
+            <dd class="govuk-summary-list__value">
+              tbc (need to add logic to update)
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Register number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              tbc (need to add logic to update)
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Entry number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              tbc (need to add logic to update)
+            </dd>
+          </div>
+        </dl>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">10 results returned</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header table-col-search">Year registered</th>
+              <th scope="col" class="govuk-table__header table-col-search">First names</th>
+              <th scope="col" class="govuk-table__header table-col-search">Surname</th>
+              <th scope="col" class="govuk-table__header table-col-search">District of death</th>
+              <!-- <th scope="col" class="govuk-table__header">Register number</th> -->
+              <th scope="col" class="govuk-table__header table-col-search">Quarter</th>
+              <th scope="col" class="govuk-table__header table-col-search">Entry number</th>
+              <th scope="col" class="govuk-table__header table-col-search">Year of birth</th>
+              <th scope="col" class="govuk-table__header table-col-search">       </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1978</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+
+             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">2010</td>
+              <td class="govuk-table__cell">John Joe</td>
+              <td class="govuk-table__cell">Smith</td>
+              <td class="govuk-table__cell">IPSWICH 080-1B</td>
+              <td class="govuk-table__cell">Q1</td>
+              <td class="govuk-table__cell">126734126</td>
+              <td class="govuk-table__cell">1921</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link table-col-search">Select record</a></td>
+            </tr>
+          
+          </tbody>
+        </table>
+
+        <h2 class="govuk-heading-m">Get help finding a record</h2>
+        <p><a href="../get-help/get-help-start" class="govuk-link">Get help if you cannot find what you need</a>. This will cost an extra £3 and take 3 weeks longer.</p>
+
+  
+
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+GOV pay – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="confirmation-car" method="post">
+      <h1 class="govuk-heading-l">Confirm your payment</h1>
+
+  
+      <p>Total amount:<br> <b style="font-size:30px;">£11.00</b></p>
+    <hr style="margin-bottom:30px;">
+
+<div class="govuk-form-group">
+  
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       Card number
+      </dt>
+      <dd class="govuk-summary-list__value">
+       ************1111
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Expiry date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        03/24
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Name on card
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Georgia Wood
+      </dd>
+    </div>
+  </dl>
+
+
+<a href="../confirmation/confirmation" class="govuk-button" data-module="govuk-button">Confirm payment</a>
+<p class="govuk-body"><a href="payment-order-summary.html" class="govuk-link">Cancel payment</a></p>
+
+  </form>
+</div>
+</div>
+{% endblock %}

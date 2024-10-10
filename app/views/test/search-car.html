@@ -1,0 +1,43 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Seaarch for a car – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Search for a car</h1>
+
+<form class="form" action="search-results" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="make">
+    Make
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="make" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="year">
+    Year
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="year" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="model">
+    Model (optional)
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="model" type="text">
+</div>
+
+{{ govukButton({
+  text: "Search"
+}) }}
+
+</form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="check-answers-2" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Select a car
+              </h1>
+            </legend>
+            
+           <a href="" name=""> <img src="https://media.evo.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1556258945/evo/images/dir_545/car_photo_272943.jpg" alt="car 1" class="car1"/></a>
+           <a href="" name=""> <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1651743345/evo/2022/05/NewAbarth695Tributo131rally(2)_h6rfjo.jpg" alt="car 1" class="car1"/></a> 
+           <a href="" name=""> <img src="https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/cms/uploads/zbgxsf2df5dgviwvbgwo" alt="car 1" class="car1"/></a>
+           <a href="" name=""> <img src="https://choosemycar.com/wp-content/uploads/2023/04/fiat-124-spider-hero-image.webp" alt="car 1" class="car1"/></a>
+          </fieldset>
+        </div>
+        
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><b>From:</b> General Register Office<br>
+      <b>Subject:</b> Receipt and order confirmation - HDJ123F</p>
+      <hr>
+      <p class="govuk-body">Dear  {{data['nameDelivery'] }},</p>
+     
+ <h2 class="govuk-heading-m">Order summary</h2>
+<p class="govuk-body">Order number: HDJ123F</br>
+Number of items: 1</br>
+Total paid: £12.50</br>
+
+
+      <h2 class="govuk-heading-m">Estimated delivery date: Thursday 15 August</h2>
+
+      <p class="govuk-body">Your certificate should be dispatched by second class post by Monday 12 August.</p>
+      <p class="govuk-body">Royal Mail aims to deliver second class post in 2 to 3 working days, but it can take longer in some areas.</p>
+      <h2 class="govuk-heading-m">Item summary</h2>
+      <p class="govuk-body">
+          Certificates being delivered to: 74 Westgate Hill Street, Liverpool, CH41 5LH.
+      </p>
+
+<h3 class="govuk-heading-s">Death certificate: John Joe Smith, 2023</h3>
+  <p class="govuk-body">Shipping method: standard UK (second class post)</br>
+  Number of copies: 1</br>
+  Billing address same as delivery address: yes</br>
+      
+<h2 class="govuk-heading-m">Contact us</h2>
+
+<p class="govuk-body">Find out how to contact us: <a href="https://www.gov.uk/general-register-office">https://www.gov.uk/general-register-office</a></p>
+
+      <p class="govuk-body govuk-!-margin-top-7">
+          Regards,<br />
+          General Register Office
+      </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+      <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
+  </div>
+</div>
+{% endblock %}

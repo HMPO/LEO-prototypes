@@ -1,0 +1,141 @@
+
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+<form action="name" method="post" class="form">
+
+            <h1 class="govuk-heading-l">Check your answers</h1>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  First name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Last name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Smith
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sex
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Male
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Year death registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Place of death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['place'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+<div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Last known address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['lineOne'] }}  {{data['lineTwo'] }} {{data['lineThree'] }} {{data['lineFour'] }} 
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+<div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Age at death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['ageAtDeath'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['day'] }}  {{data['month'] }}  {{data['year'] }} 
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Occupation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['occupation']or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+            </dl>
+
+
+           
+           <p>These answers will be used for our search. If we cannot find a record that matches your answers, you will get a partial refund.</p>
+
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+          <a href="../order-details/how-many.html" class="govuk-button">Continue</a>
+        </div>
+         </div>
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}

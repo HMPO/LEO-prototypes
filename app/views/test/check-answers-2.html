@@ -1,0 +1,81 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Fullname
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['full-name'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Role
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['role'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  When did you start working here?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['work'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Pet?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['doYouHaveAPet'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                </dd>
+              </div>
+          </dl>
+          
+          <h2 class="govuk-heading-m">Now send your application</h2>
+          <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+          <form action="thank-you" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Accept and send
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}

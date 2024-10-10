@@ -1,0 +1,102 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       Payment
+      </h1>
+
+      <form class="form" action="basic-search/basic-search" method="post">
+
+        <h2 class="govuk-heading-m">How to pay</h2>
+        <img src="/public/img/cards.png" style="margin-bottom:50px;">
+
+                <h2 class="govuk-heading-m">Order summary</h2>
+           
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Order type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Paper certificate
+                    </dd>
+
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Shipping method
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      2nd class post
+                    </dd>
+
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Number of copies
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      1
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Delivery address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      74 Westgate Hill St<br>Liverpool<br>CH41 5LH
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Billing address same as delivery address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Total cost
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      £11
+                    </dd>
+                  </div>
+                </dl>
+
+                <div class="govuk-button-group">
+                  <a href="enter-card-details" class="govuk-button" data-module="govuk-button">Continue to payment</a>
+                </div>
+        
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

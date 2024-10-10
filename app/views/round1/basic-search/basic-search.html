@@ -1,0 +1,110 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+  <!-- Heading -->
+      <h1 class="govuk-heading-l">Search the register</h1>
+
+  <!-- Guidance -->
+      <p class="govuk-body">
+         Enter details of the person you are searching for:</p>
+ <ul class="govuk-list govuk-list--bullet">
+        <li>as they are written on official documents, such as a passport or death certificate</li>
+        <li>as they were when they died</li>
+      </ul>
+   <br>
+
+<!-- Form start -->
+      <form action="" method="post" class="form">
+ <!-- year -->
+         <div class="govuk-form-group">
+             <label class="govuk-label govuk-label--m" for="first-name" for="width-4">
+               What year was the death registered?</label>
+             <div id="first-name-hint" class="govuk-hint">
+               For example, 2010
+               </div>
+               <input class="govuk-input govuk-input--width-4" id="first-name">
+            </div>
+         
+<!-- Names -->
+         <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m">
+               What was their name?</label>
+            <label class="govuk-label govuk-label" for="first-name">
+               First name (optional)</label>
+            <input class="govuk-input" id="first-name" name="first-name" type="text"
+               value="">
+         </div>
+
+<!-- Middle names -->
+      <div class="govuk-form-group">
+            <label class="govuk-label govuk-label" for="surname">
+               Middle names (optional)</label>
+            <input class="govuk-input" id="surname" name="surname" type="text"
+               value="">
+         </div>
+
+<!-- Surname -->
+         <div class="govuk-form-group">
+            <label class="govuk-label govuk-label" for="surname">
+               Surname</label>
+
+            <input class="govuk-input" id="surname" name="surname" type="text"
+               value="">
+         </div>
+
+<!-- sex -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      <label class="govuk-label govuk-label--m">
+      What was their sex?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Female
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Male
+        </label>
+      </div>
+  </fieldset>
+</div>
+
+<!--------------------------- Addmore details button --------------------------->
+<h2 class="govuk-heading-m">Add more details</h2>
+<p class="govuk-body">
+         You can provide additional information to help with your search, for example if you know the GRO index reference.
+      </p>
+
+<a href="../advanced-search/advance-search" class="govuk-button govuk-button--secondary" data-module="govuk-button">Add more details</a>
+<br>
+
+<a href="search-results-basic" class="govuk-button">Search</a>
+
+</form>
+
+
+   
+   </div>
+</div>
+{% endblock %}

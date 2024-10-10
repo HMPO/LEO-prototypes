@@ -1,0 +1,42 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What is the name of your pet?
+      </h1>
+
+      <form class="form" action="what-is-your-role" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-20">
+            Name of pet
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="whatIsYourPetsName" name="whatIsYourPetsName" type="text">
+        </div>
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

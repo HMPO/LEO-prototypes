@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+homepageUrl: "/",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block footer %}{% endblock %}

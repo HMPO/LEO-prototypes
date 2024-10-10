@@ -1,0 +1,65 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/lpb2/design/sponsor-a-worker-skilled-worker/home" method="post">
+
+
+            <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Payment successful
+  </h1>
+  <div class="govuk-panel__body">
+    Your order number<br><strong>HDJ213F</strong>
+  </div>
+</div>
+<p></p>
+
+<p class="govuk-body">A receipt and order confirmation will be sent to your email.<p>
+<h2 class="govuk-heading-m">Order summary</h2>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Number of items
+    </dt>
+    <dd class="govuk-summary-list__value">
+      1
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Total paid
+    </dt>
+    <dd class="govuk-summary-list__value">
+      £12.50
+    </dd>
+  </div>
+</dl>
+
+     <h2 class="govuk-heading-m">Estimated delivery date: Thursday 15 August</h2>
+  <p class="govuk-body">Your certificate should be dispatched by Monday 12 August by second class post.</p>
+  <p class="govuk-body">Royal Mail aims to deliver second class post in 2 to 3 working days, but it can take longer in some areas.</p>
+
+   <!-- <h2 class="govuk-heading-m">If we cannot find your record</h2>
+    <p>We will give you a partial refund if there is a problem with your order. You do not need to do anything unless we contact you.</p> -->
+
+  
+
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Order a death certificate
+      </h1>
+
+      <form class="form" action="" method="post">
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body">You will need the following details:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the year the death was registered</li>
+          <li>the person's surname at the time of death</li>
+          <li>the person's sex at the time of death</li>
+        </ul>
+
+        <p>You can also tell us additonal, optional information to help with your search, for example if you know the GRO index reference.</p>
+
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is a GRO index reference?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>This is the unique reference the General Register Office (GRO) gives all births, deaths and marriages when they are registered in England or Wales.</p>
+            <p>It includes the year and district they were registered in.</p>
+          </div>
+        </details>
+
+
+        <a href="../search/V2-basic-search.html" class="govuk-button" data-module="govuk-button">Continue</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

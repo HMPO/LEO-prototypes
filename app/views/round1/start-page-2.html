@@ -1,0 +1,157 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a birth, death, marriage  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Births, deaths, marriages and care",
+        href: "#"
+      },
+      {
+        text: "Certificates, register offices, changes of name or gender",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<!----------------------------------H1 section ended---------------------------------->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Order a birth, death, marriage or civil partnership certificate
+      </h1>
+    </div>  
+  </div>
+<!----------------------------------H1 section ended---------------------------------->
+
+
+<!----------------------------------left section---------------------------------->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p>You need to register on the General Register Office (GRO) website to get a copy of a birth, adoption, death, marriage or civil partnership certificate in England and Wales.</p>
+          <p>You can use this service to research your family tree.</p>
+          <p>Order with the <a href="https://www.gov.uk/research-family-history">GRO index reference number</a>.</p>
+          <p>It takes around 10 minutes and you’ll need a debit or credit card.</p>
+    
+          <div class="govuk-inset-text">
+            <p>There’s a different process for <a href="">getting certificates in Scotland</a> and <a href=""> getting certificates in Northern Ireland</a>.</p>
+          </div>
+         
+          {{ govukButton({
+            text: "Start now",
+            href: "versions-triage-and-search/triage/triage-one-page",
+            isStartButton: true
+          }) }}
+          
+    
+  <h2 class="govuk-heading-m h2-start-page">Certificate fees</h2>
+         <p>Certificates cost £11 and are sent 4 days after you apply.</p>
+         <p>If you do not have a <a href="https://www.gov.uk/research-family-history">GRO index reference number</a>,you’ll have to pay £3 extra for each search. Certificates are sent 15 working days after you apply.</p>
+         <p>If you need the certificate sooner, you can use the priority service for £35. It’ll be sent the next working day if you order by 4pm.</p>
+         <p>Extra copies are the same price.</p>
+  <h2 class="govuk-heading-m h2-start-page">Get help ordering a certificate</h2>
+         <p>Contact the General Register Office for help ordering a certificate or questions about an order.</p>
+         <div class="get-help-inset">
+          <p>General Register Office <br>   
+          <a href="mailto:certificate.services@gro.gov.uk">certificate.services@gro.gov.uk</a> (for general enquiries)<br>
+          <a href="https://www.certificate-enquiries.homeoffice.gov.uk/about">Online form</a> (for enquiries after you’ve applied for a certificate) <br>
+          Telephone: 0300 123 1837  <br>
+          Textphone: 18001 0300 123 1837<br>
+          Monday to Friday, 8am to 6pm  <br>
+          Saturday, 9am to 1pm  <br>
+          <a href="/call-charges">Find out about call charges</a></p>   
+        </div>
+
+        <div class="get-help-inset">
+          <p>General Register Office
+            <br>PO Box 2
+            <br>Southport
+            <br>PR8 2JD
+            <br>
+            </p>
+        </div>
+
+        <h2 class="govuk-heading-m h2-start-page">Registration of births or deaths abroad</h2>
+        <p>If you’ve registered a birth or death with the Foreign, Commonwealth and Development Office (FCDO) Overseas Registration Unit, you cannot get a copy from the GRO until the November of the following year.</p>
+        <p>If you need a copy sooner, email the name of the registered person, the registration date and reference number to the Overseas Registration Unit.</p>
+        <div class="get-help-inset">
+          <p>Overseas Registration Unit<br>
+          <a href="mailto:Overseas.RegistrationUnit@fcdo.gov.uk">Overseas.RegistrationUnit@fcdo.gov.uk</a></p>
+          </div>
+        <p>You’ll get a reply telling you how to get your copy and the cost - usually £50 plus courier fees.</p>
+
+        <h2 class="govuk-heading-m h2-start-page">Other ways to apply</h2>
+
+        <h3 class="govuk-heading-s">Ordering by phone</h3>
+        <p>To order certificates by phone, call the General Register Office.</p> 
+        <div class="get-help-inset">
+          <p>General Register Office<br>
+            Telephone: 0300 123 1837<br>
+            Text relay: 18001 0300 123 1837<br>
+            Monday to Friday, 8am to 6pm<br>
+            Saturday, 9am to 1pm<br>
+            <a href="/call-charges">Find out about call charges</a></p>
+        </div>
+
+        <h3 class="govuk-heading-s">Ordering by post</h3>
+        <p>To order certificates by post, fill in the relevant <a href="https://www.gov.uk/government/publications/general-register-office-gro-certificate-application-forms">GRO certificate application</a> and send it to the address on the form.</p> 
+    
+        <h3 class="govuk-heading-s">Ordering from a local register office</h3>
+        <p style="margin-bottom:50px;">You can also order certificates from the <a href="https://www.gov.uk/register-offices">local register office </a>where the birth, death or marriage was registered.</p> 
+
+        <div class="gem-c-related-navigation"></div>
+
+      <h3 class="govuk-heading-s">Explore the topic</h3>
+      <p class="gov-start-links"><a href="https://www.gov.uk/browse/births-deaths-marriages/register-offices">Certificates, register offices, changes of name or gender</a></p>
+      <p class="gov-start-links"><a href="https://www.gov.uk/browse/births-deaths-marriages/marriage-divorce">Marriage, civil partnership and divorce</a></p>
+
+</div>  
+
+<!----------------------------------left section ended---------------------------------->   
+
+
+<!----------------------------------right section---------------------------------->
+        <div class="govuk-grid-column-one-third">
+          <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+            <h2 style="font-size:19px;margin-top:10px;" class="govuk-heading-m h2-start-page" id="subsection-title">
+              Related content
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title">
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <a href="#">
+                    Find a register office
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Search local archives
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      </div>
+<!----------------------------------right section ended---------------------------------->  
+
+{% endblock %}

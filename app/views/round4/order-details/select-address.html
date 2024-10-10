@@ -1,0 +1,62 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">What is the delivery address?</h1>
+
+
+
+    <p class="govuk-body">Postcode: <span style="margin-left:10px;" class="govuk-!-font-weight-bold">CH41 5LH</span>
+      <a style="margin-left:10px;" href="postcode" class="govuk-link--no-visited-state govuk-link">Change</a>
+    </p>
+
+    <!-- Form start -->
+    <form class="form" action="summary" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select an address
+        </label>
+        <select class="govuk-select" id="sort" name="address-2">
+          <option value="Victoria House, Johnston, SA62 3NF">68 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">69 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">70 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">71 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">72 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">73 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">74 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">75 Westgate Hill St</option>
+          <option value="Gate House, Johnston, SA62 3NF">76 Westgate Hill St</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-body"><a href="manual-entry" class="govuk-link">I can't find the address</a></p>
+      </div>
+
+      <div class="govuk-button-group">
+        <a href="confirm-address" class="govuk-button" data-module="govuk-button">Continue</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

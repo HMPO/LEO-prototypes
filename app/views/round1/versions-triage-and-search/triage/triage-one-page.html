@@ -1,0 +1,43 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Order birth, death, marriage or civil partnership certificate</h1>
+      <form class="form" action="/round1/triage-question-1" method="post">
+
+        <div class="govuk-form-group">
+            <h2 class="govuk-heading-m">New service for death certificates</h2>
+        </div>
+
+        <p>We are trialling a new service for ordering paper copies of death certificates registered after 1 January 2010.</p>
+        <a href="login-or-sign-in.html" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Order a death certificate</a>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Use the existing service for all other certificates</h2>
+      </div>
+      <p>We are still making improvements and this is not the finalised service. You will still need to use the existing service to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>order birth, adoption, marriage or civil partnership certificates</li>
+        <li>order a certificate from before 31 December 2010</li>
+        <li>order a PDF or digital image</li>
+      </ul>
+      <a href="https://www.gro.gov.uk/gro/content/certificates/login.asp" class="govuk-button" data-module="govuk-button">Use the existing service</a>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

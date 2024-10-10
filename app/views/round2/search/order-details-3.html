@@ -1,0 +1,152 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="payment-method" method="post">
+
+        <h1 class="govuk-heading-l" style="padding-bottom: 20px;">Record summary</h1>
+
+      
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style=>
+           First name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style=>
+           Middle names
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Melvin
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style=>
+           Surname
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Smith
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sex
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Male
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+
+
+
+             </dd>
+      </dd>
+          </div>
+
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+             1949
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year death registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             2023
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              District of death
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Liverpool (025-1E)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Quarter death registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Q1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+ <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Entry number
+            </dt>
+            <dd class="govuk-summary-list__value">
+             516354619
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+
+
+</dl>
+
+</form>
+
+<p class="govuk-body"><a href="page-1-search-results.html">Back to search results</a></p>
+       
+  <a style="margin-top:25px;" href="#" class="govuk-button" data-module="govuk-button">Continue</a>
+  
+
+
+   </div>
+</div>
+
+
+
+{% endblock %}

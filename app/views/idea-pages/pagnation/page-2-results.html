@@ -1,0 +1,278 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Search results – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<header>
+<script type="text/javascript" language="javascript">
+  function moveWindow (){window.location.hash="moveToHere";}
+</script>
+</header>
+<body onload="moveWindow()"></body>
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Search results
+      </h1>
+
+      <form class="form" action="../order-details/order-details" method="post">
+
+        <h2 class="search-headings govuk-heading-m">Search</h2>     
+        <a class="govuk-link change-link-search" href="basic-search">Change</a>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2011 
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="govuk-summary-list__value">
+             John
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Middle names
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Joe
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Surname
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Smith
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sex
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Male
+            </dd>
+          </div>
+        </dl>
+
+      </div>
+    </div>
+    <a name="moveToHere"></a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="results-table">
+      <table class="govuk-table" style="margin-bottom:10px;">
+        <caption class="govuk-table__caption govuk-table__caption--m">30 results returned</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header table-col-search">Year registered</th>
+            <th scope="col" class="govuk-table__header table-col-search">First names</th>
+            <th scope="col" class="govuk-table__header table-col-search">Surname</th>
+            <th scope="col" class="govuk-table__header table-col-search">District of death</th>
+            <!-- <th scope="col" class="govuk-table__header">Register number</th> -->
+            <th scope="col" class="govuk-table__header table-col-search">Quarter</th>
+            <th scope="col" class="govuk-table__header table-col-search">Entry number</th>
+            <th scope="col" class="govuk-table__header table-col-search">Year of birth</th>
+            <th scope="col" class="govuk-table__header table-col-search">       </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">London 030-8H</td>
+            <td class="govuk-table__cell">Q4</td>
+            <td class="govuk-table__cell">126734126</td>
+            <td class="govuk-table__cell">1987</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Nottingham 030-2C</td>
+            <td class="govuk-table__cell">Q3</td>
+            <td class="govuk-table__cell">8473625132</td>
+            <td class="govuk-table__cell">1970</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Manchester 020-2C</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">121635461</td>
+            <td class="govuk-table__cell">1989</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+  <!---------------------working record--------------------->
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Liverpool 080-1B</td>
+            <td class="govuk-table__cell">Q1</td>
+            <td class="govuk-table__cell">501653789</td>
+            <td class="govuk-table__cell">1921</td>
+            <td class="govuk-table__cell"><a href="../order-details/order-details.html" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+  <!---------------------working record--------------------->
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Cornwall 080-1B</td>
+            <td class="govuk-table__cell">Q1</td>
+            <td class="govuk-table__cell">778273645</td>
+            <td class="govuk-table__cell">1960</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Northampton 030-3E</td>
+            <td class="govuk-table__cell">Q4</td>
+            <td class="govuk-table__cell">182736450</td>
+            <td class="govuk-table__cell">2001</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Brighton 050-1L</td>
+            <td class="govuk-table__cell">Q1</td>
+            <td class="govuk-table__cell">176354689</td>
+            <td class="govuk-table__cell">1965</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+           <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Cambridge 040-7C</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">126734126</td>
+            <td class="govuk-table__cell">2006</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Bradford 030-1b</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">098235615</td>
+            <td class="govuk-table__cell">1986</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">2011</td>
+            <td class="govuk-table__cell">John Joe</td>
+            <td class="govuk-table__cell">Smith</td>
+            <td class="govuk-table__cell">Blackpool 010-2C</td>
+            <td class="govuk-table__cell">Q4</td>
+            <td class="govuk-table__cell">563467891</td>
+            <td class="govuk-table__cell">1992</td>
+            <td class="govuk-table__cell"><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+        
+        </tbody>
+      </table>
+<!------------pagniation------------>
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="page-1-search-results.html" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="page-1-search-results.html" aria-label="Page 1" aria-current="page">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="#" aria-label="Page 2">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="page-3-results" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="page-3-results.html" rel="next">
+            <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+<!------------pagniation------------>
+
+    </div> 
+
+
+  </div>
+</div>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Get help finding a record</h2>
+        <p><a href="../get-help/get-help-start" class="govuk-link">Get help if you cannot find what you need</a>. This will cost an extra £3 and take 3 weeks longer.</p>
+</div>
+</div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

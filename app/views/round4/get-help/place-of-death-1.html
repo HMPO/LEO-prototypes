@@ -1,0 +1,71 @@
+
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+   
+  <!-- Form start -->
+<form action="/round2/get-help/place-of-death-2" method="post" class="form">
+     <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                 Which of the following do you know about John Smith?
+              </h1>
+           </legend>
+        <div id="countries-hint" class="govuk-hint">
+              Select all that apply.
+           </div>
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="placeOfDeath" name="placeOfDeath" type="checkbox" value="placeOfDeath">
+                     <label class="govuk-label govuk-checkboxes__label" for="placeOfDeath">
+                        Where they died
+                     </label>
+                     <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                        This could be a city, town or county, or the name of the hospital or care home.
+                     </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="lastKnownAddress" name="lastKnownAddress" type="checkbox" value="lastKnownAddress">
+                     <label class="govuk-label govuk-checkboxes__label" for="lastKnownAddress">
+                        Last known address
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+         </div>
+
+ <!-- body text -->
+<p class="govuk-body">
+  Providing as many details as possible will help our search.
+</p>
+
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+               Continue
+            </button>
+         </div>
+
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}

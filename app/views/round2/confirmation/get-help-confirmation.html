@@ -1,0 +1,46 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/lpb2/design/sponsor-a-worker-skilled-worker/home" method="post">
+
+
+            <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Payment successful
+  </h1>
+  <div class="govuk-panel__body">
+    Your order number<br><strong>HDJ213F</strong>
+  </div>
+</div>
+<p></p>
+<p class="govuk-body">You have paid £14. A receipt and order confirmation have been sent to your email.<p>
+      <h2 class="govuk-heading-m">What happens next</h2>
+    <p class="govuk-body">We will review your order.</p>
+  <p class="govuk-body">We will send your certificate by second class post on Wednesday 23 May if we can find a record that matches the details you have provided.</p>
+    <h2 class="govuk-heading-m">If we cannot find your record</h2>
+    <p>We may contact you to give you a partial refund if there is a problem with your order. You do not need to do anything unless we contact you.</p>
+
+  
+
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Extras
+      </h1>
+      <form class="form" action="check-answers-final" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-heading-m">
+                Alloy colour
+              </h2>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alloyColour" name="colour" type="radio" value="gun metal">
+                <label class="govuk-label govuk-radios__label" for="alloyColour">
+                  Gun metal
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  This is standard with the car
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alloyColour-2" name="colour" type="radio" value="gloss black">
+                <label class="govuk-label govuk-radios__label" for="alloyColour-2">
+                  Gloss black
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  This is an upgrade, £300 extra
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="alloyColour-3" name="colour" type="radio" value="matt bronze">
+                <label class="govuk-label govuk-radios__label" for="alloyColour-3">
+                  Matt bronze
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  This is an upgrade, £450 extra
+                </div>
+              </div>
+          
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

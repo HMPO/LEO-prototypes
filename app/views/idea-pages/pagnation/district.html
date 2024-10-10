@@ -1,0 +1,74 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Search results – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        District of death
+      </h1>
+
+      <form class="form" action="../order-details/order-details" method="post">
+
+        <p>Entering a district could help narrow your search results. </p>  
+        <p class="govuk-body">A district could be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a town or city, such as Bridgend or Nottingham</li>
+          <li>part of a county, such as Mid Devon or North Yorkshire</li>
+        </ul>
+<br>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m">
+            Which district was the death registered in? (optional)</label>
+           <!-- <div id="event-name-hint" class="govuk-hint">
+              TBC
+            </div> -->
+  
+          <input class="govuk-input" id="first-name" name="first-name" type="text"
+             value="">
+        </div>
+        
+        <label for="my-autocomplete">Select your country</label>
+        <div id="my-autocomplete-container"></div>
+
+
+        
+    
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+         
+    </div> 
+  </div>
+
+  <div class="govuk-button-group">
+    <a href="page-1-search-results" class="govuk-button">Continue to search</a>
+    <a href="page-1-search-results" class="govuk-button govuk-button--secondary">Continue without entering district</a>
+
+
+
+
+
+    
+</div>
+      </form>
+      </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

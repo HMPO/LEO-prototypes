@@ -1,0 +1,44 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">What is the delivery name?</h1>
+
+      <p class="govuk-body">This will appear on the envelope, along with the delivery address.</p>
+    <!-- Form start -->
+    <form class="form" action="../gov-pay/payment-order-summary" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="nameDelivery">
+          Full name
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="nameDelivery" name="nameDelivery" type="text">
+      </div>
+     
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+           Continue
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}

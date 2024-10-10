@@ -1,0 +1,50 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/round1/triage-question-4" method="post">
+
+     
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Search the register
+              </h1>
+            </legend>
+            <p class="govuk-body">Enter details of teh person you are searching for:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>as they are written on the offical documents, such as a passport o rdeath certificate</li>
+              <li>as they were when they died</li>
+            </ul>
+
+            <h2 class="govuk-heading-m">What was their name?</h2>
+            
+
+        
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+          <!-- <a class="govuk-link" href="#">Cancel</a> -->
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+//-------------------------------Dummy site testing-------------------------------//
+.car1 {
+    width:300px;
+    height:200px;
+}
+
+.cards {
+    width:45px;
+    height:30px;
+    padding:5px 5px 0px 0px;
+}
+
+.monthyear {
+
+}
+//-------------------------------Dummy site testing END-------------------------------//
+
+
+
+//-------------------------------GOV as is start page styling-------------------------------//
+.h2-start-page {
+    margin-top: 45px;
+    font-size:27px;
+}
+
+// thin inset (for start page only)
+.get-help-inset {
+    border-left: 1px solid #b1b4b6;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.gem-c-related-navigation__link {
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    padding:0px;
+}
+
+.gem-c-related-navigation {
+    color: #0b0c0c;
+    border-top: 2px solid #1d70b8;
+    margin-bottom: 30px;
+    padding:0px;
+}
+
+.gov-start-links {
+    font-size: 16px;
+    color: #1d70b8;
+    font-weight: bold;
+}
+//-------------------------------GOV as is start page styling END-------------------------------//
+
+
+.govuk-show-password__toggle {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    margin-left: -2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: row;
+}
+
+.govuk-input__wrapper {
+    flex-direction: row;
+}
+
+.govuk-show-password__toggle  {
+    font-family: "GDS Transport", arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    z-index: 0;
+    display: table-cell;
+    padding: 5px 15px;
+    min-width: 5.5em;
+    color: #1d70b8;
+    text-decoration: underline;
+    background: #fff;
+    border: solid 2px #0b0c0c;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.govuk-show-password__input-wrapper {
+    display: flex;
+}
+
+//-------------------------------Search results page-------------------------------//
+.search-headings {
+    display:inline;
+}
+.change-link-search {
+    display: inline-block;
+    margin-left:20px;
+    margin-bottom: 20px;
+    // font-size:19px;
+}
+
+.table-col-search {
+    white-space: nowrap;
+}
+
+.table-col-search-select {
+    white-space: nowrap;
+}
+
+.results-table {
+    overflow-x: auto;
+    & table {
+        // font-size: 19px;
+    }
+}

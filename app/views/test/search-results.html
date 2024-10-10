@@ -1,0 +1,94 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Search results – {{ serviceName }} – Search results
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-l">Search results</h1>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Make
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['make'] }}
+            </dd>
+          </div>
+     
+       <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['year'] }}
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Model
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['model'] }}
+            </dd>
+          </div>  
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <a href="" name=""> <img src="https://media.evo.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1556258945/evo/images/dir_545/car_photo_272943.jpg" alt="car 1" class="car1"/></a>
+            </dt>
+          </div>
+
+        </dl>
+
+<form class="form" action="/add-on-wheels" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h3 class="govuk-heading-m">
+        Is this the vehicle you are looking for?
+      </h3>
+    </legend>
+    
+
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="correctCar" name="correctCar" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="correctCar">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="correctCar-2" name="correctCar" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="correctCar">
+          No, search again
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+ 
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
