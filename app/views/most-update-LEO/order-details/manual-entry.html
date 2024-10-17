@@ -1,4 +1,12 @@
-{% extends "layouts/main-2.html" %}
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
 
 {% set homepageLink = "../../index.html" %}
 
@@ -12,6 +20,7 @@
   href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
+{% set serviceName = "Order a certificate" %}
 
 {% block content %}
 
@@ -57,7 +66,7 @@
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-county">
-            County
+            County (optional)
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
         </div>
