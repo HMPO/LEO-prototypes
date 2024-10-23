@@ -1,0 +1,85 @@
+{% extends "layouts/main-2.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+    <h1 class="govuk-heading-xl">Beta prototypes 
+    </h1>
+
+ 
+<!--Round 1 Beta-->
+   <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 style="font-size:25px;" class="govuk-summary-card__title govuk-heading-m">
+              Beta round 1     
+            </h2> 
+            <strong style="height:20px;" class="govuk-tag govuk-tag--orange">Buiding prototype</strong>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+             
+              
+              <p class="govuk-body">What we tested:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mobile view - search results page</li>
+                <li>No results returned - search results page</li>
+                <li>Account name</li>
+              </ul>
+              
+              <p><a class="govuk-link--no-visited-state" href="round5/leo-home/home-page-leo.html">Link no results journey</a> </p>
+              <p><a class="govuk-link--no-visited-state" href="round5/leo-home/home-page-leo.html">Link results journey (mobile)</a> </p>
+
+              <hr style="opacity:35%;">
+              <div id="account-number-hint" class="govuk-hint"><b>Tested</b> on: TBC</div>
+              <p style="font-size:16px; margin-bottom:10px;">Any questions contact: Helen Fitton - Content designer, Owen Beddis - User researcher or Katrina Doyle - UX designer</p>
+            </dl>
+          </div>
+        </div>
+    
+
+       <!-- copy and paste template for UR rounds
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 style="font-size:25px;" class="govuk-summary-card__title govuk-heading-m">
+              Alpha round 3     
+            </h2> 
+            <strong style="height:20px;" class="govuk-tag govuk-tag--orange">Not started</strong>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+             
+              
+              <p class="govuk-body">What we tested:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>text</li>
+                <li>text</li>
+                
+              </ul>
+              
+              <p><a class="govuk-link--no-visited-state" href="round2/start-page">Link to prototype (get help journey)</a> </p>
+              <hr style="opacity:35%;">
+              <div id="account-number-hint" class="govuk-hint"><b>Tested</b> on: TBC</div>
+              <p style="font-size:16px; margin-bottom:10px;">Any questions contact: Helen Fitton - Content designer, Owen Beddis - User researcher or Katrina Doyle - UX designer</p>
+            </dl>
+          </div>
+        </div> -->
+     
+
+
+
+    <!-- email link not tested in round1-->
+    <!--<p><a class="govuk-link--no-visited-state" href="round1/confirmation/email.html">Link 3</a></p>-->
+
+
+    <!-- <p><a href="search-car.html">Testing journey</a></p> -->
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  </div>
+</div>
+
+{% endblock %}
