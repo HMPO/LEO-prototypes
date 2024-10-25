@@ -1,0 +1,274 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Search results
+      </h1>
+
+      <form class="form" action="../get-help/get-help-start" method="post">
+ 
+        <h2 class="search-headings govuk-heading-m">Your search</h2>
+        <br>   <br> 
+
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['first-name'] or "Not supplied" }}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd> 
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Middle names
+            </dt>
+            <dd class="govuk-summary-list__value"> 
+              {{ data['middleName'] or "Not supplied" }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Last name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['surname']}}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sex
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['sexRadios']}}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Year of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['yearBirth'] or "Not supplied" }}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year death registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['yearDeathReg']}}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Month death registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['radios'] }} 
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            District
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['input-autocomplete'] or "Not supplied" }}
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </dd>
+          </div>
+        </dl>
+
+      </div>
+    </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="results-table">
+      <table class="govuk-table" style="margin-bottom:10px;">
+        <caption class="govuk-table__caption govuk-table__caption--m">10 results returned</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header table-col-search">Full name</th>
+            <th scope="col" class="govuk-table__header table-col-search">Year of birth</th>
+            <th scope="col" class="govuk-table__header table-col-search">Year registered</th>
+            <th scope="col" class="govuk-table__header table-col-search">District of death</th>
+            <th scope="col" class="govuk-table__header table-col-search">Quarter</th>
+            <th scope="col" class="govuk-table__header table-col-search">Entry number</th>
+   
+          </tr>
+        </thead>
+
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Joe Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Ken Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Levi Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Melvin Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Parker Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Joe Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Ken Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Levi Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Melvin Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Parker Smith</a></td>
+            <td class="govuk-table__cell">1933</td>
+            <td class="govuk-table__cell">2023</td>
+            <td class="govuk-table__cell">LIVERPOOL (025-1E)</td>
+            <td class="govuk-table__cell">Q2</td>
+            <td class="govuk-table__cell">501209582</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+ 
+
+
+
+  </div>
+</div>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Get help finding a record</h2>
+        <p><a href="../../get-help/get-help-start.html" class="govuk-link govuk-link govuk-link--no-visited-state">Get help if you cannot find what you need</a>. This will cost an extra £3 and take 2 weeks longer.</p>
+</div>
+</div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
