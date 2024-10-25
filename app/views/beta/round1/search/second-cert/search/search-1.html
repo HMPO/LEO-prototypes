@@ -1,0 +1,106 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+<span class="govuk-caption-xl">Search for a record: page 1 of 3</span>
+<h1 class="govuk-heading-xl">Name, sex and birth year</h1>  
+
+<!-- Form start -->
+<form action="search-2" method="post" class="form">
+  
+ <!-- Names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     What was their name?</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     First name (optional)</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+
+<!-- Middle names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+     Middle names (optional)</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div>
+
+<!-- Surname -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="surname">
+     Last name</label>
+
+  <input class="govuk-input" id="surname" name="surname" type="text"
+     value="">
+</div>
+
+<!-- sex -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      <label class="govuk-label govuk-label--m">
+      What was their sex?
+    </legend>
+
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="sexRadios" type="radio" value="Female">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Female
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="sexRadios" type="radio" value="Male">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Male
+        </label>
+      </div>
+
+  </fieldset>
+</div>
+
+ <!-- year -->
+ <div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="first-name" for="width-4">
+    What year were they born? (optional)</label>
+  <div id="first-name-hint" class="govuk-hint">
+    For example, 1949
+    </div>
+    <input class="govuk-input govuk-input--width-4" name="yearBirth" id="yearBirth">
+ </div>
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
