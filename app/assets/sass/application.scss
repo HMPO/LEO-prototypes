@@ -98,35 +98,63 @@
 }
 
 //-------------------------------Search results page-------------------------------//
-.search-headings {
-    display:inline;
-}
-.change-link-search {
-    display: inline-block;
-    margin-left:20px;
-    margin-bottom: 20px;
-    // font-size:19px;
-}
+// .search-headings {
+//     display:inline;
+// }
+// .change-link-search {
+//     display: inline-block;
+//     margin-left:20px;
+//     margin-bottom: 20px;
+//     // font-size:19px;
+// }
 
-.table-col-search {
-    white-space: nowrap;
-}
+// .table-col-search {
+//     white-space: nowrap;
+// }
 
-.table-col-search-select {
-    white-space: nowrap;
-}
+// .table-col-search-select {
+//     white-space: nowrap;
+// }
 
-.results-table {
-    overflow-x: auto;
-    & table {
-        // font-size: 19px;
-    }
-}
+// .results-table {
+//     overflow-x: auto;
+//     & table {
+//         // font-size: 19px;
+//     }
+// }
 
-
-
-
-.responsive-table {
+.container { 
+    margin: auto;
+    max-width: 960px;
+  }
+  
+  /* Standard table styling, change as desired */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+    
+  caption { 
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+    
+  th {
+    border-bottom: 1px solid #bfc1c3;
+    font-size: 19px;
+    padding: 0.5em 1em 0.5em 0;
+    text-align: left;
+  }
+    
+  td {
+    border-bottom: 1px solid #bfc1c3;
+    font-size: 19px;
+    padding: 0.5em 1em 0.5em 0;
+  }
+  
+  /* Responsive table styling */
+  .responsive-table { 
     margin-bottom: 0;
     width: 100%;
   }
@@ -151,19 +179,25 @@
     padding: 0 0.5em;
   }
   
-  @media (min-width: 769px) {
-    tbody tr {
-      display: table-row;
-    }
-  }
-
-  /*mobile*/
-
   tbody tr td {
+    display: block; /* browsers that don't support flex */
     display: flex;
     justify-content: space-between;
     min-width: 1px;
     text-align: right;
+  }
+  
+  @media all and (-ms-high-contrast: none) { /* IE11 flex fix */
+    tbody tr td {
+      display: block;
+    }
+  }
+  
+  .responsive-table__heading {
+    font-weight: 700;
+    padding-right: 1em;
+    text-align: left;
+    word-break: initial;
   }
   
   @media (max-width: 768px) {
@@ -171,7 +205,7 @@
       padding-right: 0;
     }
     tbody tr td:last-child {
-      border-bottom: 0
+      border-bottom: 0;
     }
     tbody tr {
       border-bottom: 3px solid grey;
@@ -179,8 +213,28 @@
   }
   
   @media (min-width: 769px) {
+    thead {
+      clip: auto;
+      -webkit-clip-path: none;
+      clip-path: none;
+      display: table-header-group;
+      height: auto;
+      overflow: auto;
+      position: relative;
+      width: auto;
+    }
+    
+    tbody tr {
+      display: table-row;
+    }
+    
     tbody tr td {
       display: table-cell;
       text-align: left;
     }
+    
+    .responsive-table__heading {
+      display: none;
+    }
   }
+  
