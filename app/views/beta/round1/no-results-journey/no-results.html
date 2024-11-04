@@ -1,5 +1,4 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
-
 {% set navigationItems = [
   {
       href: "#",
@@ -7,13 +6,10 @@
       id: 'id3'
     }]
   %} 
-
 {% set homepageLink = "../../../../index.html" %}
-
 {% block pageTitle %}
   Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
@@ -21,25 +17,20 @@
 }) }}
 {% endblock %}
 {% set serviceName = "Order a certificate" %}
-
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       
-
       <h1 class="govuk-heading-l">
         Search results
       </h1>
-
       <form class="form" action="../get-help/get-help-start" method="post">
 
 
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Amend your search
+            Your search
           </span>
         </summary>
         <div class="govuk-details__text">
@@ -144,20 +135,26 @@
           </dl>
         </div>
       </details>
-
      
      
-
       </div>
     </div>
+<!-- no results text -->
+  <h2 class="govuk-heading-m">
+        No results found
+      </h2>
+   <p class="govuk-body">Improve your search results by:</p>
+ <ul class="govuk-list govuk-list--bullet">
+          <li>removing optional search fields, for example district</li>
+          <li>trying a different year</li>
+          <li>double-checking your spelling</li>
+        </ul>
 
+<!-- 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <p>No results design here, table is commented out if we need to use this</p>
-
-    <!--table-->
-    <!-- <div class="container">
+    <!--table--> <!--
+    <div class="container">
       <table class="govuk-table responsive-table" role="table">
         <caption class="govuk-table__caption govuk-table__caption--m">5 results returned</caption>
         <thead class="govuk-table__head" role="rowgroup">
@@ -175,69 +172,63 @@
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Full name</span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">John Joe Smith</a></td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1993</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
-            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
           </tr>
-
           <tr class="govuk-table__row" role="row">
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Full name</span><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">John Kay Smith</a></td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1993</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
-            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
           </tr>
-
           <tr class="govuk-table__row" role="row">
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Full name</span><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">John Lenny Smith</a></td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1993</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
-            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
           </tr>
-
           <tr class="govuk-table__row" role="row">
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Full name</span><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">John Melvin Smith</a></td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1993</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
-            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
           </tr>
-
           <tr class="govuk-table__row" role="row">
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Full name</span><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">John Robert Smith</a></td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1993</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
-            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (025-1E)</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
             <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
           </tr>
          
         </tbody>
       </table>
-    </div> -->
-    <!--table-->
+    </div>
+    <!--table
  
-
 
 
   </div>
 </div>
-<br>
+<br> -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-m">Get help finding a record</h2>
-        <p><a href="get-help-start.html" class="govuk-link govuk-link govuk-link--no-visited-state">Get help if you cannot find what you need</a>. This will cost an extra £3 and take 2 weeks longer.</p>
+        <p><a href="../../get-help/get-help-start.html" class="govuk-link govuk-link govuk-link--no-visited-state">Get help if you cannot find what you need</a>. This will cost an extra £3 and take 2 weeks longer.</p>
 </div>
 </div>
       </form>
 
 
-
     </div>
   </div>
-
 {% endblock %}
+
