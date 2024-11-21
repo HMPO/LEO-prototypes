@@ -8,7 +8,7 @@
     }]
   %} 
 
-{% set homepageLink = "../../index.html" %}
+{% set homepageLink = "../../../index.html" %}
 
 {% block pageTitle %}
   Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
@@ -35,7 +35,7 @@
   <span class="govuk-caption-xl">Search for a record: page 3 of 3</span>
    <h1 class="govuk-heading-xl">District</h1>
 
-      <form class="form" action="result-pages/page-1" method="post">
+      <form class="form" action="no-results" method="post">
 
         <p>Entering a district could help narrow your search results. </p>  
         <p class="govuk-body">A district could be:</p>
@@ -50,7 +50,8 @@
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="searchArea">
             What district was the death registered in? (optional)</label>
-           <div id="event-name-hint" class="govuk-hint">Select a district from the list
+           <div id="event-name-hint" class="govuk-hint">
+              Start typing to search
             </div>
             <div id="searchArea-container"></div>
         </div>
