@@ -32,7 +32,7 @@
 <h1 class="govuk-heading-xl">Year and month of death</h1>
 
 <!-- Form start -->
-<form action="district" method="post" class="form">
+<form action="../check-answers-1" method="post" class="form">
  <!-- year -->
          <div class="govuk-form-group">
              <label class="govuk-label govuk-label--m" for="first-name" for="width-4">
@@ -40,7 +40,7 @@
              <div id="first-name-hint" class="govuk-hint">
                For example, 2010
                </div>
-               <input class="govuk-input govuk-input--width-4" name="yearDeathReg" id="first-name">
+               <input class="govuk-input govuk-input--width-4" name="yearDeathReg" id="first-name" value="{{ data['year'] | default('2023') }}">
             </div>
 
 
