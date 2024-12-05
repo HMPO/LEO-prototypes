@@ -47,7 +47,7 @@
                   Date of death
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  09 February 2023
+                  9 February 2023
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -55,7 +55,18 @@
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Place of death
+                  Details known for place of death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Where they died, Last known address
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="place-of-death-1">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Where they died
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{ data['place'] or "Not supplied" }}
@@ -69,7 +80,7 @@
                   Last known address
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  17 Smith Street Manchester
+                  17 Smith Street, Manchester
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -88,7 +99,7 @@
               </div>
 <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Second parent's last name
+                  Second parent's full name
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{data['secondParent'] or "Not supplied" }}
