@@ -17,13 +17,11 @@
 }) }}
 {% endblock %}
 {% set serviceName = "Order a certificate" %}
-
 {% block content %}
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
 <form action="/check-answers-1" method="post" class="form">
             <h1 class="govuk-heading-l">Check the details you entered</h1>
-           <h2 class="govuk-heading-m">Name, sex and year of birth</h2>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -80,9 +78,6 @@
                   <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
           </div>
-        </dl>
-<h2 class="govuk-heading-m">Year and month of death</h2>
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
                <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Year death registered
@@ -105,9 +100,6 @@
                   <a class="govuk-link govuk-link--no-visited-state" href="change/year-and-month">Change<span class="govuk-visually-hidden"> name</span></a>
             </dd>
           </div>
-        </dl>
- <h2 class="govuk-heading-m">District</h2>           
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   District
@@ -129,5 +121,4 @@
       </form>
    </div>
 </div>
-
 {% endblock %}

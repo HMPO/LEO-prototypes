@@ -1,5 +1,4 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
-
 {% set navigationItems = [
   {
       href: "#",
@@ -7,13 +6,10 @@
       id: 'id3'
     }]
   %} 
-
 {% set homepageLink = "../../../index.html" %}
-
 {% block pageTitle %}
   Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
@@ -22,14 +18,12 @@
 {% endblock %}
 {% set serviceName = "Order a certificate" %}
 
-
 {% block content %}
-
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
-<form action="/check-answers-1" method="post" class="form">
-
-                   <h1 class="govuk-heading-l">Check the details you entered</h1>
+<form action="first-name" method="post" class="form">
+            <h1 class="govuk-heading-l">Check the details you entered</h1>
+           <h2 class="govuk-heading-m">Name, sex and year of birth</h2>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -80,12 +74,15 @@
                   Year of birth
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Not supplied
+                  1933
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
                 </dd>
-              </div>
+          </div>
+        </dl>
+<h2 class="govuk-heading-m">Year and month of death</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
                <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Year death registered
@@ -102,27 +99,28 @@
                   Month death registered
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Not supplied
+                  April, May or June (quarter 2)
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/year-and-month">Change<span class="govuk-visually-hidden"> name</span></a>
-                </dd>
-              </div>
+            </dd>
+          </div>
+        </dl>
+ <h2 class="govuk-heading-m">District</h2>           
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   District
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Not supplied
+                  Liverpool
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/district">Change<span class="govuk-visually-hidden"> name</span></a>
-                </dd>
-              </div>
-              
-            </dl>
+                 </dd>
+          </div>
+        </dl>
            
-
          <!-- Buttons -->
          <div class="govuk-button-group">
           <a href="place-of-death-1.html" class="govuk-button">Continue</a>
@@ -131,6 +129,5 @@
       </form>
    </div>
 </div>
-
 
 {% endblock %}
