@@ -47,9 +47,9 @@
   <label class="govuk-label govuk-label--m">
      What was their name?</label>
   <label class="govuk-label govuk-label" for="first-name">
-     First name (optional)</label>
+     First name</label>
   <input class="govuk-input" id="first-name" name="first-name" type="text"
-     >
+   value="{{ data['first-name'] | default('John') }}">
 </div>
 
 <!-- Middle names -->
