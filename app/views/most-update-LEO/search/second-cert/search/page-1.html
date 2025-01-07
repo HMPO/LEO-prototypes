@@ -33,109 +33,118 @@
 
       <form class="form" action="../get-help/get-help-start" method="post">
  
-        <h2 class="search-headings govuk-heading-m">Your search</h2>
-        <br>   <br> 
+     
 
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              First name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['first-name'] or "Not supplied" }}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd> 
-            </dd>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Your search
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  First name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['first-name'] or "Not supplied" }}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd> 
+                </dd>
+              </div>
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Middle names
+                </dt>
+                <dd class="govuk-summary-list__value"> 
+                  {{ data['middleName'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Last name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['surname']}}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sex
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['sexRadios']}}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+    
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Year of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['yearBirth'] or "Not supplied" }}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+    
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Year death registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 {{ data['yearDeathReg']}}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Month death registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['radios'] }} 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+    
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                District
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['input-autocomplete'] or "Not supplied" }}
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </dd>
+              </div>
+            </dl>
           </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Middle names
-            </dt>
-            <dd class="govuk-summary-list__value"> 
-              {{ data['middleName'] or "Not supplied" }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-             Last name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['surname']}}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Sex
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['sexRadios']}}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-             Year of birth
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{data['yearBirth'] or "Not supplied" }}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Year death registered
-            </dt>
-            <dd class="govuk-summary-list__value">
-             {{ data['yearDeathReg']}}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Month death registered
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{data['radios'] }} 
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            District
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{data['input-autocomplete'] or "Not supplied" }}
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-              </dd>
-            </dd>
-          </div>
-        </dl>
+        </details>
+  
+  
 
       </div>
     </div>
