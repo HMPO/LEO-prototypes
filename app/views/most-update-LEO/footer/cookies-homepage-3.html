@@ -1,0 +1,83 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-cookie-banner" data-nosnippet role="region" aria-label="Cookies on [name of service]">
+  <div class="govuk-cookie-banner__message govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+          Cookies on the order a certificate service
+        </h2>
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We use some essential cookies to make this service work.</p>
+          <p class="govuk-body">We’d like to use analytics cookies so we can remember your settings, understand how people use the service and make improvements.</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-button-group">
+      <button value="yes" type="submit" name="cookies[additional]" class="govuk-button" data-module="govuk-button">
+        Accept additional cookies
+      </button>
+      <button value="no" type="submit" name="cookies[additional]" class="govuk-button" data-module="govuk-button">
+        Reject additional cookies
+      </button>
+      <a class="govuk-link" href="#">View cookies</a>
+    </div>
+  </div>
+</div>
+
+      <h1 class="govuk-heading-l">
+        Order a death certificate
+      </h1>
+
+      <form class="form" action="../basic-search/basic-search.html" method="post">
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body">You will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the year the death was registered</li>
+          <li>the person's last name at the time of death</li>
+          <li>the person's sex at the time of death</li>
+          <li>a debit or credit card</li>
+        </ul>
+
+        <p class="govuk-body">The details you provide should be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>as they would be written on official documents, such as a passport, marriage certificate or driving licence</li>
+          <li>as they were when they died</li>
+        </ul>
+      
+        <div class="govuk-button-group">
+          <a href="../search/search-1" class="govuk-button" data-module="govuk-button">Continue</a>
+       </div>
+
+        <!-- {{ govukButton({
+          text: "Continue"
+        }) }} -->
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
