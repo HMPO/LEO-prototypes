@@ -60,7 +60,7 @@
 }
 //-------------------------------GOV as is start page styling END-------------------------------//
 
-
+//-------------------------------One Login styling-------------------------------//
 .govuk-show-password__toggle {
     font-size: 19px;
     font-size: 1.1875rem;
@@ -97,38 +97,14 @@
     display: flex;
 }
 
-//-------------------------------Search results page-------------------------------//
-// .search-headings {
-//     display:inline;
-// }
-// .change-link-search {
-//     display: inline-block;
-//     margin-left:20px;
-//     margin-bottom: 20px;
-//     // font-size:19px;
-// }
-
-// .table-col-search {
-//     white-space: nowrap;
-// }
-
-// .table-col-search-select {
-//     white-space: nowrap;
-// }
-
-// .results-table {
-//     overflow-x: auto;
-//     & table {
-//         // font-size: 19px;
-//     }
-// }
 
 .container { 
     margin: auto;
     max-width: 960px;
   }
+  //-------------------------------One Login styling END-------------------------------//
   
-  /* Standard table styling, change as desired */
+  // --------------------------- Results table styling --------------------------- //
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -237,4 +213,31 @@
       display: none;
     }
   }
-  
+// --------------------------- Results table styling END --------------------------- //
+
+
+  //-------------------------------Search results page-------------------------------//
+// .search-headings {
+//     display:inline;
+// }
+// .change-link-search {
+//     display: inline-block;
+//     margin-left:20px;
+//     margin-bottom: 20px;
+//     // font-size:19px;
+// }
+
+// .table-col-search {
+//     white-space: nowrap;
+// }
+
+// .table-col-search-select {
+//     white-space: nowrap;
+// }
+
+// .results-table {
+//     overflow-x: auto;
+//     & table {
+//         // font-size: 19px;
+//     }
+// }
