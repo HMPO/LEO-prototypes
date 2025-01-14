@@ -3,17 +3,10 @@ For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
+
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 {% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-
-  {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
 {% set html %}
   <p class="govuk-body">We use some essential cookies to make this service work.</p>
@@ -21,10 +14,10 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% endset %}
 
 {{ govukCookieBanner({
-  ariaLabel: "Cookies on the order a certificate service",
+  ariaLabel: "Cookies on [name of service]",
   messages: [
     {
-      headingText: "Cookies on the order a certificate service",
+      headingText: "Cookies on order a certificate service",
       html: html,
       actions: [
         {
@@ -37,10 +30,20 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         },
         {
           text: "View cookies",
-          href: "../footer/cookies.html"
+          href: "#"
         }
       ]
     }
   ]
 }) }}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+
+
+  
   {% endblock %}
