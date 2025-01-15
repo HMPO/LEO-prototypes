@@ -1,22 +1,9 @@
+{% from "di-govuk-one-login-service-header/service-header.njk" import govukOneLoginServiceHeader %}
+
+
 
 {% extends "layouts/cookies-layout" %}
 
-{% set navigationItems = [
-  {
-      href: "#",
-      text: 'Basket (0)',
-      id: 'id3'
-    }]
-  %} 
-
-{% set homepageLink = "../../index.html" %}
-
-{% block pageTitle %}
-  {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-
-{% set serviceName = "Order a certificate" %}
 
 
 {% block content %}

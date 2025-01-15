@@ -1,12 +1,12 @@
 {#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+  #}
+  
+  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+  {% block header %}
 
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-{% block header %}
-{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+  {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
 {% set html %}
   <p class="govuk-body">We use some essential cookies to make this service work.</p>
@@ -14,10 +14,10 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% endset %}
 
 {{ govukCookieBanner({
-  ariaLabel: "Cookies on [name of service]",
+  ariaLabel: "Cookies on [Order a certificate]",
   messages: [
     {
-      headingText: "Cookies on order a certificate service",
+      headingText: "Cookies on Order a certificate",
       html: html,
       actions: [
         {
@@ -36,14 +36,27 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     }
   ]
 }) }}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+
+
+ <!--using govukOneLoginServiceHeader label will populate the one login banner-->
+{# Set serviceName in config.js. #}
+  {{ govukOneLoginServiceHeader({
+    serviceName: "Order a certificate",
+    navigationItems: [{
+      href: "#",
+      text: 'Basket (1)',
+      id: 'servicelink1'
+    }],
+    activeLinkId: 'servicelink3'
   }) }}
-
-
   
+  
+<!--Onelogin banner END-->
+
+   
   {% endblock %}
+
+<!--This is One login-banner-->
+
+
+<!--end-->
