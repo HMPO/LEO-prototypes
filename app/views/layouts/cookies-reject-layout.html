@@ -1,22 +1,15 @@
-{#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+ {#
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+  #}
+  
+  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+  {% block header %}
 
   {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
 {% set html %}
-  <p class="govuk-body">You’ve rejected analytics cookies. You can <a href="../footer/cookies.html">change your cookie settings</a> at any time.</p>
+   <p class="govuk-body">You’ve rejected analytics cookies. You can <a href="../footer/cookies.html">change your cookie settings</a> at any time.</p>
 {% endset %}
 
  {{ govukCookieBanner({
@@ -34,4 +27,26 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     }
   ]
 }) }}
+
+<!--using govukOneLoginServiceHeader label will populate the one login banner-->
+{# Set serviceName in config.js. #}
+  {{ govukOneLoginServiceHeader({
+    serviceName: "Order a certificate",
+    navigationItems: [{
+      href: "#",
+      text: 'Basket (1)',
+      id: 'servicelink1'
+    }],
+    activeLinkId: 'servicelink3'
+  }) }}
+  
+  
+<!--Onelogin banner END-->
+
+   
   {% endblock %}
+
+<!--This is One login-banner-->
+
+
+<!--end-->
