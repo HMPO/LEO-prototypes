@@ -1,5 +1,4 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
-
 {% set navigationItems = [
   {
       href: "#",
@@ -7,13 +6,10 @@
       id: 'id3'
     }]
   %} 
-
 {% set homepageLink = "../../../index.html" %}
-
 {% block pageTitle %}
   Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
@@ -21,7 +17,6 @@
 }) }}
 {% endblock %}
 {% set serviceName = "Order a certificate" %}
-
 
 {% block content %}
 
