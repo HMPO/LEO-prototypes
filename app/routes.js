@@ -450,3 +450,30 @@ router.post('/beta/round1/triage/triage-question-3', function(request, response)
         response.redirect("/beta/round1/triage/direct-to-rolo.html")
     } 
 })
+
+
+// BETA JS
+//--------------------------------------------------------routing for roud 3 BETA using branching (checkboxes screen)--------------------------------------------------------
+const util = require('util')
+
+router.post('/round5/search/second-cert/50-year-rule/place-of-death-2', function(request, response) {
+
+    var exports = request.session.data['exports']
+    if (exports !== undefined && exports.includes("death")){
+        response.redirect("place-of-death-2")
+    } else if (exports !== undefined && exports.includes("address")) {
+        response.redirect("address") 
+    }
+
+})
+
+router.post('/round5/search/second-cert/50-year-rule/address', function(request, response) {
+
+    var exports = request.session.data['exports']
+    if (exports !== undefined && exports.includes("address", "death")) {
+        response.redirect("address") 
+    } else if (exports !== undefined && exports.includes("death")){
+        response.redirect("parents-names")
+    }
+   
+})
