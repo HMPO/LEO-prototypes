@@ -453,10 +453,9 @@ router.post('/beta/round1/triage/triage-question-3', function(request, response)
 
 
 // BETA JS
-//--------------------------------------------------------routing for roud 3 BETA using branching (checkboxes screen)--------------------------------------------------------
-const util = require('util')
+//--------------------------------------------------------routing for roud 2 BETA using branching (checkboxes screen)--------------------------------------------------------
 
-router.post('/round5/search/second-cert/50-year-rule/place-of-death-2', function(request, response) {
+router.post('/beta/round2/get-help/place-of-death-2', function(request, response) {
 
     var exports = request.session.data['exports']
     if (exports !== undefined && exports.includes("death")){
@@ -467,7 +466,7 @@ router.post('/round5/search/second-cert/50-year-rule/place-of-death-2', function
 
 })
 
-router.post('/round5/search/second-cert/50-year-rule/address', function(request, response) {
+router.post('/beta/round2/get-help/address', function(request, response) {
 
     var exports = request.session.data['exports']
     if (exports !== undefined && exports.includes("address", "death")) {
