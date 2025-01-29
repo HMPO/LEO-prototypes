@@ -457,22 +457,30 @@ router.post('/beta/round1/triage/triage-question-3', function(request, response)
 
 router.post('/beta/round2/get-help/place-of-death-2', function(request, response) {
 
-    var exports = request.session.data['exports']
-    if (exports !== undefined && exports.includes("death")){
+    var placeOfDeath = request.session.data['placeOfDeath']
+    var lastKnownAddress = request.session.data['lastKnownAddress']
+    if (placeOfDeath == "placeOfDeath" ){
         response.redirect("place-of-death-2")
-    } else if (exports !== undefined && exports.includes("address")) {
+    } else if (lastKnownAddress == "lastKnownAddress" ) {
         response.redirect("address") 
     }
 
 })
 
-router.post('/beta/round2/get-help/address', function(request, response) {
-
-    var exports = request.session.data['exports']
-    if (exports !== undefined && exports.includes("address", "death")) {
-        response.redirect("address") 
-    } else if (exports !== undefined && exports.includes("death")){
-        response.redirect("parents-names")
-    }
-   
+// Age
+router.post('/beta/round2/get-help/parents-names', function(request, response) {
+    var placeDeath = request.session.data['placeOfDeath'], 
+    lastKnownAddress = request.session.data['lastKnownAddress'];
+    if (lastKnownAddress == "lastKnownAddress"){
+        response.redirect("/beta/round2/get-help/address")
+    } 
+    else if (placeDeath == "placeOfDeath"){
+        response.redirect("/beta/round2/get-help/parents-names")
+    } 
 })
+
+// Age2
+router.post('/round2/get-help/address', function(request, response) {
+    response.redirect("/round5/50-year-rule/parents-names")
+})
+
