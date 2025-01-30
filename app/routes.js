@@ -455,32 +455,6 @@ router.post('/beta/round1/triage/triage-question-3', function(request, response)
 // BETA JS
 //--------------------------------------------------------routing for roud 2 BETA using branching (checkboxes screen)--------------------------------------------------------
 
-router.post('/beta/round2/get-help/place-of-death-2', function(request, response) {
 
-    var placeOfDeath = request.session.data['placeOfDeath']
-    var lastKnownAddress = request.session.data['lastKnownAddress']
-    if (placeOfDeath == "placeOfDeath" ){
-        response.redirect("place-of-death-2")
-    } else if (lastKnownAddress == "lastKnownAddress" ) {
-        response.redirect("address") 
-    }
 
-})
-
-// Age
-router.post('/beta/round2/get-help/parents-names', function(request, response) {
-    var placeDeath = request.session.data['placeOfDeath'], 
-    lastKnownAddress = request.session.data['lastKnownAddress'];
-    if (lastKnownAddress == "lastKnownAddress"){
-        response.redirect("/beta/round2/get-help/address")
-    } 
-    else if (placeDeath == "placeOfDeath"){
-        response.redirect("/beta/round2/get-help/parents-names")
-    } 
-})
-
-// Age2
-router.post('/round2/get-help/address', function(request, response) {
-    response.redirect("/round5/50-year-rule/parents-names")
-})
 
