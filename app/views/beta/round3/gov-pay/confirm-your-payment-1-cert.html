@@ -1,0 +1,68 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="../confirmation/confirmation-1-cert" method="post">
+      <h1 class="govuk-heading-l">Confirm your payment</h1>
+
+  
+      <p>Total amount:<br> <b style="font-size:30px;">£16</b></p>
+    <hr style="margin-bottom:30px;">
+
+<div class="govuk-form-group">
+  
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       Card number
+      </dt>
+      <dd class="govuk-summary-list__value">
+       ************1111
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Expiry date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        03/29
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Name on card
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{data['nameDelivery'] }}
+      </dd>
+    </div>
+  </dl>
+
+
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+       Confirm payment
+    </button>
+  </div>
+
+<p class="govuk-body"><a href="payment-order-summary.html" class="govuk-link govuk-link--no-visited-state">Cancel payment</a></p>
+
+  </form>
+</div>
+</div>
+{% endblock %}

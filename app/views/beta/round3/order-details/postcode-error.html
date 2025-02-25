@@ -1,0 +1,48 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">Sorry, there is a problem with postcode search</h1>
+
+    
+    <!-- Form start -->
+    <form class="form" action="manual-entry" method="post">
+
+    
+
+      <div class="govuk-button-group">
+        <a href="manual-entry" class="govuk-button" data-module="govuk-button">Enter address manually</a>
+      </div>
+
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}
