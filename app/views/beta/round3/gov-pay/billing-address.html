@@ -1,0 +1,74 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Billing address</h1>
+
+ <p class="govuk-body">You have used the following address for delivery:</p>
+
+    <form class="form" action="save-billing-address" method="post">
+
+      <div class="govuk-inset-text">
+       74 Westgate Hill St, Liverpool, CH41 5LH
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="code">
+           Use this address for your billing address?
+        </label>
+        <div id="changedName-hint" class="govuk-hint">
+          The billing address is the address associated with your payment card
+        </div>
+         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+           Continue
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}
