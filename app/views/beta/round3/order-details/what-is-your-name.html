@@ -27,26 +27,29 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <!-- Heading -->
-    <h1 class="govuk-heading-l">What is the delivery name?</h1>
+    <h1 class="govuk-heading-l">Your name</h1>
 
-      <p class="govuk-body">This will appear on the envelope, along with the delivery address.</p>
-    <!-- Form start -->
     <form class="form" action="order-reference" method="post">
+      
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="nameDelivery">
-          Full name
+        <label class="govuk-label" for="full">
+          First name
         </label>
-        <input class="govuk-input govuk-input--width-20" id="nameDelivery" name="nameDelivery" type="text">
+        <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
       </div>
-     
 
-    <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-           Continue
-        </button>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full">
+          Last name
+        </label>
+        <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
       </div>
+
+    <!-- Buttons -->
+    <div class="govuk-button-group">
+      <a href="use-name-for-delivery" class="govuk-button" data-module="govuk-button">Continue</a>
+   </div>
       
     </form>
   </div>
