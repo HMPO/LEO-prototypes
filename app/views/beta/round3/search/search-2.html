@@ -2,27 +2,28 @@
 
 {% set navigationItems = [
   {
+    href: "my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
-    }]
+    }
+    ]
   %} 
 
-{% set homepageLink = "../../index.html" %}
+{% set homepageLink = "../../../index.html" %}
 
 {% block pageTitle %}
-  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
+
 
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">

@@ -2,24 +2,24 @@
 
 {% set navigationItems = [
   {
+    href: "my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
-    }]
+    }
+    ]
   %} 
 
-{% set homepageLink = "../../index.html" %}
+{% set homepageLink = "../../../index.html" %}
 
 {% block pageTitle %}
-  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
@@ -33,18 +33,6 @@
 
 <!-- Guidance -->
       <p class="govuk-body">The first copy costs £16 and each additional copy costs £12.50. For example, 2 copies would cost £28.50.</p>
-
-      <!-- <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  How many copies do you want?
-                </h1>
-              </legend>
-
-<div id="passport-issued-hint" class="govuk-hint">
-      The first copy costs £16 and each additional copy costs £12.50. For example, 2 copies would cost £28.50.
-    </div> -->
 
     <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="code">
@@ -95,7 +83,7 @@
 
          <!-- Buttons -->
          <div class="govuk-button-group">
-            <a href="postcode" class="govuk-button" data-module="govuk-button">Continue</a>
+            <a href="what-is-your-name" class="govuk-button" data-module="govuk-button">Continue</a>
          </div>
 
       </form>
