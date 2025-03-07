@@ -2,7 +2,7 @@
 
 {% set navigationItems = [
   {
-    href: "../account/my-account",
+    href: "../account/my-account-filled in",
     text: 'My account',
     id: 'id3'
   },
@@ -35,7 +35,7 @@
 
     <h1 class="govuk-heading-l">Your name</h1>
 
-    <form class="form" action="postcode" method="post">
+    <form class="form" action="use-saved-address" method="post">
 
       <div class="govuk-inset-text">
         {{ data['accountNameFirst']}}      {{ data['accountNameSecond']}}
