@@ -20,12 +20,6 @@
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
@@ -117,6 +111,17 @@
         <dd class="govuk-summary-list__value">
           74 Westgate Hill St
           Liverpool CH41 5LH
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Billing address same as delivery address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>

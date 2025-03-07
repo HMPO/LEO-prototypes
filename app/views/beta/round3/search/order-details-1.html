@@ -20,6 +20,12 @@
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
@@ -82,7 +88,7 @@
               Year of birth
             </dt>
             <dd class="govuk-summary-list__value">
-             2008
+             1930
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -107,7 +113,7 @@
               Quarter death registered
             </dt>
             <dd class="govuk-summary-list__value">
-             Q3
+             Q1
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>

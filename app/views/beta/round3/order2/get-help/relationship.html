@@ -2,22 +2,17 @@
 
 {% set navigationItems = [
   {
-    href: "my-account",
-    text: 'My account',
-    id: 'id3'
-  },
-  {
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
-    }
-    ]
+    }]
   %} 
 
-{% set homepageLink = "../../../index.html" %}
+  {% set homepageLink = "../../../../../../index.html" %}
+
 
 {% block pageTitle %}
-  {{ serviceName }} – GOV.UK Prototype Kit
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,17 +29,15 @@
   <div class="govuk-grid-column-two-thirds">
 
     <!-- Heading -->
-    <h1 class="govuk-heading-l">What is the delivery name?</h1>
-
-      <p class="govuk-body">This will appear on the envelope, along with the delivery address.</p>
+    <h1 class="govuk-heading-l">What was your relationship with John Smith?</h1>
     <!-- Form start -->
-    <form class="form" action="order-reference" method="post">
+    <form class="form" action="check-answers" method="post">
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="nameDelivery">
-          Full name
-        </label>
-        <input class="govuk-input govuk-input--width-20" id="nameDelivery" name="nameDelivery" type="text">
+      <div id="changedName-hint" class="govuk-hint">
+      For example, parent, aunt or brother
+    </div>
+        <input class="govuk-input govuk-input--width-20" id="relationship" name="relationship" type="text">
       </div>
      
 

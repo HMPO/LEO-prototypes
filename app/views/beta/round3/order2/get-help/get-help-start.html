@@ -1,0 +1,98 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="what-year" method="post" class="form">
+
+      <h1 class="govuk-heading-l">Get help searching</h1>
+
+ <p class="govuk-body">It will cost an extra £3.50 to get help searching and will take around 2 weeks longer.</p>  
+ <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third"></th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Cost for one certificate</th>
+    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Estimated delivery</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Get help searching for a death certificate</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£16</td>
+    <td class="govuk-table__cell">Wednesday 19 March</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Death certificate</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£12.50</td> 
+    <td class="govuk-table__cell">Friday 7 March</td>
+    </tr>
+  </tbody>
+</table> 
+
+      
+
+
+      
+ <h2 class="govuk-heading-m">Before you start</h2>
+
+<p class="govuk-body">You will need to check the details you entered in your search and provide the following additional details of the person you are looking for:</p>
+ <ul class="govuk-list govuk-list--bullet">
+
+        <li>their first name, if you have not already told us</li>
+        <li>how old they were when they died</li>
+        <li>the date they died</li>
+        <li>where they died or their last known address</li> 
+        </ul>
+
+<p class="govuk-body">If the person you are looking for was 16 or under when they died, you will also have to tell us:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+
+        <li>the full names of their parents</li>
+        <li>your relationship to them</li>
+        </ul>
+ <h2 class="govuk-heading-m">If we cannot find your record</h2>
+
+<p class="govuk-body">You would get a partial refund if we cannot find a record that matches the details you provide.</p>
+<p class="govuk-body">We keep £7.50 of what you pay (which is made up of the £3.50 non-refundable search charge, and a £4 admin cost).</p>
+
+
+<p class="govuk-body">Go back if you want to <a href="../search/result-pages/page-1.html" class="govuk-link--no-visited-state">search for a record yourself</a>.</p>
+
+
+<!-- buttons -->
+      <div class="govuk-button-group">
+        <a href="first-name" class="govuk-button">Continue</a>
+      </div>
+
+
+
+    </form>
+  </div>
+</div>
+{% endblock %}

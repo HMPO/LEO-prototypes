@@ -2,7 +2,7 @@
 
 {% set navigationItems = [
   {
-    href: "my-account",
+    href: "../account/my-account",
     text: 'My account',
     id: 'id3'
   },
@@ -30,28 +30,39 @@
 
 {% block content %}
 
+
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="payment-method" method="post">
+      <form class="form" action="../order-details/how-many" method="post">
 
-        <h1 class="govuk-heading-l" style="padding-bottom: 20px;">Record summary</h1>
-
+ <span class="govuk-caption-xl">Selected item</span>
+   <h1 class="govuk-heading-xl">John Joe Smith</h1>
       
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key" style=>
-           Name
+           First name
             </dt>
             <dd class="govuk-summary-list__value">
-              John Joe
+              John
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key" style=>
-           Surname
+           Middle names
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Joe
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style=>
+           Last name
             </dt>
             <dd class="govuk-summary-list__value">
              Smith
@@ -59,18 +70,7 @@
             <dd class="govuk-summary-list__actions">
             </dd>
           </div>
-<div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Year death registered
-            </dt>
-            <dd class="govuk-summary-list__value">
-             2011
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-<div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Sex
             </dt>
@@ -80,15 +80,27 @@
             <dd class="govuk-summary-list__actions">
             </dd>
              </dd>
-      </dd>
+            </dd>
           </div>
 
 <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              District of death
+              Year of birth
             </dt>
             <dd class="govuk-summary-list__value">
-             Liverpool
+             2008
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year death registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             2023
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -101,51 +113,53 @@
               Quarter death registered
             </dt>
             <dd class="govuk-summary-list__value">
-             Q1
+             Q3
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
              </dd>
       </dd>
           </div>
+
+
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              District of death
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Portsmouth (497-1A)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
 
  <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Entry number
             </dt>
             <dd class="govuk-summary-list__value">
-             501653789
+              501209582
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
              </dd>
       </dd>
           </div>
-
-
- <div class="govuk-summary-list__row">
-  <dt class="govuk-summary-list__key">
-    Register number
-  </dt>
-  <dd class="govuk-summary-list__value">
-    080-1B
-  </dd>
-  <dd class="govuk-summary-list__actions">
-  </dd>
-   </dd>
-</dd>
-</div>
-
-
 </dl>
+
+<p class="govuk-body"><a href="../search/result-pages/page-1.html">Back to search results</a></p>
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button" style="margin-top:25px;">
+      Order item
+    </button>
+  </div>
 
 </form>
 
-<p class="govuk-body"><a href="../basic-search/search-results-basic.html">Back to search results</a></p>
-
-       
-  <a style="margin-top:25px;" href="how-many" class="govuk-button" data-module="govuk-button">Continue</a>
-  
 
 
    </div>

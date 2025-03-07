@@ -1,0 +1,73 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+  {% set homepageLink = "../../../../../../index.html" %}
+
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">What were John Smith's parents’ names?</h1>
+    <!-- Form start -->
+    <form class="form" action="relationship" method="post">
+
+<p class="govuk-body">You must tell us the names of both John Smith's parents if two parents are listed on their death certificate.</p>
+<p class="govuk-body">In most cases, 2 parents are listed on a death certificate. In some cases, only 1 parent is listed.</p>
+
+
+<!-- Parent 1 -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     Parent 1's full name</label>
+
+  <input class="govuk-input" id="firstParent" name="firstParent" type="text"
+     value="">
+</div>
+
+<!-- Parent 2 -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     Parent 2's full name</label>
+<div id="changedName-hint" class="govuk-hint">
+      You can leave this blank if only 1 parent is listed on their death certificate
+    </div>
+  <input class="govuk-input" id="secondParent" name="secondParent" type="text"
+     value="">
+</div>
+
+
+     
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+           Continue
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}

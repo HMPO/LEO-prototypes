@@ -2,7 +2,7 @@
 
 {% set navigationItems = [
   {
-    href: "../account/my-account",
+    href: "my-account",
     text: 'My account',
     id: 'id3'
   },
@@ -20,12 +20,6 @@
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
@@ -33,9 +27,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Save delivery address</h1>
+    <h1 class="govuk-heading-l">Billing address</h1>
 
-    <form class="form" action="order-reference" method="post">
+ <p class="govuk-body">You have used the following address for delivery:</p>
+
+    <form class="form" action="save-billing-address" method="post">
 
       <div class="govuk-inset-text">
        74 Westgate Hill St, Liverpool, CH41 5LH
@@ -43,10 +39,10 @@
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="code">
-           Save delivery address to your account?
+           Use this address for your billing address?
         </label>
         <div id="changedName-hint" class="govuk-hint">
-          Hint text TBC
+          The billing address is the address associated with your payment card
         </div>
          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">

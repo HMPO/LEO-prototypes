@@ -2,22 +2,24 @@
 
 {% set navigationItems = [
   {
-    href: "../account/my-account",
-    text: 'My account',
-    id: 'id3'
-  },
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set navigationItems = [
   {
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
-    }
-    ]
+    }]
   %} 
 
-{% set homepageLink = "../../../index.html" %}
+{% set homepageLink = "../../index.html" %}
 
 {% block pageTitle %}
-  {{ serviceName }} – GOV.UK Prototype Kit
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,25 +32,24 @@
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
 
 <!-- Heading -->
-<span class="govuk-caption-xl">Search for a record: page 1 of 3</span>
+<!-- <span class="govuk-caption-xl">Search for a record: page 1 of 3</span> -->
 <h1 class="govuk-heading-xl">Name, sex and birth year</h1>  
 
 <!-- Form start -->
-<form action="search-2" method="post" class="form">
+<form action="../check-answers-1" method="post" class="form">
   
  <!-- Names -->
 <div class="govuk-form-group">
   <label class="govuk-label govuk-label--m">
      What was their name?</label>
   <label class="govuk-label govuk-label" for="first-name">
-     First name (optional)</label>
+     First name</label>
   <input class="govuk-input" id="first-name" name="first-name" type="text"
-     value="">
+   value="{{ data['firstName']}}">
 </div>
 
 <!-- Middle names -->
@@ -56,7 +57,7 @@
   <label class="govuk-label govuk-label" for="middleName">
      Middle names (optional)</label>
   <input class="govuk-input" id="middleName" name="middleName" type="text"
-     value="">
+     value="{{ data['middleName']}}">
 </div>
 
 <!-- Surname -->
@@ -65,7 +66,7 @@
      Last name</label>
 
   <input class="govuk-input" id="surname" name="surname" type="text"
-     value="">
+     value="{{ data['surname']}}">
 </div>
 
 <!-- sex -->
@@ -85,7 +86,7 @@
       </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="sexRadios" type="radio" value="Male">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="sexRadios" type="radio" value="Male" checked data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
           Male
         </label>
@@ -101,7 +102,7 @@
   <div id="first-name-hint" class="govuk-hint">
     For example, 1949
     </div>
-    <input class="govuk-input govuk-input--width-4" name="yearBirth" id="yearBirth">
+    <input class="govuk-input govuk-input--width-4" name="yearBirth" id="yearBirth" value="{{ ('1933') }}">
  </div>
 
          <button type="submit" class="govuk-button" data-module="govuk-button">

@@ -20,12 +20,6 @@
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
@@ -33,9 +27,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Save delivery address</h1>
+    <h1 class="govuk-heading-l">Save billing address</h1>
 
-    <form class="form" action="order-reference" method="post">
+    <form class="form" action="enter-card-details-1-cert" method="post">
 
       <div class="govuk-inset-text">
        74 Westgate Hill St, Liverpool, CH41 5LH
@@ -43,7 +37,7 @@
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="code">
-           Save delivery address to your account?
+           Save billing address to your account?
         </label>
         <div id="changedName-hint" class="govuk-hint">
           Hint text TBC
