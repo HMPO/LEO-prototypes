@@ -2,7 +2,7 @@
 
 {% set navigationItems = [
   {
-    href: "../account/my-account",
+    href: "../account/my-account-filled in",
     text: 'My account',
     id: 'id3'
   },
@@ -43,7 +43,7 @@
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Death certificate: John Joe Smith, 2023
+                  Death certificate: Doris Ann Jones, 2021
                 </span>
               </h2>
             </div>
@@ -84,17 +84,6 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Your name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['accountNameFirst']}}  {{ data['accountNameSecond']}}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
           Delivery name
         </dt>
         <dd class="govuk-summary-list__value">
@@ -111,17 +100,6 @@
         <dd class="govuk-summary-list__value">
           74 Westgate Hill St
           Liverpool CH41 5LH
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Billing address same as delivery address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
@@ -174,7 +152,7 @@
         <!-- <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue to payment
         </button> -->
-        <a href="billing-address" style="text-decoration:none;" class="govuk-button">Continue to payment</a>
+        <a href="use-saved-billing-address.html" style="text-decoration:none;" class="govuk-button">Continue to payment</a>
         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Add another item
         </button>
