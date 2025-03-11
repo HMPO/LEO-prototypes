@@ -216,6 +216,133 @@
 // --------------------------- Results table styling END --------------------------- //
 
 
+//--------------------------- One Login Your services styling ---------------------- //
+@media (min-width: 40.0625em) {
+  .information-box {
+      padding: 30px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+      background: #f3f2f1;
+  }
+}
+
+.your-services__card {
+  border: 1px solid #b1b4b6;
+}
+
+.your-services__card.your-services__card--empty {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 40.0625em) {
+  .your-services__card__content {
+      padding-top: 20px;
+  }
+}
+
+.your-services__card__content {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.your-services__card__heading {
+  padding: 15px 15px 20px 15px;
+  background-color: #f3f2f1;
+  margin: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-s {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+//--security page one login--//
+.activity-card {
+  border: 1px solid #b1b4b6;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+//-Nav-//
+
+.account-navigation {
+  background-color: #f3f2f1;
+  border-bottom: 1px solid #b1b4b6;
+  position: relative;
+}
+
+nav {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.account-navigation__list-item--active .account-navigation__button-content, .account-navigation__list-item--active .account-navigation__link {
+  border-bottom: 5px solid #1d70b8;
+}
+
+.account-navigation__button-content:not(:hover), .account-navigation__link:not(:hover) {
+  text-decoration: none;
+}
+
+.account-navigation__button-content, .account-navigation__link {
+  display: inline-block;
+  font-weight: bold;
+  padding: 13px 0 10px;
+  margin-top: 2px;
+}
+
+.account-navigation__link {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, .0625rem);
+  text-underline-offset: .1578em;
+}
+
+@media (min-width: 40.0625em) {
+  .account-navigation__list {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .account-navigation__list-item {
+      margin: 0 30px 0 0;
+  }
+}
+
+.account-navigation__list-item {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+@media (min-width: 40.0625em) {
+  .account-navigation__list {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.account-navigation__list {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
   //-------------------------------Search results page-------------------------------//
 // .search-headings {
 //     display:inline;
