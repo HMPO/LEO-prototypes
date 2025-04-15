@@ -1,0 +1,606 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (2)',
+      id: 'id3'
+    }]
+  %} 
+
+
+{% set homepageLink = "../../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+
+
+
+
+<div class="govuk-width-container">
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Your basket</h1>
+      </div>
+    </div>
+
+<!----------------left col----------->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Item summary</h2>
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+<!--1st certificate John Joe Smith 2023 Portsmouth (497-1A), 501209582-->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Death certificate: John Joe Smith, 2023, Liverpool (025-1C)
+                </span>
+              </h2>
+            </div>
+
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+             <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Item details 
+    </h2>
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove from basket</a>
+    </p>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Shipping method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Standard UK (2nd class post)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of copies
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Delivery address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          74 Westgate Hill St
+          Liverpool CH41 5LH
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Billing address same as delivery address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Delivery name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['nameDelivery']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+               <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Your reference
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+{{ data['orderReference']}}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £12.50
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+            </div>
+          </div>
+
+<!--2nd certificate John Joe Smith 2023 Portsmouth (497-1A), 501209582-->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Death certificate: John Joe Smith 2023, Portsmouth (497-1A)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Item details 
+                  </h2>
+                  <p class="govuk-body">
+                  <a href="#" class="govuk-link">Remove from basket</a>
+                  </p>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Shipping method
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Standard UK (2nd class post)
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Number of copies
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        1
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Delivery address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        3 pARK hall Road Portsmouth M20 1LH
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Billing address same as delivery address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Yes
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Delivery name
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        {{ data['nameDeliverySecondCert']}}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Your reference
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+{{ data['orderReferenceSecondCert']}}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Total cost
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        £12.50
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!--3rd certificate John Joe Smith 2023, Portsmouth (025-1G), 505467346-->
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        Death certificate: John Joe Smith 2023, Portsmouth (025-1G), 505467346
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Item details 
+        </h2>
+        <p class="govuk-body">
+        <a href="#" class="govuk-link">Remove from basket</a>
+        </p>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Shipping method
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Standard UK (2nd class post)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of copies
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 pARK hall Road Portsmouth M20 1LH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Billing address same as delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nameDeliverySecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+{{ data['orderReferenceSecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total cost
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £12.50
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--4th certificate John Smith 2023, Northumberland (681-1D), 505467346-->
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        Death certificate: John Smith 2023, Northumberland (681-1D)
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Item details 
+        </h2>
+        <p class="govuk-body">
+        <a href="#" class="govuk-link">Remove from basket</a>
+        </p>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Shipping method
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Standard UK (2nd class post)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of copies
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 pARK hall Road Portsmouth M20 1LH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Billing address same as delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nameDeliverySecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+{{ data['orderReferenceSecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total cost
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £12.50
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Birth cert 5th certificate John Smith 2023, Northumberland (681-1D), 505467346-->
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        Birth certificate: John Smith 2023, Northumberland (681-1D)
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Item details 
+        </h2>
+        <p class="govuk-body">
+        <a href="#" class="govuk-link">Remove from basket</a>
+        </p>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Shipping method
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Standard UK (2nd class post)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of copies
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 pARK hall Road Portsmouth M20 1LH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Billing address same as delivery address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Delivery name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['nameDeliverySecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+{{ data['orderReferenceSecondCert']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total cost
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £12.50
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+        
+        </div>
+       
+      </div>
+
+<!----------------right col----------->
+<form class="form" action="enter-card-details" method="post">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Order summary</h3>
+       
+        <p><b>Number of items:</b> 2<br>
+          <b>Total cost:</b> £25</p>
+        
+        <h3 class="govuk-heading-s">How to pay</h3>
+        <img src="/public/img/cards.png" style="margin-bottom:30px;">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue to payment
+        </button>
+        <!-- <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add another item
+        </button> -->
+        <a style="text-decoration:none;" class="govuk-button govuk-button--secondary" data-module="govuk-button">Add another item</a>
+      </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+      
+  
+
+  
+
+{% endblock %}

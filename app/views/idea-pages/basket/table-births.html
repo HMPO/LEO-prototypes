@@ -1,0 +1,163 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <h1 class="govuk-heading-l">
+        Your basket
+      </h1>
+
+      <form class="form" action="../../get-help/get-help-start.html" method="post">
+      </div>
+    </div>
+<h2 class="govuk-heading-m">Total items in basket: 5</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <!--table-->
+    <div class="container">
+      <table class="govuk-table responsive-table" role="table">
+        <caption class="govuk-table__caption govuk-table__caption--m">2 items</caption>
+        <thead class="govuk-table__head" role="rowgroup">
+          <tr class="govuk-table__row" role="row">
+            <th class="govuk-table__header" role="columnheader" scope="col">Type</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Full name</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Year of birth</th>
+            <th class="govuk-table__header"role="columnheader" scope="col">Year registered</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">District of death</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Quarter</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Entry number</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row" role="row">
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>Death</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>John Joe Smith</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1930</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">District of death</span>PORTSMOUTH (497-1A)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q1</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501209582</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Remove item</a></td>
+          </tr>
+
+          <tr class="govuk-table__row" role="row">
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>Death</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>John Smith</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1931</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (123-1A)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501232095</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Remove item</a></td>
+          </tr>
+
+          <tr class="govuk-table__row" role="row">
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>Birth</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>John Smith</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year of birth</span>1931</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2023</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">District of death</span>LIVERPOOL (123-1A)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501232095</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Remove item</a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    <!--table-->
+ <br><br>
+<h2 class="govuk-heading-m">Get help finding a record</h2>
+   <!--table-->
+   <div class="container">
+    <table class="govuk-table responsive-table" role="table">
+      <caption class="govuk-table__caption govuk-table__caption--m">2 items</caption>
+      <thead class="govuk-table__head" role="rowgroup">
+        <tr class="govuk-table__row" role="row">
+          <th class="govuk-table__header" role="columnheader" scope="col">Type</th>
+          <th class="govuk-table__header" role="columnheader" scope="col">Full name</th>
+          <th class="govuk-table__header" role="columnheader" scope="col">Age at death</th>
+          <th class="govuk-table__header"role="columnheader" scope="col">Date of death</th>
+          <th class="govuk-table__header" role="columnheader" scope="col">Action</th>
+          <th class="govuk-table__header" role="columnheader" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row" role="row">
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span>Death</td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>John Smith</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true"></span>90</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true"></span>21 Novemember 2023</td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Edit</a></td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Remove item</a></td>
+        </tr>
+
+        <tr class="govuk-table__row" role="row">
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span>Death</td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">Full name</span>John Smith</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true"></span>90</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true"></span>21 Novemember 2023</td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Edit</a></td>
+          <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true"></span><a href="../order-details-1.html" class="govuk-link govuk-link--no-visited-state table-col-search">Remove item</a></td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <!--table-->
+
+
+  </div>
+</div>
+<br>
+<br>
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue to delivery
+</button>
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
