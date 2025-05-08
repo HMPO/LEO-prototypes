@@ -1,0 +1,55 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">Add a reference for this item</h1>
+
+      <p class="govuk-body">This will appear on your order summary for this item. This is for your reference only.</p>
+    <!-- Form start -->
+    <form class="form" action="../basket-pay/basket-2" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="orderReferenceSecondCert">
+          Item reference (optional)
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="orderReferenceSecondCert" name="orderReferenceSecondCert" type="text">
+      </div>
+     
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+           Continue
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}
