@@ -1,0 +1,63 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><b>From:</b> General Register Office<br>
+      <b>Subject:</b> Receipt and order confirmation - HDJ123F</p>
+      <hr>
+      <p class="govuk-body">Dear  {{data['nameDelivery'] }},</p>
+     
+ <h2 class="govuk-heading-m">Order summary</h2>
+<p class="govuk-body">Order number: HDJ123F</br>
+Number of items: 2</br>
+Total paid: £25</br>
+<br>
+<hr>
+<br>
+
+      <h3 class="govuk-heading-m">Item summary</h3>
+      <p class="govuk-body">The following items are being sent by standard UK shipping and will be dispatched by Tuesday 27 August.</p>
+      <p>Estimated delivery date: Monday 2 September.</p>
+
+
+  <p class="govuk-body"><strong>Death certificate: John Joe Smith, 2023</strong> <br>
+    District of death: Liverpool</br>
+    Quarter: Q2 <br>
+    Entry number: 501209582<br>
+    Number of copies: 1</br>
+    Delivery address: 74 Westgate Hill St, Liverpool, CH41 5LH<br>
+    Billing address same as delivery address: yes</br>
+</p>
+  <br>
+
+  <p class="govuk-body"><strong>Death certificate: Adam Calvin Parker, 2023</strong> <br>
+    District of death: Manchester</br>
+    Quarter: Q1<br>
+    Entry number: 509878736<br>
+    Number of copies: 1</br>
+    Delivery address: 198 Burton Rd, Manchester, M20 1LH<br>
+    Billing address same as delivery address: yes</br>
+</p>
+  <br>
+<hr>
+<br>
+      
+<h2 class="govuk-heading-m">Contact us</h2>
+
+<p class="govuk-body">Find out how to contact us: <a href="https://www.gov.uk/general-register-office">https://www.gov.uk/general-register-office</a></p>
+
+      <p class="govuk-body govuk-!-margin-top-7">
+          Regards,<br />
+          General Register Office
+      </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+      <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
+  </div>
+</div>
+{% endblock %}

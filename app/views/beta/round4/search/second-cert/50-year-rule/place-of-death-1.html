@@ -1,0 +1,111 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+       href: "#",
+       text: 'Basket (1)',
+       id: 'id3'
+     }]
+   %} 
+
+{% set homepageLink = "../../../../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+   
+  <!-- Form start -->
+<!-- <form action="place-of-death-2" method="post" class="form">
+     <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                 Which of the following do you know about Adam Calvin Parker?
+              </h1>
+           </legend>
+        <div id="countries-hint" class="govuk-hint">
+              Select all that apply.
+           </div>
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="placeOfDeath" name="placeOfDeath" type="checkbox" value="placeOfDeath">
+                     <label class="govuk-label govuk-checkboxes__label" for="placeOfDeath">
+                        Where they died
+                     </label>
+                     <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                        This could be a city, town or county, or the name of the hospital.
+                     </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="lastKnownAddress" name="lastKnownAddress" type="checkbox" value="lastKnownAddress">
+                     <label class="govuk-label govuk-checkboxes__label" for="lastKnownAddress">
+                        Last known address
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+         </div>
+ -->
+ <form class="form" action="place-of-death-2" method="post">
+
+   {{ govukCheckboxes({
+     name: "exports",
+     values: data["exports"],
+     fieldset: {
+       legend: {
+         text: "Which of the following do you know about Adam Calvin Parker?",
+         isPageHeading: true,
+         classes: "govuk-fieldset__legend--l"
+       }
+     },
+     hint: {
+       text: "Select all that apply."
+     },
+     items: [
+       {
+         value: "death",
+         text: "Where they died",
+         hint: {
+            text: "This could be a city, town or county, or the name of a hospital."
+          }
+       },
+       {
+         value: "address",
+         text: "Last known address"
+       }
+     ]
+   }) }}
+   
+   {{ govukButton({
+     text: "Continue"
+   }) }}
+   
+   </form>
+         <!-- Buttons -->
+         <!-- <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+               Continue
+            </button>
+         </div> -->
+
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}
