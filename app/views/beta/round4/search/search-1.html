@@ -37,7 +37,7 @@
 
 <!-- Heading -->
 <span class="govuk-caption-xl">Search for a record: page 1 of 3</span>
-<h1 class="govuk-heading-xl">Name, sex and birth year</h1>  
+<h1 class="govuk-heading-xl">Name, sex and mothers maiden name</h1>  
 
 <!-- Form start -->
 <form action="search-2" method="post" class="form">
@@ -97,15 +97,13 @@
   </fieldset>
 </div>
 
- <!-- year -->
- <div class="govuk-form-group">
-  <label class="govuk-label govuk-label--m" for="first-name" for="width-4">
-    What year were they born? (optional)</label>
-  <div id="first-name-hint" class="govuk-hint">
-    For example, 1949
-    </div>
-    <input class="govuk-input govuk-input--width-4" name="yearBirth" id="yearBirth">
- </div>
+ <!-- mothers maiden name -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="first-name" for="width-4">What was their mothers maiden name? (optional)</label>
+  <div id="changedName-hint" class="govuk-hint">Hint text needed??</div>
+  <input class="govuk-input" id="surname" name="surname" type="text"
+     value="">
+</div>
 
          <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue
