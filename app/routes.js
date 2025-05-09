@@ -452,9 +452,43 @@ router.post('/beta/round1/triage/triage-question-3', function(request, response)
 })
 
 
+// ------------------------- BETA triage round 4 ----------------------------//
+
+router.post('/beta/round4/triage/triage-question-1', function(request, response) {
+    var triageq1 = request.session.data['certTypeBeta4']
+    if (triageq1 == "birth"){
+        response.redirect("/beta/round4/triage/triage-question-2")
+    } else {
+        response.redirect("/beta/round4/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 2nd page (was the death reg before 31 Dec 2009?)
+router.post('/beta/round4/triage/triage-question-2', function(request, response) {
+    var triageq2 = request.session.data['certTypeBeta2']
+    if (triageq2 == "yes"){
+        response.redirect("/beta/round4/triage/triage-question-3")
+    } 
+    else if (triageq2 == "no"){
+        response.redirect("/beta/round4/triage/direct-to-rolo.html")
+    } 
+    else {
+        response.redirect("/beta/round4/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 3RD page delivery method
+router.post('/beta/round4/triage/triage-question-3', function(request, response) {
+    var triageq3 = request.session.data['certTypeBeta3']
+    if (triageq3 == "standard"){
+        response.redirect("/beta/round4/login/login-or-sign-in")
+    } 
+    else if (triageq3 == "no"){
+        response.redirect("/beta/round4/triage/direct-to-rolo.html")
+    } 
+})
+
+// ------------------------- BETA triage round 4 ----------------------------//
+
 // BETA JS
-//--------------------------------------------------------routing for roud 2 BETA using branching (checkboxes screen)--------------------------------------------------------
-
-
-
 

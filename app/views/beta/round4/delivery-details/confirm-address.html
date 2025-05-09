@@ -1,17 +1,25 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
+{% set oneLoginLink = "../your-services-one-login" %}
+
 {% set navigationItems = [
   {
+    href: "../account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
       href: "#",
-      text: 'Basket (1)',
+      text: 'Basket (0)',
       id: 'id3'
-    }]
+    }
+    ]
   %} 
 
-{% set homepageLink = "../../index.html" %}
+{% set homepageLink = "../../../index.html" %}
 
 {% block pageTitle %}
-  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,7 +34,7 @@
 
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
-     <form action="../check-answers" method="post" class="form">
+     <form action="save-delivery-address" method="post" class="form">
 
       <h1 class="govuk-heading-l">
       Confirm delivery address
@@ -39,7 +47,7 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            198 Burton Rd, Manchester, M20 1LH 
+            74 Westgate Hill St, Liverpool, CH41 5LH
           </dd>
 
           <dd class="govuk-summary-list__actions">
@@ -51,7 +59,7 @@
 
 
             <div class="govuk-button-group">
-              <a href="is-billing-address-same.html" class="govuk-button" data-module="govuk-button">Continue</a>
+              <a href="save-delivery-address" class="govuk-button" data-module="govuk-button">Continue</a>
             </div>
 
 </form>
