@@ -1,6 +1,11 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
 {% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
   {
       href: "#",
       text: 'Basket (0)',
@@ -8,13 +13,7 @@
     }]
   %} 
 
-{% set navigationItems = [
-  {
-      href: "#",
-      text: 'Basket (0)',
-      id: 'id3'
-    }]
-  %} 
+
 
 {% set homepageLink = "../../index.html" %}
 
@@ -37,7 +36,7 @@
 
 <!-- Heading -->
 <span class="govuk-caption-xl">Search for a record: page 1 of 3</span>
-<h1 class="govuk-heading-xl">Name, sex and mothers maiden name</h1>  
+<h1 class="govuk-heading-xl">Name, sex and mother's maiden name</h1>  
 
 <!-- Form start -->
 <form action="search-2" method="post" class="form">
@@ -99,8 +98,8 @@
 
  <!-- mothers maiden name -->
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-label--m" for="first-name" for="width-4">What was their mothers maiden name? (optional)</label>
-  <div id="changedName-hint" class="govuk-hint">Hint text needed??</div>
+  <label class="govuk-label govuk-label--m" for="first-name" for="width-4">What was their mother's maiden name? (optional)</label>
+ <!-- <div id="changedName-hint" class="govuk-hint">Hint text needed??</div> -->
   <input class="govuk-input" id="surname" name="surname" type="text"
      value="">
 </div>

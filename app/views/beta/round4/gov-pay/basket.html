@@ -1,6 +1,11 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
 {% set navigationItems = [
+ {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
   {
       href: "#",
       text: 'Basket (1)',
@@ -43,7 +48,7 @@
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Death certificate: John Joe Smith, 2023
+                  Birth certificate: John Joe Smith, 2023
                 </span>
               </h2>
             </div>
