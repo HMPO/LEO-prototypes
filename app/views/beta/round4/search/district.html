@@ -1,6 +1,11 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
 {% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
   {
       href: "#",
       text: 'Basket (0)',
@@ -51,7 +56,7 @@
           <label class="govuk-label govuk-label--m" for="searchArea">
             What district was the birth registered in? (optional)</label>
            <div id="event-name-hint" class="govuk-hint">
-              Start typing to search
+              Choose a district from the list
             </div>
             <div id="searchArea-container"></div>
         </div>

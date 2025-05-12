@@ -1,6 +1,11 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
 {% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
   {
       href: "#",
       text: 'Basket (0)',
@@ -30,8 +35,8 @@
 
       <form class="form" action="../order-details/how-many" method="post">
 
-        <h1 class="govuk-heading-l" style="padding-bottom: 20px;">Record summary</h1>
-
+ <span class="govuk-caption-xl">Selected item</span>
+   <h1 class="govuk-heading-xl">John Joe Smith</h1>
       
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -106,7 +111,7 @@
 
 <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              District of death
+              District of birth
             </dt>
             <dd class="govuk-summary-list__value">
              Liverpool (025-1E)
@@ -136,7 +141,7 @@
   
   <div class="govuk-button-group">
     <button type="submit" class="govuk-button" data-module="govuk-button" style="margin-top:25px;">
-      Continue
+      Order item
     </button>
   </div>
 
