@@ -1,0 +1,103 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+
+<h1 class="govuk-heading-xl">Parents names</h1>  
+
+<!-- Form start -->
+<form action="check-your-answers" method="post" class="form">
+  
+ <!-- Names -->
+
+ <!-- Names -->
+ <div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     Mothers names</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     Mothers first name</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+
+<!-- last names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+     Mothers maiden name</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div>
+
+<!-- last name at the time of birth -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+     Mothers last name at the time of birth (optional)</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div>
+
+
+ <!-- Names -->
+ <div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     Other parent details</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     First name</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+
+<!-- last names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+    Last name</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div>
+
+
+
+  
+
+
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
