@@ -36,37 +36,24 @@
 
 <!-- Heading -->
 
-<h1 class="govuk-heading-l">Mother's name</h1>  
+<h1 class="govuk-heading-l">Father/parent details</h1>  
+<p class="govuk-body">You must tell us the names of the father/parent if they are listed on the birth certificate</p>
 
 <!-- Form start -->
-<form action="father-parent-names" method="post" class="form">
-  
- <!-- Names -->
+<form action="check-your-answers" method="post" class="form">
 
+   
  <!-- Names -->
  <div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="mothersFirstName">
-     First name</label>
-  <input class="govuk-input" id="mothersFirstName" name="mothersFirstName" type="text"
-     value="">
+  <label class="govuk-label govuk-label" for="first-name">First name (optional)</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"value="">
 </div>
 
 <!-- last names -->
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="mothersMaidenName">
-     Maiden name</label>
-  <input class="govuk-input" id="mothersMaidenName" name="mothersMaidenName" type="text"
-     value="">
+  <label class="govuk-label govuk-label" for="middleName">Last name (optional)</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text" value="">
 </div>
-
-<!-- last name at the time of birth -->
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="lastNameAtBirth">
-     Last name at the time of birth (optional)</label>
-  <input class="govuk-input" id="lastNameAtBirth" name="lastNameAtBirth" type="text"
-     value="">
-</div>
-
 
          <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue
