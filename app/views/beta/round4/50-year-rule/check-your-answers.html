@@ -70,7 +70,7 @@
             Mothers maiden name
          </dt>
          <dd class="govuk-summary-list__value">
-           {{ data['mothersMaidenName']}}
+           {{ data['mothersMaidenName'] or "Not supplied" }}
          </dd>
          <dd class="govuk-summary-list__actions">
            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -92,7 +92,7 @@
            Father/parent first name
          </dt>
          <dd class="govuk-summary-list__value">
-            {{ data['fatherFirstName' or "Not supplied" ]}}
+               {{ data['fatherFirstName'] or "Not supplied" }}
          </dd>
          <dd class="govuk-summary-list__actions">
            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -103,7 +103,7 @@
            Father/parent last name
          </dt>
          <dd class="govuk-summary-list__value">
-              {{ data['fathersLastName' or "Not supplied" ]}}
+            {{ data['fathersLastName'] or "Not supplied" }}
          </dd>
          <dd class="govuk-summary-list__actions">
            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
