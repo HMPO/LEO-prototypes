@@ -1,7 +1,24 @@
-{% extends "layouts/main.html" %}
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,6 +27,7 @@
   href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
+{% set serviceName = "Order a certificate" %}
 
 {% block content %}
 
@@ -36,6 +54,7 @@
                     I am ordering on behalf of an adopted person who is searching for their own birth certificate
                   </label>
                 </div>
+                <div class="govuk-radios__divider">or</div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
                   <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
