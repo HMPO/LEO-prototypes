@@ -176,7 +176,7 @@
     word-break: initial;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     tbody tr td {
       padding-right: 0;
     }
@@ -188,7 +188,7 @@
     }
   }
   
-  @media (min-width: 769px) {
+  @media (min-width: 1080px) {
     thead {
       clip: auto;
       -webkit-clip-path: none;
@@ -213,6 +213,23 @@
       display: none;
     }
   }
+
+
+  @media (min-width: 1200px) {
+   tbody tr td {
+    white-space:normal;
+    }
+  } 
+
+
+   @media (min-width: 1345px) {
+   tbody tr td {
+   white-space:nowrap;
+    }
+  } 
+  // .white-space-nowrap {
+  //   white-space:nowrap;
+  // }
 // --------------------------- Results table styling END --------------------------- //
 
 
