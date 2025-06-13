@@ -215,21 +215,20 @@
   }
 
 
+  //--fixing table to be responsive as table size increased when having larger district names, and full names-//
   @media (min-width: 1200px) {
    tbody tr td {
     white-space:normal;
     }
   } 
 
-
    @media (min-width: 1345px) {
    tbody tr td {
    white-space:nowrap;
     }
   } 
-  // .white-space-nowrap {
-  //   white-space:nowrap;
-  // }
+ //--// 
+
 // --------------------------- Results table styling END --------------------------- //
 
 
