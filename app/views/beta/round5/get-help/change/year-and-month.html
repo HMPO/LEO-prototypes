@@ -2,11 +2,6 @@
 
 {% set navigationItems = [
   {
-    href: "/beta/round3/account/my-account",
-    text: 'My account',
-    id: 'id3'
-  },
-  {
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
@@ -33,13 +28,11 @@
    <div class="govuk-grid-column-two-thirds">
 
 <!-- Heading -->
-<span class="govuk-caption-xl">Search for a record: page 3 of 4</span>
+<!-- <span class="govuk-caption-xl">Search for a record: page 2 of 3</span> -->
 <h1 class="govuk-heading-xl">When was the birth registered?</h1>
 
- <p class="govuk-body">NEEDS CHANGING. Search by the date the birth was registered. This could be up to 6 weeks after the baby was born.</p>
-
 <!-- Form start -->
-<form action="district" method="post" class="form">
+<form action="../check-answers-1" method="post" class="form">
  <!-- year -->
          <div class="govuk-form-group">
              <label class="govuk-label govuk-label--m" for="first-name" for="width-4">
@@ -47,8 +40,9 @@
              <div id="first-name-hint" class="govuk-hint">
                For example, 2010
                </div>
-               <input class="govuk-input govuk-input--width-4" name="yearDeathReg" id="first-name">
+               <input class="govuk-input govuk-input--width-4" name="yearDeathReg" id="first-name" value="{{ data['year'] | default('2023') }}">
             </div>
+
 
 <!-- quarter -->
 <div class="govuk-form-group">
@@ -90,7 +84,7 @@
 
 <div class="govuk-radios__divider">or</div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-6" name="radios" type="radio" value="I don't know">
+        <input class="govuk-radios__input" id="whereDoYouLive-6" name="radios" type="radio" value="I don't know" checked data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
           I don't know
         </label>
