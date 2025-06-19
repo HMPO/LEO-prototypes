@@ -1,0 +1,137 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+{% set homepageLink = "../../../index.html" %}
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+<form action="adoption-question" method="post" class="form">
+            <h1 class="govuk-heading-l">Check the details you entered</h1>
+           <h2 class="govuk-heading-m">Name and sex
+           </h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  First name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['firstName']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Middle names
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['middleName'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Last name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['surname']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Sex
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Male
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+        </dl>
+<h2 class="govuk-heading-m">Mother's maiden name</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Mother's maiden name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['postcode']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/maiden-name">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+        </dl>        
+<h2 class="govuk-heading-m">When was the birth registered?</h2>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Year birth registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['yearDeathReg']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/year-and-month">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Month birth registered
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['radios']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/year-and-month">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+        </dl>
+ <h2 class="govuk-heading-m">District</h2>           
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  District
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['event-name-hint']or "Not supplied"}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state" href="change/district">Change<span class="govuk-visually-hidden"> name</span></a>
+                 </dd>
+          </div>
+        </dl>
+           
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+          <a href="adoption-question.html" class="govuk-button">Continue</a>
+        </div>
+         </div>
+      </form>
+   </div>
+</div>
+
+{% endblock %}
