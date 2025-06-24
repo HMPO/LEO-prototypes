@@ -30,7 +30,7 @@
    <div class="govuk-grid-column-two-thirds">
 <form action="name" method="post" class="form">
 
-            <h1 class="govuk-heading-l">Check your answers NEEDS UPDATING</h1>
+            <h1 class="govuk-heading-l">Check your answers</h1>
 
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -50,7 +50,7 @@
                   Mothers name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                Mary Parker Brown
+                {{ data['mothersFirstName']}}  {{ data['mothersMaidenName'] }}   {{ data['lastNameAtBirth']}}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
@@ -62,7 +62,7 @@
                   Other parent
                 </dt>
                 <dd class="govuk-summary-list__value">
-                Henry Brown
+                {{ data['fatherFirstName'] or "Not supplied" }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
