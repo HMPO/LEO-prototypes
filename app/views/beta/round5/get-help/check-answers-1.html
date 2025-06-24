@@ -31,7 +31,7 @@
                   First name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['firstName']}}
+                  {{ data['first-name']}}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/name-sex-year">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -78,7 +78,7 @@
                   Mother's maiden name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['postcode']}}
+                  {{ data['maidenName']}}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/maiden-name">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -117,7 +117,7 @@
                   District
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['event-name-hint']or "Not supplied"}}
+                  {{data['input-autocomplete'] or "Not supplied" }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/district">Change<span class="govuk-visually-hidden"> name</span></a>
