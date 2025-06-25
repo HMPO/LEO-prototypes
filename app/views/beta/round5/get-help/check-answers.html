@@ -45,31 +45,7 @@
             </dd>
           </div>
 
-           <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Mothers name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                {{ data['mothersFirstName']}}  {{ data['mothersMaidenName'] }}   {{ data['lastNameAtBirth']}}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Other parent
-                </dt>
-                <dd class="govuk-summary-list__value">
-                {{ data['fatherFirstName'] or "Not supplied" }}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
+ <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                Place of birth
                 </dt>
@@ -80,6 +56,56 @@
                   <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
                 </dd>
               </div>
+
+           <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Mother's first name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                {{ data['mothersFirstName']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+           <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Mother's maiden name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                {{ data['mothersMaidenName'] }} 
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+           <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Mother's last name when they gave birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+               {{ data['lastNameAtBirth'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Other parent's full name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                {{ data['fatherFirstName'] or "Not supplied" }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+             
 
           </dl>
 
