@@ -29,7 +29,7 @@ Total paid: £16</br>
 
       <p class="govuk-body"><strong>Birth certificate: Theo Brown, 2019</strong> <br>
     District of birth: {{data['input-autocomplete'] or "Not supplied" }}</br>
-    Quarter: Q3 (July, August or September)<br>
+    Quarter: {{ data['radios'] or "Not supplied"}}<br>
     <!-- Entry number: 505643781<br> -->
     Number of copies: 1</br>
     Your personal reference: {{data['orderReference'] }}<br>
