@@ -1,0 +1,92 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "../account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">What is the delivery address?</h1>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      SO37 1QQ
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+    </dd>
+  </div>
+</dl>
+
+
+   <!-- <p class="govuk-body">Postcode: <span style="margin-left:10px;" class="govuk-!-font-weight-bold">CH41 5LH</span>
+      <a style="margin-left:10px;" href="postcode" class="govuk-link--no-visited-state govuk-link">Change</a>
+    </p> -->
+
+    <!-- Form start -->
+    <form class="form" action="confirm-address" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select an address
+        </label>
+        <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="address-2">
+          <option value="Victoria House, Johnston, SA62 3NF"> 41 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Victoria House, Johnston, SA62 3NF"> 42 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 43 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 44 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 45 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 46 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 47 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 48 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 49 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+          <option value="Gate House, Johnston, SA62 3NF"> 50 East Mill Street, Twyford, Hampshire SO37 1QQ</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-body"><a href="manual-entry" class="govuk-link">I cannot find the address</a></p>
+      </div>
+
+      <div class="govuk-button-group">
+        <a href="confirm-address" class="govuk-button" data-module="govuk-button">Continue</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
