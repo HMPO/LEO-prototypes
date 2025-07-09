@@ -1,0 +1,63 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Provide additional details</h1>
+
+      <form class="form" action="DOB" method="post">
+
+        <p class="govuk-body">You have to provide additional details to complete your order. This is because the birth occurred in the last 50 years</p>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p class="govuk-body">You will need to tell us:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>their date of birth</li>
+          <li>their parents’ full names</li>
+          <li>their mother’s maiden name</li>
+          <li>the person date of birth</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">If the details you tell us do not match</h2>
+        <p class="govuk-body">You will get a full refund if we cannot find a record that matches the answers you provide.</p>
+      
+        <div class="govuk-button-group">
+          <a href="DOB" class="govuk-button" data-module="govuk-button">Continue</a>
+       </div>
+
+        <!-- {{ govukButton({
+          text: "Continue"
+        }) }} -->
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
