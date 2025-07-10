@@ -186,6 +186,9 @@
     tbody tr {
       border-bottom: 3px solid grey;
     }
+ .govuk-table__caption  {
+    font-size: 24px;
+  }
   }
   
   @media (min-width: 1080px) {
@@ -199,6 +202,9 @@
       position: relative;
       width: auto;
     }
+     .govuk-table__caption  {
+    font-size: 24px;
+  }
     
     tbody tr {
       display: table-row;
@@ -215,6 +221,13 @@
   }
 
 
+   @media (max-width: 768px) {
+    .govuk-table__caption  {
+    font-size: 20px;
+  }
+} 
+
+
   //--fixing table to be responsive as table size increased when having larger district names, and full names-//
   @media (min-width: 1200px) {
    tbody tr td {
@@ -227,6 +240,8 @@
    white-space:nowrap;
     }
   } 
+
+  
  //--// 
 
 // --------------------------- Results table styling END --------------------------- //
