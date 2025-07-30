@@ -1,0 +1,87 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "#",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        My account
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['accountNameFirst']}}      {{ data['accountNameSecond']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="what-is-your-name">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Delivery address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            74 Westgate Hill St, Liverpool, CH41 5LH
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="delivery-address">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Billing address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            74 Westgate Hill St, Liverpool, CH41 5LH
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="billing-address">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+
+    
+      </dl>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
