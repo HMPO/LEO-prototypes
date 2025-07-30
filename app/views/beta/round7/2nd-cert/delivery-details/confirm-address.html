@@ -1,0 +1,71 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "../account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <form action="save-delivery-address" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+      Confirm delivery address
+      </h1>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 Lime Street Manchester M24VD
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+            <div class="govuk-button-group">
+              <a href="save-delivery-address" class="govuk-button" data-module="govuk-button">Continue</a>
+            </div>
+
+</form>
+
+
+        </div>
+        </div>
+
+{% endblock %}

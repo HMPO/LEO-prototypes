@@ -1,0 +1,226 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round3/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <h1 class="govuk-heading-l">
+        Search results
+      </h1>
+
+      <form class="form" action="../../get-help/get-help-start.html" method="post">
+
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Your search
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                First name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['first-name'] or "Not supplied" }}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd> 
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Middle names
+              </dt>
+              <dd class="govuk-summary-list__value"> 
+                {{ data['middleName'] or "Not supplied" }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Last name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['surname']}}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Sex
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['sexRadios']}}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+
+              
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Mother's maiden name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  {{ data['maidenName']}}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Year birth registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+               {{ data['yearDeathReg']}}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Month birth registered
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['radios'] }} 
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              District
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['input-autocomplete'] or "Not supplied" }}
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </details>
+
+     
+     
+
+      </div>
+    </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <!--table-->
+    <div class="container">
+      <table class="govuk-table responsive-table" role="table">
+        <caption class="govuk-table__caption govuk-table__caption--m">2 results returned</caption>
+        <thead class="govuk-table__head" role="rowgroup">
+          <tr class="govuk-table__row" role="row">
+            <th class="govuk-table__header" role="columnheader" scope="col">Full name</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Mother's maiden name</th>
+            <th class="govuk-table__header"role="columnheader" scope="col">Year registered</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">District of birth</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Quarter</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Entry number</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" role="row">
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true">Full name</span>Olivia Jane Brown</td>
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true">Mother's maiden name</span>Parker</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2019</td>
+            <td role="cell" style="white-space: nowrap;"><span class="responsive-table__heading" aria-hidden="true">District of birth</span>HAMPSHIRE (813-1A) </td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501276845</td>
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true"></span><a href="selected-record-row-2" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>
+
+           <tr class="govuk-table__row" role="row">
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true">Full name</span>Olivia Rose Brown</td>
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true">Mother's maiden name</span>Parker</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Year registered</span>2019</td>
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true">District of birth</span>HAMPSHIRE (813-1A)</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Quarter</span>Q2</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Entry number</span>501219786</td>
+            <td role="cell" class="white-space-nowrap"><span class="responsive-table__heading" aria-hidden="true"></span><a href="" class="govuk-link govuk-link--no-visited-state table-col-search">Select record</a></td>
+          </tr>    
+         
+        </tbody>
+      </table>
+    </div>
+    <!--table-->
+<br>
+
+
+
+  </div>
+</div>
+<br>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Get help searching</h2>
+        <p><a href="../get-help/get-help-start.html" class="govuk-link govuk-link govuk-link--no-visited-state">Our team can search for you</a> if you need help. This will cost an extra £3.50 and take 15 working days.</p>
+</div>
+</div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
