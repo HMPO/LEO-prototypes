@@ -1,0 +1,52 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Continue to the certificate ordering service
+      </h1>
+
+      <form class="form" action="https://www.gro.gov.uk/gro/content/certificates/login.asp" method="post">
+
+        <p class="govuk-body">Based on your answers, you have to use our older service.</p>
+        <p class="govuk-body">We are developing a new service which is currently only available for some orders.</p>
+        
+      
+      <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I need help doing things online
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+ You can call the General Register Office and ask for help if you cannot use this site.<br>    
+  <br>   
+          Find out how to <a href="https://www.gov.uk/general-register-office">contact the General Register Office<a/>.
+  </div>
+</details>
+       
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
