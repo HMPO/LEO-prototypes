@@ -2,13 +2,13 @@
 
 {% set navigationItems = [
   {
-    href: "../account/my-account",
+    href: "/beta/round7/account/my-account-filled in",
     text: 'My account',
     id: 'id3'
   },
   {
       href: "#",
-      text: 'Basket (1)',
+      text: 'Basket (0)',
       id: 'id3'
     }
     ]
@@ -19,62 +19,65 @@
 {% block pageTitle %}
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
-
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Billing address</h1>
-
- <p class="govuk-body">You have used the following address for delivery:</p>
-
-    <form class="form" action="save-billing-address" method="post">
-
-      <div class="govuk-inset-text">
-       7 Lime Street Manchester M24VD
-      </div>
-
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is your billing address?
+        </h1>
+      </legend>
       <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="code">
-           Use this for your billing address?
+        <label class="govuk-label" for="address-line-1">
+          Address line 1
         </label>
-        <div id="changedName-hint" class="govuk-hint">
-          The billing address is the address associated with your payment card
-        </div>
-         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
-          Yes
-        </label>
+        <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1" value="74 Westgate Hill St">
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          No
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          Address line 2 (optional)
         </label>
+        <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
       </div>
-    </div>
-  </fieldset>
-</div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2" value="Liverpool">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County (optional)
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="CH41 5LH">
+      </div>
+    </fieldset>
 
-    <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-           Continue
-        </button>
+
+
+
+      <div class="govuk-button-group">
+        <a href="my-account-filled in" class="govuk-button" data-module="govuk-button">Save</a>
       </div>
-      
-    </form>
+  
   </div>
 </div>
 
