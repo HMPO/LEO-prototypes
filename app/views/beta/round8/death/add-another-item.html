@@ -1,0 +1,93 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round7/account/my-account-filled in",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        PLACEHOLDER Add another item
+      </h1>
+
+   <p class="govuk-body">Use this service to order a birth or death certificate from 2010. You will need to use our older service for any other record.</p>
+
+
+<!-- Form start -->
+<form action="/" method="post" class="form">
+  
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        What are you searching for?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="AddAnotherItem" name="AddAnotherItem" type="radio" value="birth">
+        <label class="govuk-label govuk-radios__label" for="AddAnotherItem">
+          A birth certificate registered after 1 January 2010
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="AddAnotherItem-2" name="AddAnotherItem" type="radio" value="death">
+        <label class="govuk-label govuk-radios__label" for="AddAnotherItem-2">
+          A death certificate registered after 1 January 2010
+        </label>
+      </div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="AddAnotherItem-6" name="AddAnotherItem" type="radio" value="basket">
+        <label class="govuk-label govuk-radios__label" for="AddAnotherItem-6">
+          Neither of these, take me back to my basket
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  
+
+
+
+
+
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
