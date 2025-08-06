@@ -1,0 +1,100 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account-filled in",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!-- Heading -->
+    <h1 class="govuk-heading-l">Add a personal reference</h1>
+
+    
+      <p class="govuk-body">You could use this if you are researching your ancestry, for example 'Evans family tree'.</p>
+      <p>Only you will see this. It will appear on the confirmation email for your order.</p>
+
+  
+
+    <!-- Form start -->
+    <form class="form" action="../gov-pay/basket" method="post">
+
+
+<div class="govuk-form-group" action="../gov-pay/basket"> 
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+      Do you want to add a personal reference?
+      </h2>
+    </legend>
+     
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes" name="personalReference" type="radio" value="yes" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="yes">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="orderReference">
+            Personal reference
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="orderReference" name="orderReference" spellcheck="false">
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no" name="personalReference" type="radio" value="no" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="no">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<!--
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="orderReference">
+          Your personal reference (optional)
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="orderReference" name="orderReference" type="text">
+      </div> -->
+     
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+           Add item to basket
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+{% endblock %}
