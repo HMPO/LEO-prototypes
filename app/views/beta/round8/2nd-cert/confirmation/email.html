@@ -1,0 +1,74 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><b>From:</b> General Register Office<br>
+      <b>Subject:</b> Receipt and order confirmation - HDJ123F</p>
+      <hr>
+      <p class="govuk-body">Dear {{data['accountNameFirst'] }} {{data['accountNameSecond'] }},</p>
+     
+ <h2 class="govuk-heading-m">Order summary</h2>
+<p class="govuk-body">Order number: HDJ123F</br>
+Number of items: 1</br>
+Total paid: £16</br>
+    Delivery address: 47 East Mill Street, Twyford, Hampshire SO37 1QQ<br>
+    Billing address: 47 East Mill Street, Twyford, Hampshire SO37 1QQ</br>
+<br>
+<hr>
+<br>
+
+      <h3 class="govuk-heading-m">Item summary</h3>
+      <p class="govuk-body">You provided the following details for our team to search for you.</p>
+      <p class="govuk-body">If we can find a record that matches, it will be sent by standard UK shipping (second class post) and should be dispatched by Tuesday 5 August.</p>
+      <p>Estimated delivery date: Monday 11 August.</p>
+      <p class="govuk-body">You would be refunded £8.50 if we cannot find a record that matches these details.</p>
+
+      <p class="govuk-body"><strong>Birth certificate (get help searching): Theo Brown, 2019</strong> <br>
+    District of birth: {{data['input-autocomplete'] or "Not supplied" }}</br>
+    Quarter: {{ data['radios'] or "Not supplied"}}<br>
+    <!-- Entry number: 505643781<br> -->
+    Number of copies: 1</br>
+    Your personal reference: {{data['orderReference'] }}<br>
+</p>
+ <p class="govuk-body"><strong>Additional details</strong> <br>
+    <!-- You provided the following additonal details because the birth was registered in the last 50 years. If these details do not match our records, we will be unable to send you the certificate and you will get a full refund.<p> 
+    
+    <p> -->Date of birth: 27 March 2019</br>
+    Mother's first name: {{ data['mothersFirstName']}}<br>
+    Mother's maiden name: {{ data['mothersMaidenName'] }}<br>
+    Mother's last name when they gave birth: {{ data['lastNameAtBirth'] or "Not supplied" }}</br>
+    Other parent's full name: {{ data['fatherFirstName'] or "Not supplied" }}<br>
+</p>
+  <!-- <br>
+
+  <p class="govuk-body"><strong>Death certificate: Adam Calvin Parker, 2023</strong> <br>
+    District of death: Manchester</br>
+    Quarter: Q1<br>
+    Entry number: 509878736<br>
+    Number of copies: 1</br>
+    Delivery address: 198 Burton Rd, Manchester, M20 1LH<br>
+    Billing address same as delivery address: yes</br>
+</p>
+  <br> -->
+<hr>
+<br>
+      
+<h2 class="govuk-heading-m">Contact us</h2>
+
+<p class="govuk-body">Find out how to contact us: <a href="https://www.gov.uk/general-register-office">https://www.gov.uk/general-register-office</a></p>
+
+      <p class="govuk-body govuk-!-margin-top-7">
+          Regards,<br />
+          General Register Office
+      </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+      <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
+  </div>
+</div>
+{% endblock %}
