@@ -643,7 +643,7 @@ router.post('/beta/round8/triage/triage-question-3', function(request, response)
 // ------------------------- BETA triage round 8 END ----------------------------//
 
 // ------------------------- BETA Routing question page for mix of cert types round 8 END ----------------------------//
-router.post('/beta/round8/death/add-another-item-copy', function(request, response) {
+router.post('/beta/round8/death/add-another-item', function(request, response) {
 
 	var addanother = request.session.data['addanother']
 	if ( addanother == "birth"){
@@ -653,7 +653,7 @@ router.post('/beta/round8/death/add-another-item-copy', function(request, respon
 		response.redirect("home-page-death.html")
 	} 
     else {
-		response.redirect("basket.html")
+		response.redirect("../gov-pay/basket.html")
 	}
 })
 
