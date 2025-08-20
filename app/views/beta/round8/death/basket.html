@@ -8,7 +8,7 @@
   },
   {
       href: "#",
-      text: 'Basket (1)',
+      text: 'Basket (2)',
       id: 'id3'
     }]
   %} 
@@ -109,15 +109,87 @@
           <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
         </dd>
       </div>
+
       
     </dl>
   </div>
 </div>
             </div>
           </div>
+        <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Death certificate: John Joe Smith, 2023        </span> 
+              </h2>
+            </div>
 
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+             <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Item details 
+    </h2>
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove from basket</a>
+    </p>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Shipping method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Standard UK (2nd class post)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of copies
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+               <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Your reference
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+{{ data['orderReferenceDeath'] or "" }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £12.50
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+        </dd>
+      </div>
 
       
+    </dl>
+  </div>
+</div>
+
+      </div>
+       
+      </div>  
         
         </div>
        
@@ -128,8 +200,8 @@
         <h3 class="govuk-heading-m">Order summary</h3>
 
         <form class="form" action="" method="post">
-        <p><b>Number of items:</b> 1<br>
-        <b>Total cost:</b> £12.50</p>
+        <p><b>Number of items:</b> 2<br>
+        <b>Total cost:</b> £25</p>
         
         <h3 class="govuk-heading-s">How to pay</h3>
         <img src="/public/img/cards.png" style="margin-bottom:30px;">
