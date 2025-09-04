@@ -1,0 +1,167 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round7/account/my-account-filled in",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<!--styling for auto complete-->
+<style>.autocomplete__wrapper{position:relative}.autocomplete__hint,.autocomplete__input{-webkit-appearance:none;appearance:none;border:2px solid #0b0c0c;border-radius:0;box-sizing:border-box;height:2.5rem;line-height:1.25;margin-bottom:0;width:100%}.autocomplete__input{background-color:transparent;position:relative}.autocomplete__hint{color:#505a5f;position:absolute}.autocomplete__input--default{padding:5px}.autocomplete__input--focused{box-shadow:inset 0 0 0 2px;outline:3px solid #fd0;outline-offset:0}.autocomplete__input--show-all-values{cursor:pointer;padding:5px 35px 5px 5px}.autocomplete__dropdown-arrow-down{display:inline-block;height:24px;position:absolute;right:8px;top:10px;width:24px;z-index:-1}.autocomplete__menu{background-color:#fff;border:2px solid #0b0c0c;border-top:0;color:#0b0c0c;margin:0;max-height:342px;overflow-x:hidden;padding:0;width:100%;width:calc(100% - 4px)}.autocomplete__menu--visible{display:block}.autocomplete__menu--hidden{display:none}.autocomplete__menu--overlay{box-shadow:0 2px 6px rgba(0,0,0,.257);left:0;position:absolute;top:100%;z-index:100}.autocomplete__menu--inline{position:relative}.autocomplete__option{border-bottom:1px solid #b1b4b6;border-left-width:0;border-right-width:0;border-top-width:1px;cursor:pointer;display:block;position:relative}.autocomplete__option>*{pointer-events:none}.autocomplete__option:first-of-type{border-top-width:0}.autocomplete__option:last-of-type{border-bottom-width:0}.autocomplete__option--odd{background-color:#f3f2f1}.autocomplete__option--focused,.autocomplete__option:hover{background-color:#1d70b8;border-color:#1d70b8;color:#fff;outline:none}@media (-ms-high-contrast:active),(forced-colors:active){.autocomplete__menu{border-color:FieldText}.autocomplete__option{background-color:Field;color:FieldText}.autocomplete__option--focused,.autocomplete__option:hover{background-color:Highlight;background-color:SelectedItem;border-color:SelectedItem;color:HighlightText;color:SelectedItemText;forced-color-adjust:none;outline-color:SelectedItemText}}.autocomplete__option--no-results{background-color:#f3f2f1;color:#505a5f;cursor:not-allowed}.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1rem;font-weight:400}.autocomplete__hint,.autocomplete__option{padding:5px}@media (min-width:641px){.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1.1875rem;line-height:1.3157894737}}</style>
+<!--END styling for auto complete-->
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+<span class="govuk-caption-l">Quick search: page 2 of 2</span>
+<h1 class="govuk-heading-l">GRO index reference</h1>  
+
+<!-- Form start -->
+<form action="maiden-name" method="post" class="form">
+
+
+  <!--first name -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     What is their name?</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     First name</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+ <!--middle names 
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+     Middle names (optional)</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div> -->
+
+ <!--Surname -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="surname">
+     Last name</label>
+
+  <input class="govuk-input" id="surname" name="surname" type="text"
+     value="">
+</div> 
+
+<!--date-->
+
+ <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          What is their date of birth?</h2>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 27 3 2010
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+      
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+<!--first name -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     What is their mother's name?</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     Mother's first name</label>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+ <!--middle names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="middleName">
+     Mother's maiden name</label>
+  <input class="govuk-input" id="middleName" name="middleName" type="text"
+     value="">
+</div>
+
+ <!--Surname -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="surname">
+     Mother's last name at the time of birth (optional)</label>
+
+  <input class="govuk-input" id="surname" name="surname" type="text"
+     value="">
+</div> 
+
+<!--first name -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m">
+     What is their other parent's full name?</label>
+  <label class="govuk-label govuk-label" for="first-name">
+     </label>
+     <div id="event-name-hint" class="govuk-hint">
+    Leave blank if only their mother would be included on their birth certificate
+  </div>
+  <input class="govuk-input" id="first-name" name="first-name" type="text"
+     value="">
+</div>
+
+
+
+
+  </fieldset>
+</div>
+
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
