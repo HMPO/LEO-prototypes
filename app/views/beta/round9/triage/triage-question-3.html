@@ -1,0 +1,80 @@
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/beta/round8/triage/triage-question-3" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What delivery method do you need?
+              </h1>
+            </legend>
+            
+          
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="standard">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Standard UK: £12.50
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Dispatched by Tuesday 9 September by second class post
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Priority UK: £38.50
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Dispatched Thursday 4 September by first class or priority post
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Overseas delivery
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Send to an address outside the UK
+                </div>
+              </div>
+            
+              
+            </div>
+          </fieldset>
+        </div>
+
+        
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
