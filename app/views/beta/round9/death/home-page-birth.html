@@ -1,0 +1,74 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+ {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Order a birth certificate
+      </h1>
+
+      <form class="form" action="../search/search-1" method="post">
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body">You will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the year the birth was registered</li>
+          <li>their surname at birth</li>
+          <li>their sex at birth</li>
+          <li>a debit or credit card, to order a certificate</li>
+        </ul>
+
+        <p>The details you provide should be as they would be written on official documents, such as a passport, marriage certificate or driving licence.</p>
+        
+        <p class="govuk-body">If the birth was registered in the last 50 years, you will also need to tell us:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>their date of birth</li>
+          <li>their mother’s first and maiden names</li>
+          <li>their other parent’s full name</li>
+        </ul>
+  
+      
+        <div class="govuk-button-group">
+          <a href="../search/search-1" class="govuk-button" data-module="govuk-button">Continue</a>
+       </div>
+
+        <!-- {{ govukButton({
+          text: "Continue"
+        }) }} -->
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

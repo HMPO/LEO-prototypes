@@ -1,0 +1,224 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+ {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<!--styling for auto complete-->
+<style>.autocomplete__wrapper{position:relative}.autocomplete__hint,.autocomplete__input{-webkit-appearance:none;appearance:none;border:2px solid #0b0c0c;border-radius:0;box-sizing:border-box;height:2.5rem;line-height:1.25;margin-bottom:0;width:100%}.autocomplete__input{background-color:transparent;position:relative}.autocomplete__hint{color:#505a5f;position:absolute}.autocomplete__input--default{padding:5px}.autocomplete__input--focused{box-shadow:inset 0 0 0 2px;outline:3px solid #fd0;outline-offset:0}.autocomplete__input--show-all-values{cursor:pointer;padding:5px 35px 5px 5px}.autocomplete__dropdown-arrow-down{display:inline-block;height:24px;position:absolute;right:8px;top:10px;width:24px;z-index:-1}.autocomplete__menu{background-color:#fff;border:2px solid #0b0c0c;border-top:0;color:#0b0c0c;margin:0;max-height:342px;overflow-x:hidden;padding:0;width:100%;width:calc(100% - 4px)}.autocomplete__menu--visible{display:block}.autocomplete__menu--hidden{display:none}.autocomplete__menu--overlay{box-shadow:0 2px 6px rgba(0,0,0,.257);left:0;position:absolute;top:100%;z-index:100}.autocomplete__menu--inline{position:relative}.autocomplete__option{border-bottom:1px solid #b1b4b6;border-left-width:0;border-right-width:0;border-top-width:1px;cursor:pointer;display:block;position:relative}.autocomplete__option>*{pointer-events:none}.autocomplete__option:first-of-type{border-top-width:0}.autocomplete__option:last-of-type{border-bottom-width:0}.autocomplete__option--odd{background-color:#f3f2f1}.autocomplete__option--focused,.autocomplete__option:hover{background-color:#1d70b8;border-color:#1d70b8;color:#fff;outline:none}@media (-ms-high-contrast:active),(forced-colors:active){.autocomplete__menu{border-color:FieldText}.autocomplete__option{background-color:Field;color:FieldText}.autocomplete__option--focused,.autocomplete__option:hover{background-color:Highlight;background-color:SelectedItem;border-color:SelectedItem;color:HighlightText;color:SelectedItemText;forced-color-adjust:none;outline-color:SelectedItemText}}.autocomplete__option--no-results{background-color:#f3f2f1;color:#505a5f;cursor:not-allowed}.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1rem;font-weight:400}.autocomplete__hint,.autocomplete__option{padding:5px}@media (min-width:641px){.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1.1875rem;line-height:1.3157894737}}</style>
+<!--END styling for auto complete-->
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <span class="govuk-caption-xl">Search for a record: page 3 of 3</span>
+   <h1 class="govuk-heading-xl">District</h1>
+
+      <form class="form" action="result-pages/page-1" method="post">
+
+        <p>Entering a district could help narrow your search results. </p>  
+        <p class="govuk-body">A district could be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a town, for example Bridgend</li>
+          <li>a city, for example Nottingham</li>
+          <li>a county, for example Lancashire</li>
+         <li>a part of a county, for example Mid Devon</li>
+
+        </ul>
+<br>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="searchArea">
+            What district was the death registered in? (optional)</label>
+           <div id="event-name-hint" class="govuk-hint">Choose a district from the list
+            </div>
+            <div id="searchArea-container"></div>
+        </div>
+        
+        <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+        <script>
+          const authorities = [
+          'Aberayron',
+          'Aberconwy',
+          'Abergavenny',
+          'Aberystwith',
+          'Abingdon',
+          'Acle',
+          'Alcester',
+          'Alderbury',
+          'Aldershot',
+          'Aldridge & Brownhills',
+          'Aled',
+          'Alnwick',
+          'Alresford',
+          'Alston',
+          'Alton',
+          'Altrincham',
+          'Alverstoke',
+          'Alyn & Deeside',
+          'Amber Valley',
+          'Amersham',
+          'Amesbury',
+          'Amounderness',
+          'Ampthill',
+          'Andover',
+          'Anglesey',
+          'Appleby',
+          'Ardudwy',
+          'Ardwick',
+          'Ashbourne',
+          'Ashby de la Zouche',
+          'Ashford',
+          'Ashton',
+          'Ashton under Lyne',
+          'Askrigg',
+          'Aston',
+          'Atcham',
+          'Atherstone',
+          'Auckland',
+          'Axbridge',
+          'Axminster',
+          'Aylesbury',
+          'Aylesham',
+          'Aysgarth',
+          
+          'Bakewell',
+          'Bala',
+          'Banbury',
+          'Bangor',
+          'Barking',
+          'Barkston Ash',
+          'Barnet',
+          'Barnsley',
+          'Barnstaple',
+          'Barrow In Furness',
+          'Barrow on Soar',
+          'Barton',
+          'Barton on Irwell',
+          'Barton Regis',
+          'Basford',
+          'Basildon',
+          'Basingstoke',
+          'Bassetlaw',
+          'Bath',
+          'Bathavon',
+          'Battersea',
+          'Battle',
+          'Beaminster',
+          'Bedale',
+          'Bedford',
+          'Bedfordshire',
+          'Bedminster',
+          'Bedwelty',
+          'Belford',
+          'Bellingham',
+          'Belper',
+          'Berkhamstead',
+          'Bermondsey',
+          'Berwick on Tweed',
+          'Bethnal Green',
+          'Beverley',
+          'Bexley',
+          'Bicester',
+          'Bideford',
+          'Biggleswade',
+          'Billericay',
+          'Billesdon',
+          'Bilston',
+          'Bingham',
+          'Birkenhead',
+          'Birmingham',
+          'Bishop Gate',
+          'Bishops Stortford',
+          'Blaby',
+          'Blackburn',
+          'Blackpool',
+          'Blaenau Gwent',
+          'Blandford',
+          'Blean',
+          'Blofield',
+          'Bloomsbury',
+          'Blyth',
+          'Blything',
+          'Bodmin',
+          'Bolton',
+          'Bootle',
+          'Border',
+          'Bosmere',
+          'Boston',
+          'Bourne',
+          'Bournemouth',
+          'Bournemouth, Christchurch and Poole',
+          'Brackley',
+          'Bracknell',
+          'Bracknell Forest',
+          'Bradfield',
+          'Bradford',
+          'Bradford on Avon',
+          'Braintree',
+          'Bramham',
+          'Bramley',
+          'Brampton',
+          'Brecknock',
+          'Brent',
+          'Brentford',
+          'Brentwood',
+          'Bridge',
+          'Bridgend',
+          'Bridgnorth','Bridgwater','Bridlington','Bridport','Brightford','Brighton','Bristol','Brixworth','Bromley','Bromsgrove','Bromyard','Broxbourne','Buckingham','Buckinghamshire','Bucklow','Buckrose','Builth','Bullingdon','Bulmer','Buntingford','Burnley','Burton on Trent','Bury','Bury St Edmunds',
+'Caerleon','Caernarvon','Caerphilly','Caistor','Calder','Calderdale','Calne','Camberwell','Cambourne Redruth','Cambridge','Cambridgeshire','Camden','Camelford','Cannock','Canterbury','Cardiff','Cardigan','Cardiganshire','Carlisle','Carmarthen','Carmarthenshire','Carnarvon','Castle Point & Rochford','Castle Ward','Castleford','Catherington','Caxton','Central Bedfordshire','Central Cleveland','Ceredigion','Cerne','Chailey','Chanctonbury','Chapel en le Frith','Chard','Chatham','Cheadle','Chelmsford','Chelsea','Cheltenham','Chepstow','Chertsey','Cheshire','Cheshire East','Cheshire West and Chester','Chester','Chester le Street','Chesterfield','Chesterton','Chichester','Chiltern','Chippenham','Chipping Norton','Chipping Sodbury','Chorley','Chorlton','Christchurch','Church Stretton','Cirencester','City of London','City of Westminster','Claro','Claydon','Cleethorpes','Cleobury Mortimer','Clerkenwell','Cleveland','Clifton','Clitheroe','Clun','Clutton','Coalville','Cockermouth','Colchester','Colwyn','Congleton','Conway','Cookham','Corby','Cornwall','Corwen','Cosford','Coventry','Cowbridge','Cranbrook','Crawley','Crediton','Crewe','Crickhowell','Cricklade','Crosby','Crowborough','Croydon','Cuckfield','Cumberland','Cumbria','Dacorum','Darlington','Dartford','Darwen','Daventry','Dawley','De Meirionwydd','Deben','Delyn','Denbigh','Denbighshire','Denbighshire','Deptford','Depwade','Derby','Derbyshire','Devizes','Devon Central','Devonport','Dewsbury','Docking','Dolgelly','Don Valley','Doncaster','Dorchester','Dore','Dorking','Dorset','Dover','Dowborough','Downham','Drayton','Driffield','Droitwich','Droxford','Dudley','Dulverton','Dunmow','Dunstable','Durham','Dursley','Dwyffryn Conwy','Dwyfor','Ealing','Easington','Easingwold','East Ashford','East Cleveland','East Dereham','East Devon','East Dorset','East Elloe','East Flegg','East Glamorgan','East Grinstead','East Ham','East London','East Preston','East Retford','East Riding of Yorkshire','East Staffordshire','East Stonehouse','East Surrey','East Sussex','East Ward','Eastbourne','Easthampstead','Eastleigh','Eastry','Ecclesall Bierlow','Ecclesfield','Edmonton','Elham','Ellesmere','Elstree & Potters Bar','Ely','Enfield','Epping','Epsom','Erewash','Erpingham','Essex','Essex South West','Eton','Everton','Evesham','Ewecross','Exeter','Exmoor','Fakenham','Falmouth','Fareham','Faringdon','Farnborough','Farnham','Farnworth','Farringdon','Faversham','Fenland','Ffestiniog','Finsbury','Fleetwood','Flegg','Flintshire','Foleshill','Folkestone','Forden','Fordingbridge','Forehoe','Forest of Dean','Freebridge Lynn','Frome','Fulham','Fylde','Gainsborough','Garrigill','Garstang','Gateshead','Gipping','Glamorgan','Glanford Brigg','Glendale','Glossop','Gloucester','Gloucestershire','Glyndwr','Godstone','Goole','Gosport','Gower','Grantham','Gravesend','Great Boughton','Great Ousebourn','Great Yarmouth','Greenwich','Grimsby','Guildford','Guiltcross','Guisborough','Gwynedd','Hackney','Hailsham','Halifax','Halstead','Halton','Haltwhistle','Hambledon','Hammersmith','Hampshire','Hampshire North','Hampstead','Happing','Hardingstone','Haringey','Harlow','Harrow','Hartismere','Hartlepool','Hartley Wintney','Harwich','Haslingden','Hastings','Hatfield','Havant','Haverfordwest','Havering','Hawarden','Hay','Hayfield','Haywards Heath','Headington','Helmsley','Helston','Hemel Hempstead','Hemsworth','Hendon','Henley','Henstead','Hereford','Herefordshire','Hertford','Hertfordshire','Hexham','Heywood','High Peak', 
+'Highworth','Hillingdon','Hinckley','Hiraethog','Hitchin','Holbeach','Holbeck','Holborn','Holderness','Hollingbourn','Holsworthy','Holyhead','Holywell','Honiton','Hoo','Horncastle','Horsham','Horwich','Houghton le Spring','Hounslow','Hove','Howden','Howdenshire','Hoxne','Huddersfield','Hull','Hungerford','Hunslet','Huntingdon','Huntingdonshire North','Hursley','Hyde','Hyndburn & Rossendale','Ilford','Ilkeston','Ince','Ipswich','Isle Of Wight','Isles Of Scilly','Islington','Jarrow','Keighley','Kendal','Kensington','Kent','Kerrier','Kettering','Ketton','Keynsham','Kidderminster','King\'s Lynn','Kings Norton','Kingsbridge','Kingsclere','Kingston','Kingston upon Hull','Kingston upon Thames','Kingswinford','Kingswood','Kington','Kirk Deighton','Kirklees','Kirkstall','Knaresborough','Knighton','Knowsley','Lambeth','Lampeter','Lancashire','Lancaster','Lanchester','Langport','Launceston','Launditch','Leamington & Warwick','Ledbury','Leeds','Leek','Leicester','Leicestershire','Leigh','Leighton Buzzard','Leominster','Lewes','Lewisham','Lexden','Leyburn','Lichfield','Limehouse','Lincoln','Lincolnshire','Linton','Liskeard','Littleborough','Liverpool','Llandiloes','Llandilofawr','Llandovery','Llanelli','Llanelly','Llanfyllin','Llanrwst','Loddon','London City','Long Ashton','Longtown','Lothingland','Loughborough','Louth','Lower Agbrigg','Ludlow','Lunesdale','Luton','Lutterworth','Lymington','Macclesfield','Machynlleth','Madeley','Maelor','Maidenhead','Maidstone','Maldon','Malling','Malmesbury','Malton','Malvern','Manchester','Mansfield','March','Market Bosworth','Market Drayton','Market Harborough','Marlborough','Martley','Marylebone','Matlock','Medway','Melksham','Melton & Rutland','Melton Mowbray','Mendip','Mere','Meriden','Merioneth','Merthyr Tydfil','Merton','Mid Devon','Mid Glamorgan','Mid Powys','Mid Surrey','Mid Warwickshire','Middlesbrough','Middlesex South','Middleton','Midhurst','Mildenhall','Mile End','Millom','Milton','Milton Keynes','Minster','Mitford','Monmouth','Monmouthshire','Montgomery','Morpeth','Mutford','Nantwich','Narberth','Neath','Nelson','New Forest','Newark','Newbury','Newcastle in Emlyn','Newcastle under Lyme','Newcastle upon Tyne','Newent','Newham','Newhaven','Newington','Newmarket','Newport','Newport Pagnell','Newton','Newton Abbot','Newtown','Norfolk','North Aylesford','North Bierley','North Bucks','North Cleveland','North Cotswold','North Devon','North Dorset','North East Cheshire','North East Hampshire','North East Lincolnshire','North Kesteven','North Lincolnshire','North Shields','North Shropshire','North Somerset','North Surrey','North Tyneside','North Walsham','North Warwickshire','North Witchford','North Yorkshire','Northallerton','Northampton','Northamptonshire','Northleach','Northumberland','Northwich','Norton Radstock','Norwich','Nottingham','Nottinghamshire','Nuneaton','Oakehampton','Oakham','Ogwr','Oldbury','Oldham','Ongar','Ormskirk','Orpingham','Orsett','Oswestry','Otley','Oundle','Overton','Oxford','Oxfordshire','Paddington','Pancras','Pateley Bridge','Patrington','Pembroke','Pembrokeshire','Penistone','Penkridge','Penllyn','Penrith','Penzance','Pershore','Peterborough','Petersfield','Petworth','Pewsey','Pickering','Plomesgate','Ploughley','Plymouth','Plympton','Pocklington','Pontardawe','Pontefract','Pontypool','Pontypridd','Poole','Poplar','Portsea','Portsmouth','Potterspury','Powys','Prescot','Presteigne','Preston','Prestwich','Purbeck','Pwllheli','Radford','Radnorshire','Reading','Redbridge','Redcar & Cleveland','Redditch','Redruth','Reeth','Reigate','Repton','Rhayader','Rhondda','Rhondda Cynon Taf','Rhuddlan','Ribble Valley','Richmond','Richmond upon Thames','Ringwood','Ripon','Risbridge','Rochdale','Rochford','Romford','Romney Marsh','Romsey','Ross','Rothbury','Rother Valley','Rotherham','Rotherhithe','Rowley Regis','Royston','Rugby','Runcorn','Rushcliffe','Ruthin','Rutland','Rye','Ryedale','Saddleworth','Saffron Walden','Salford','Salisbury','Samford','Sandwell','Scarborough','Scilly Isles','Sculcoates','Scunthorpe','Sedbergh','Sedgefield','Sedgemoor','Sefton','Seisdon','Selby','Settle','Sevenoaks','Shaftesbury','Shardlow','Sheffield','Sheppey','Shepton Mallet','Shepway','Sherbourne','Shifnal','Shipston on Stour','Shoreditch','Shrewsbury','Shropshire','Sidcup','Sittingbourne','Skipton','Skirlaugh','Sleaford','Slough','Smallburgh','Smethwick','Sodbury','Solihull','Somerset','South Cheshire','South Derbyshire','South Dorset','South East Hampshire','South East Surrey','South Glamorgan','South Gloucestershire','South Hams','South Molton','South Pembrokeshire','South Shields','South Staffordshire','South Stoneham','South Tyneside','South Warwickshire','Southam','Southampton','Southend on Sea','Southport','Southwark','Southwell','Sowe','Spalding','Spen Valley','Spilsby','St Albans','St Asaph','St Austell','St Columb','St Faiths','St George','St Germans','St Giles','St Helens','St Ives','St James','St Lukes','St Martin','St Mary','St Marylebone','St Matthew','St Neots','St Olave','St Pancras','St Saviour','St Thomas','Stafford','Staffordshire','Staffordshire Moorlands','Staincliffe','Staincross','Staines','Stamford','Stepney','Stevenage','Steyning','Stockbridge','Stockport','Stockton','Stoke & Wolstanton','Stoke Damerel','Stoke Newington','Stoke on Trent','Stokesley','Stone','Stourbridge','Stow','Stow on the Wold','Strand','Stratford on Avon','Stratton','Strood','Stroud','Sturminster','Sudbury','Suffolk','Sunderland','Surrey','Sussex','Sutton','Sutton Coldfield','Swadlincote','Swaffham','Swale','Swansea','Swindon','Tadcaster','Tameside','Tamworth','Taunton','Tavistock','Teesdale','Teesside','Teignbridge','Telford','Tenbury','Tendring','Tenterden','Tetbury','Tewkesbury','Thakeham','Thame','Thanet','Thetford','Thingoe','Thirsk','Thornbury','Thorne','Thrapston','Thurrock','Ticehurst','Tisbury','Tiverton','Todmorden','Tonbridge','Torbay','Torfaen','Torquay','Torridge','Torrington','Totnes','Towcester','Tower Hamlets','Toxteth Park','Trafford','Tregaron','Trowbridge','Truro','Tunbridge Wells','Tunstall','Tunstead','Tynemouth','Uckfield','Ulverston','Upper Agbrigg','Uppingham','Upton on Severn','Uttlesford','Uttoxeter','Uxbridge','Vale of Glamorgan','Vale Royal','Vaynor','Wainford','Wakefield','Wallasey','Wallingford','Walsall','Walsingham','Waltham Forest','Wandsworth','Wangford','Wantage','Ware','Wareham','Warley','Warminster','Warrington','Warwick','Warwickshire','Watford','Waveney','Wayland','Weardale','Wednesbury','Wellingborough','Wellington','Wells','Welshpool','Welton','Wem','Wenlock','Wensleydale','Weobley','West Ashford','West Berkshire','West Bridgford','West Bromwich','West Cheshire','West Derby','West Devon','West Dorset','West Firle','West Glamorgan','West Ham','West Hartlepool','West Lancashire','West London','West Oxfordshire','West Somerset','West Surrey','West Sussex','West Ward','Westbourne','Westbury','Westbury on Severn','Westhampnett','Westminster','Westmorland','Weston Super Mare','Wetherby','Weymouth','Wharfedale','Wheatenhurst','Whitby','Whitchurch','Whitechapel','Whitehaven','Whittlesey','Widnes','Wigan','Wigton','Willesden','Williton','Wilton','Wiltshire','Wimborne','Wincanton','Winchcombe','Winchester','Windsor','Winslow','Winstree','Wirral','Wisbech','Witham','Witney','Woburn','Wokingham','Wolstanton','Wolverhampton','Wolverton','Wood Green','Woodbridge','Woodstock','Woolwich','Worcester','Worcestershire','Worksop','Worsley','Worth Valley','Worthing','Wortley',
+          ];
+          accessibleAutocomplete({
+          element: document.querySelector('#searchArea-container'),
+          id: 'searchArea', // To match it to the existing <label>.
+          source: authorities
+        });
+        </script>
+        
+    
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+         
+    </div> 
+  </div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue to search
+</button>
+
+      </form>
+      </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

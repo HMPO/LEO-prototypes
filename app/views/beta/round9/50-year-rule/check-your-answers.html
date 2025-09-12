@@ -1,0 +1,110 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+
+<h1 class="govuk-heading-l">Check your answers</h1>  
+
+<!-- Form start -->
+<form action="../order-details/how-many" method="post" class="form">
+  
+
+   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Date of birth
+         </dt>
+         <dd class="govuk-summary-list__value">
+          27 March 2019
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+         </dd>
+       </div>
+      <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Mother's first name
+         </dt>
+         <dd class="govuk-summary-list__value">
+           {{ data['mothersFirstName']}}
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+            Mother's maiden name
+         </dt>
+         <dd class="govuk-summary-list__value">
+           {{ data['mothersMaidenName'] or "Not supplied" }}
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+            Mother's last name when they gave birth
+         </dt>
+         <dd class="govuk-summary-list__value">
+           {{ data['lastNameAtBirth']}}
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Other parent's full name
+         </dt>
+         <dd class="govuk-summary-list__value">
+               {{ data['fatherFirstName'] or "Not supplied" }}
+         </dd>
+         <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+         </dd>
+       </div>
+      </dl>
+<p class="govuk-body">If these details do not match our records, we will be unable to send you the certificate and you will get a full refund.</p>
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
