@@ -11,7 +11,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -25,7 +24,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--xl\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -39,7 +37,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--l\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -53,7 +50,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--m\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -67,7 +63,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--s\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -82,7 +77,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--xl\">\n    <h1 class=\"govuk-fieldset__heading\">\n      What is your address?\n    </h1>\n  </legend>\n</fieldset>"
         },
         {
@@ -97,7 +91,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--l\">\n    <h1 class=\"govuk-fieldset__heading\">\n      What is your address?\n    </h1>\n  </legend>\n</fieldset>"
         },
         {
@@ -112,7 +105,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--m\">\n    <h1 class=\"govuk-fieldset__heading\">\n      What is your address?\n    </h1>\n  </legend>\n</fieldset>"
         },
         {
@@ -127,7 +119,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend govuk-fieldset__legend--s\">\n    <h1 class=\"govuk-fieldset__heading\">\n      What is your address?\n    </h1>\n  </legend>\n</fieldset>"
         },
         {
@@ -141,7 +132,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend\">\n    <h1 class=\"govuk-fieldset__heading\">\n      What is your address?\n    </h1>\n  </legend>\n</fieldset>"
         },
         {
@@ -155,7 +145,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend\">\n    What is your address?\n  </legend>\n  <div class=\"my-content\">\n  <p>This is some content to put inside the fieldset</p>\n</div>\n\n</fieldset>"
         },
         {
@@ -169,7 +158,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\" aria-describedby=\"test-target-element\">\n  <legend class=\"govuk-fieldset__legend\">\n    Which option?\n  </legend>\n</fieldset>"
         },
         {
@@ -182,7 +170,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend\">\n    What is &lt;b&gt;your&lt;/b&gt; address?\n  </legend>\n</fieldset>"
         },
         {
@@ -195,7 +182,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend\">\n    What is <b>your</b> address?\n  </legend>\n</fieldset>"
         },
         {
@@ -209,7 +195,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\">\n  <legend class=\"govuk-fieldset__legend my-custom-class\">\n    What is your address?\n  </legend>\n</fieldset>"
         },
         {
@@ -223,7 +208,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset app-fieldset--custom-modifier\">\n  <legend class=\"govuk-fieldset__legend\">\n    Which option?\n  </legend>\n</fieldset>"
         },
         {
@@ -237,7 +221,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\" role=\"group\">\n  <legend class=\"govuk-fieldset__legend\">\n    Which option?\n  </legend>\n</fieldset>"
         },
         {
@@ -253,7 +236,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<fieldset class=\"govuk-fieldset\" data-attribute=\"value\">\n  <legend class=\"govuk-fieldset__legend\">\n    Which option?\n  </legend>\n</fieldset>"
         }
     ]

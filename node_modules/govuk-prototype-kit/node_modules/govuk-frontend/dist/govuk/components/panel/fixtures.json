@@ -10,7 +10,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Your reference number: HDJ2123F\n  </div>\n</div>"
         },
         {
@@ -23,7 +22,6 @@
             "hidden": false,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h2 class=\"govuk-panel__title\">\n    Application complete\n  </h2>\n  <div class=\"govuk-panel__body\">\n    Your reference number: HDJ2123F\n  </div>\n</div>"
         },
         {
@@ -35,7 +33,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application &lt;strong&gt;not&lt;/strong&gt; complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Please complete form 1\n  </div>\n</div>"
         },
         {
@@ -47,7 +44,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application <strong>not</strong> complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Please complete <strong>form 1</strong>\n  </div>\n</div>"
         },
         {
@@ -59,7 +55,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Your reference number&lt;br&gt;&lt;strong&gt;HDJ2123F&lt;/strong&gt;\n  </div>\n</div>"
         },
         {
@@ -71,7 +66,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Your reference number<br><strong>HDJ2123F</strong>\n  </div>\n</div>"
         },
         {
@@ -84,7 +78,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation extra-class one-more-class\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Your reference number is HDJ2123F\n  </div>\n</div>"
         },
         {
@@ -100,7 +93,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\" first-attribute=\"foo\" second-attribute=\"bar\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n  <div class=\"govuk-panel__body\">\n    Your reference number is HDJ2123F\n  </div>\n</div>"
         },
         {
@@ -111,7 +103,6 @@
             "hidden": true,
             "description": "",
             "previewLayoutModifiers": [],
-            "screenshot": false,
             "html": "<div class=\"govuk-panel govuk-panel--confirmation\">\n  <h1 class=\"govuk-panel__title\">\n    Application complete\n  </h1>\n</div>"
         }
     ]
