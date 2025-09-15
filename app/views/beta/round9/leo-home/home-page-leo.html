@@ -13,15 +13,24 @@
     }]
   %} 
 
+
+
 {% set homepageLink = "../../index.html" %}
 
 {% block pageTitle %}
-  {{ serviceName }} – GOV.UK Prototype Kit
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
 {% set serviceName = "Order a certificate" %}
 
 {% block content %}
+
 
 
   <div class="govuk-grid-row">
@@ -57,9 +66,6 @@
           <a href="../search/search-1" class="govuk-button" data-module="govuk-button">Continue</a>
        </div>
 
-        <!-- {{ govukButton({
-          text: "Continue"
-        }) }} -->
 
       </form>
 
