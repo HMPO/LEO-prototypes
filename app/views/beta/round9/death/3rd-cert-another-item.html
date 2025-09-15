@@ -43,11 +43,11 @@
         What are you searching for?
       </h2>
 <!--nun jucks for the radios routing-->
-<form class="form" action="/beta/round9/death/add-another-item" method="post">
+<form class="form" action="/beta/round9/death/3rd-cert-add-another-item" method="post">
 
 {{ govukRadios({
-  name: "addanother",
-  value: data['addanother'],
+  name: "addanother3",
+  value: data['addanother3'],
   fieldset: {
     legend: {
       text: "",
@@ -57,18 +57,18 @@
   },
   items: [
     {
-      value: "birth",
+      value: "birth3",
       text: "A birth certificate registered on or after 1 January 2010"
     },
     {
-      value: "death",
+      value: "death3",
       text: "A death certificate registered on or after 1 January 2010"
     },
     {
       divider: "or"
     },
     {
-      value: "basket",
+      value: "basket3",
       text: "Neither of these, take me back to my basket"
     }
   ]

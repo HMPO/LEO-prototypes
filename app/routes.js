@@ -657,6 +657,35 @@ router.post('/beta/round8/death/add-another-item', function(request, response) {
 	}
 })
 
+// ------------------------- ROUND 9 BETA Routing question page for mix of cert types END ----------------------------//
+router.post('/beta/round9/death/add-another-item', function(request, response) {
+
+	var addanother = request.session.data['addanother']
+	if ( addanother == "birth"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother == "death"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("../gov-pay/basket.html")
+	}
+})
+
+//3rd cert
+router.post('/beta/round9/death/3rd-cert-add-another-item', function(request, response) {
+
+	var addanother3 = request.session.data['addanother3']
+	if ( addanother3 == "birth3"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother3 == "death3"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("basket.html")
+	}
+})
 // ------------------------- BETA triage round 9 ----------------------------//
 
 router.post('/beta/round9/triage/triage-question-1', function(request, response) {
