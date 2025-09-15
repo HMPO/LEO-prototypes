@@ -1,8 +1,3 @@
-    {
-          "serviceName": "Your service name",
-          "plugins": {
-            "govuk-frontend": {
-              "rebrand": true
-            }
-          }
-        }
+{
+  "serviceName": "Order a certificate"
+}
