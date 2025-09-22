@@ -81,7 +81,7 @@
             Mother's last name when they gave birth
          </dt>
          <dd class="govuk-summary-list__value">
-           {{ data['lastNameAtBirth']}}
+           {{ data['lastNameAtBirth'] or "Not supplied" }}
          </dd>
          <dd class="govuk-summary-list__actions">
            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>

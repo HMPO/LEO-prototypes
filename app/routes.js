@@ -692,12 +692,16 @@ router.post('/beta/round9/triage/triage-question-1', function(request, response)
     var triageq1 = request.session.data['certTypeBeta4']
     if (triageq1 == "birth"){
         response.redirect("/beta/round9/triage/triage-question-2")
-    } else {
+    } 
+     else if (triageq1 == "death"){
+        response.redirect("/beta/round9/triage/death-triage-question-2")
+    } 
+    else {
         response.redirect("/beta/round9/triage/direct-to-rolo.html")
     }
 })
 
-// Triage - 2nd page (was the death reg before 31 Dec 2009?)
+// Triage - 2nd page
 router.post('/beta/round9/triage/triage-question-2', function(request, response) {
     var triageq2 = request.session.data['certTypeBeta2']
     if (triageq2 == "yes"){
@@ -722,5 +726,15 @@ router.post('/beta/round9/triage/triage-question-3', function(request, response)
     } 
 })
 
+// Triage - Death Question
+router.post('/beta/round9/triage/triage-question-3', function(request, response) {
+    var triageqD = request.session.data['certTypeBeta3']
+    if (triageqD == "yes"){
+        response.redirect("/beta/round9/triage-question-3")
+    } 
+    else if (triageqD == "no"){
+        response.redirect("/beta/round9/triage/direct-to-rolo.html")
+    } 
+})
 // BETA JS
 
