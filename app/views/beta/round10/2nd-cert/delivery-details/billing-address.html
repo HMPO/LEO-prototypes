@@ -1,0 +1,84 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account-filled in",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is your billing address?
+        </h1>
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Address line 1
+        </label>
+        <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1" value="74 Westgate Hill St">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          Address line 2 (optional)
+        </label>
+        <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2" value="Liverpool">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County (optional)
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="CH41 5LH">
+      </div>
+    </fieldset>
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="my-account-filled in" class="govuk-button" data-module="govuk-button">Save</a>
+      </div>
+  
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+
+<h1 class="govuk-heading-l">What is the name of Olivia Jane Brown's other parent?</h1>  
+<p class="govuk-body">You must tell us the name of Olivia Jane Brown's other parent if they would be included on their birth certificate.</p>
+
+<!-- Form start -->
+<form action="check-your-answers" method="post" class="form">
+
+   
+ <!-- Names -->
+ <div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="fatherFirstName">Full name</label>
+  <div id="event-name-hint" class="govuk-hint">
+    Leave blank if only their mother would be included on their birth certificate
+  </div>
+  <input class="govuk-input" id="fatherFirstName" name="fatherFirstName" type="text"value="">
+</div>
+
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}
