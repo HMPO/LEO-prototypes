@@ -1,0 +1,204 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set oneLoginLink = "../your-services-one-login" %}
+
+{% set navigationItems = [
+  {
+    href: "../account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }
+    ]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <form action="save-delivery-address" method="post" class="form">
+
+      <h1 class="govuk-heading-l">
+      How we use your data (privacy notice)
+      </h1>
+
+  <p class="govuk-body-l">Last updated: 1 October 2025</p>
+
+<p class="govuk-body">The order a certificate service is run by the General Register Office. General Register Office is the data controller. A data controller determines how and why personal data can be processed. Read the <a href="https://ico.org.uk/ESDWebPages/Entry/Z1272134">General Register Office’s entry in the Data Protection Public Register for more information</a>.</p>
+
+<h2 class="govuk-heading-m">What data we collect from you</h2>
+
+<p class="govuk-body">We collect several pieces of personal data from our users. These are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+          <li>email address</li>
+          <li>name </li>
+<li>billing and delivery addresses</li>
+</ul>
+
+<p class="govuk-body">We use this data when you create a user account and when you order certificates.</p>
+
+<h3 class="govuk-heading-s">Your email address<h3>
+
+<p class="govuk-body">When you give us your email we will only use it so that you can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+          <li>sign in securely</li>
+<li>be contacted about your order</li>
+</ul>
+
+<h3 class="govuk-heading-s">Your billing and delivery addresses</h3>
+
+<p class="govuk-body">When you give us your billing and delivery addresses, we will only use them to verify payment and send you your order.</p>
+
+<h3 class="govuk-heading-s">Cookies and analytics</h3>
+
+<p class="govuk-body">You can read our <a href="#">full cookie policy</a> to find out how we use cookies to track user journeys using Google Analytics.</p>
+
+<h2 class="govuk-heading-m">What we do with your data<h2>
+
+<p class="govuk-body">We use the information you provide to process any orders you make.</p> 
+
+<p class="govuk-body">We will not:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+          <li>sell or rent your data to third parties</li>
+<li>share your data with third parties for marketing purposes</li>
+</ul>
+
+<p class="govuk-body">We will share your data if we are required to do so by law or if we believe that a certificate is being ordered fraudulently.</p>
+
+<h2 class="govuk-heading-m">GOV.UK One Login</h2>
+
+<p class="govuk-body">To search our online records, you must create or sign in to your GOV.UK One Login.</p>
+
+  <h2 class="govuk-heading-m">Payment details NEEDS CHECKING</h2>
+
+<p class="govuk-body">The payment part of this service is provided by <a href= "https://www.payments.service.gov.uk/">GOV.UK Pay</a> in line with the <a href="https://www.payments.service.gov.uk/privacy/">GOV.UK Pay privacy policy</a>. The General Register Office does not collect or store any of your financial information.</p>
+
+<p class="govuk-body">The General Register Office has access to GOV.UK Pay so that we can resolve customer queries. We can view:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+          <li>your full name</li>
+<li>your email address</li>
+<li>the type of card you used</li>
+<li>the card’s expiry date</li>
+<li>the status of the payment</li>
+</ul>
+
+<p class="govuk-body">We cannot view the credit card number or debit card number. We also cannot view the CCV number.</p>
+
+<p class="govuk-body"><a href="https://www.payments.service.gov.uk/privacy/">Read the GOV.UK Pay privacy policy</a> if you need more details about how they use, store and protect any information you give them.</p>
+
+
+</p>
+
+<h2 class="govuk-heading-m">How long we keep your data</h2>
+
+<p class="govuk-body">TBC</p>
+
+<h2 class="govuk-heading-m">How we protect your data and keep it secure<h2>
+
+<p class="govuk-body">Information you enter into the service is stored in a secure database within the European Economic Area (EEA). However, due to the global nature of the internet, the data sent to and from the database may transit through countries outside of the EEA. Data is not stored in a non-EEA country.</p>
+
+<p class="govuk-body">It may sometimes be necessary to transfer personal information overseas. Any transfers will fully comply with all aspects of data protection law.</p> 
+
+
+<h2 class="govuk-heading-m">Giving feedback about the certificate ordering service</h2>
+
+<p class="govuk-body">You may be asked to provide feedback or take part in research about the certificate ordering service. We use this data to improve our systems.<p>
+
+<p class="govuk-body">The legal basis for processing this data is because you give your consent.</p>
+
+<h2 class="govuk-heading-m">Children’s privacy protection</h2>
+
+<p class="govuk-body">The certificate ordering service is not designed for, or intentionally targeted at, children 13 years of age or younger. It is not our policy to intentionally collect or maintain data about anyone under the age of 13.</p>
+
+<h2 class="govuk-heading-m">Your rights</h2>
+
+<p class="govuk-body">You have the right to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+          <li>ask for information about how your personal data is processed</li>
+
+<li>ask for a copy of all the personal data you’ve given to us - this copy will be provided in a structured, commonly used and machine-readable format</li>
+
+<li>ask for any mistakes in your personal data to be corrected</li>
+
+<li>ask for your personal data to be erased if we no longer need to hold it</li>
+
+<li>raise an objection about how your personal data is processed</li>
+
+<li>If your personal data is processed on the basis of consent, you can withdraw your consent at any time.</li>
+</ul>
+ 
+
+<h2 class="govuk-heading-m">Questions and complaints<h2>
+
+<p class="govuk-body">Contact our privacy team if you:</p>
+<ul class="govuk-list govuk-list--bullet">
+          <li>have any questions about anything in this notice</li>
+
+<li>think that your personal data has been misused or mishandled</li>
+</ul>
+
+<h3 class="govuk-heading-s">Email</h3>
+
+<p class="govuk-body"><a href="mailto gro.communications@gro.gov.uk">gro.communications@gro.gov.uk</a> </p>
+
+<h2 class="govuk-heading-m">Making a complaint to an independent body</h2>
+
+<p class="govuk-body">You can also complain to the Information Commissioner (an independent regulator), for example if your complaint is not resolved by the General Register Office.</p>
+
+<h3 class="govuk-heading-s">Information Commissioner (ICO) email</h3>
+
+<p class="govuk-body"><a href="mailto casework@ico.org.uk">casework@ico.org.uk</a></p>
+
+<h3 class="govuk-heading-s">Telephone</h3>
+
+<p class="govuk-body">0303 123 1113</p>
+
+<h3 class="govuk-heading-s">Post</h3>
+
+<p class="govuk-body">Information Commissioner’s Office </br>
+
+Wycliffe House </br>
+
+Water Lane </br>
+
+Wilmslow </br>
+
+Cheshire </br>
+
+SK9 5AF </p>
+
+<h2 class="govuk-heading-m">Changes to this notice</h2>
+
+<p class="govuk-body">We may modify or amend this privacy notice at any time. Any modification or amendment to this privacy notice will be applied to your data immediately. We encourage you to review this privacy notice regularly to stay informed about how we are protecting your data.</p>
+
+
+</form>
+
+
+        </div>
+        </div>
+
+{% endblock %}
