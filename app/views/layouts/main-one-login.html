@@ -6,10 +6,8 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 {% block header %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+  {{ govukHeader() }}
+  {{ govukServiceNavigation({
+        serviceName: 'test'
+    })}}
   {% endblock %}
