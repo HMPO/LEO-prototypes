@@ -1,3 +1,8 @@
 {
-  "serviceName": "Order a certificate"
+  "serviceName": "Order a certificate",
+   "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
 }
