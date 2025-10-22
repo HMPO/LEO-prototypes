@@ -7,13 +7,13 @@
   },
   "engines": {
     "node": "=v22.20.0",
-    "npm": ">=11.6.2"
+    "npm": "11.6.2"
   },
   "dependencies": {
-    "@govuk-prototype-kit/common-templates": "2.0.1",
+    "@govuk-prototype-kit/common-templates": "1.2.2",
     "accessible-autocomplete": "^3.0.0",
-    "govuk-frontend": "5.11.1",
+    "govuk-frontend": "4.7.0",
     "govuk-one-login-service-header": "github:govuk-one-login/service-header",
-    "govuk-prototype-kit": "^13.18.1"
+    "govuk-prototype-kit": "^13.16.2"
   }
 }
