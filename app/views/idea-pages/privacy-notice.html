@@ -22,34 +22,34 @@
   {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+ {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-{% set serviceName = "Order a certificate" %}
+}) }} 
+{% endblock %} 
+{% set serviceName = "Order a certificate" %} 
 
-{% block content %}
+{% block content %} 
 
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
      <form action="save-delivery-address" method="post" class="form">
 
       <h1 class="govuk-heading-l">
-      How we use your data (privacy notice)
+      How we use your data (privacy notice) DRAFT
       </h1>
 
   <p class="govuk-body-l">Last updated: 1 October 2025</p>
 
-<p class="govuk-body">The order a certificate service is run by the General Register Office. General Register Office is the data controller. A data controller determines how and why personal data can be processed. Read the <a href="https://ico.org.uk/ESDWebPages/Entry/Z1272134">General Register Office’s entry in the Data Protection Public Register for more information</a>.</p>
+<p class="govuk-body">The order a certificate service is run by the General Register Office. Registrar General is the data controller. A data controller determines how and why personal data can be processed. Read the <a href="https://ico.org.uk/ESDWebPages/Entry/Z1272134">Registrar General’s entry in the Data Protection Public Register for more information</a>.</p>
 
 <h2 class="govuk-heading-m">What data we collect from you</h2>
 
 <p class="govuk-body">We collect several pieces of personal data from our users. These are:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-          <li>email address</li>
+          <li>email address (through GOV.UK One Login)</li>
           <li>name </li>
 <li>billing and delivery addresses</li>
 </ul>
@@ -58,7 +58,7 @@
 
 <h3 class="govuk-heading-s">Your email address<h3>
 
-<p class="govuk-body">When you give us your email we will only use it so that you can:</p>
+<p class="govuk-body">We get your email address from a third party <a href="https://www.gov.uk/government/publications/govuk-one-login-privacy-notice">GOV.UK One Login</a>. We will only use your email address so that you can:</p>
 
 <ul class="govuk-list govuk-list--bullet">
           <li>sign in securely</li>
@@ -88,9 +88,9 @@
 
 <h2 class="govuk-heading-m">GOV.UK One Login</h2>
 
-<p class="govuk-body">To search our online records, you must create or sign in to your GOV.UK One Login.</p>
+<p class="govuk-body">To search our online records, you must create or sign in to your GOV.UK One Login. We will use the email address you provide to GOV.UK One Login to contact you about your order.</p>
 
-  <h2 class="govuk-heading-m">Payment details NEEDS CHECKING</h2>
+  <h2 class="govuk-heading-m">Payment details</h2>
 
 <p class="govuk-body">The payment part of this service is provided by <a href= "https://www.payments.service.gov.uk/">GOV.UK Pay</a> in line with the <a href="https://www.payments.service.gov.uk/privacy/">GOV.UK Pay privacy policy</a>. The General Register Office does not collect or store any of your financial information.</p>
 
@@ -146,14 +146,15 @@
 <li>ask for your personal data to be erased if we no longer need to hold it</li>
 
 <li>raise an objection about how your personal data is processed</li>
-
-<li>If your personal data is processed on the basis of consent, you can withdraw your consent at any time.</li>
 </ul>
+
+<p class="govuk-body">If your personal data is processed on the basis of consent, you can withdraw your consent at any time.</p>
+
  
 
 <h2 class="govuk-heading-m">Questions and complaints<h2>
 
-<p class="govuk-body">Contact our privacy team if you:</p>
+<p class="govuk-body">Contact our data protection officer team if you:</p>
 <ul class="govuk-list govuk-list--bullet">
           <li>have any questions about anything in this notice</li>
 
@@ -162,7 +163,21 @@
 
 <h3 class="govuk-heading-s">Email</h3>
 
-<p class="govuk-body"><a href="mailto gro.communications@gro.gov.uk">gro.communications@gro.gov.uk</a> </p>
+<p class="govuk-body"><a href="mailto dpo@homeoffice.gov.uk">dpo@homeoffice.gov.uk</a> </p>
+
+<h3 class="govuk-heading-s">Post</h3>
+
+<p class="govuk-body">Heidi Judd </br>
+
+The Office of the Data Protection Officer </br>
+
+Peel Building </br>
+
+2 Marsham Street </br>
+
+London </br>
+
+SW1P 4DF </p>
 
 <h2 class="govuk-heading-m">Making a complaint to an independent body</h2>
 
