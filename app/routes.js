@@ -818,6 +818,133 @@ router.post('/beta/round10/death/3rd-cert-add-another-item', function(request, r
 		response.redirect("basket.html")
 	}
 })
+// ------------------------- Round 10 JS end ------------------------- //
+
+// ------------------------- BETA triage round 11 ---------------------------- //
+
+router.post('/beta/round11/triage/triage-question-1', function(request, response) {
+    var triageq1 = request.session.data['certTypeBeta4']
+    if (triageq1 == "birth"){
+        response.redirect("/beta/round11/triage/triage-question-2")
+    } 
+     else if (triageq1 == "death"){
+        response.redirect("/beta/round11/triage/death-triage-question-2")
+    } 
+    else {
+        response.redirect("/beta/round11/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 2nd page
+router.post('/beta/round11/triage/triage-question-2', function(request, response) {
+    var triageq2 = request.session.data['certTypeBeta2']
+    if (triageq2 == "yes"){
+        response.redirect("/beta/round11/triage/triage-question-3")
+    } 
+    else if (triageq2 == "no"){
+        response.redirect("/beta/round11/triage/direct-to-rolo.html")
+    } 
+    else {
+        response.redirect("/beta/round11/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 3RD page delivery method
+router.post('/beta/round11/triage/triage-question-3', function(request, response) {
+    var triageq3 = request.session.data['certTypeBeta3']
+    if (triageq3 == "standard"){
+        response.redirect("/beta/round11/login/login-or-sign-in")
+    } 
+    else if (triageq3 == "no"){
+        response.redirect("/beta/round11/triage/direct-to-rolo.html")
+    } 
+})
+
+// Triage - Death Question
+router.post('/beta/round11/triage/triage-question-3', function(request, response) {
+    var triageqA = request.session.data['certTypeBeta3']
+    if (triageqA == "yes"){
+        response.redirect("/beta/round11/triage-question-3")
+    } 
+    else if (triageqA == "no"){
+        response.redirect("/beta/round11/triage/direct-to-rolo.html")
+    } 
+})
+
+
+
+// ------------------------- Add another traige routing -------------------------  //
+
+router.post('/beta/round11/add-another-flow/triage-question-1-add-another', function(request, response) {
+    var addanother1 = request.session.data['certTypeBeta4']
+    if (addanother1 == "birth"){
+        response.redirect("/beta/round11/add-another-flow/triage-question-2-add-another")
+    } 
+     else if (addanother1 == "death"){
+        response.redirect("/beta/round11/add-another-flow/triage-question-2-death-add-another")
+    } 
+    else {
+        response.redirect("/beta/round11/add-another-flow/use-older-service-birth")
+    }
+})
+
+// Triage - 2nd Q (birth)
+router.post('/beta/round11/add-another-flow/triage-question-2-add-another', function(request, response) {
+    var addanother2 = request.session.data['certTypeBeta2']
+    if (addanother2 == "yes"){
+        response.redirect("/beta/round11/add-another-flow/home-page-birth")
+    } 
+    else if (addanother2 == "no"){
+        response.redirect("/beta/round11/add-another-flow/use-older-service-birth")
+    } 
+})
+
+// Triage - 2nd Q (death)
+router.post('/beta/round11/add-another-flow/triage-question-2-death-add-another', function(request, response) {
+    var addanotherDeath = request.session.data['certTypeBetaDeath']
+    if (addanotherDeath == "yes"){
+        response.redirect("/beta/round11/add-another-flow/home-page-death")
+    } 
+    else if (addanotherDeath == "no"){
+        response.redirect("/beta/round11/add-another-flow/use-older-service-birth")
+    } 
+})
+// ------------------------- Add another traige routing END -------------------------  //
+
+
+
+
+
+// ------------------------- ROUND 11 BETA Routing question page for mix of cert types END ----------------------------//
+router.post('/beta/round11/death/add-another-item', function(request, response) {
+
+	var addanother = request.session.data['addanother']
+	if ( addanother == "birth"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother == "death"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("../gov-pay/basket.html")
+	}
+})
+
+//3rd cert
+router.post('/beta/round11/death/3rd-cert-add-another-item', function(request, response) {
+
+	var addanother4 = request.session.data['addanother4']
+	if ( addanother4 == "birth3"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother4 == "death3"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("basket.html")
+	}
+})
+// Round 11 JS end
 
 
 // BETA JS
