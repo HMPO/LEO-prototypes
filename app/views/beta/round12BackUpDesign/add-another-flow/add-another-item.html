@@ -42,7 +42,7 @@
   </div>
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading">
-     Use this service to order a birth or death certificate from 2010. You will need to use our older service for any other record.
+     Use this service to order a birth or death certificate from 1 July 2009. You will need to use our older service for any other record.
     </p>
   </div>
 </div>
@@ -51,22 +51,17 @@
       <h1 class="govuk-heading-l">
         Add another item
       </h1>
-<!--       
-      <div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-visually-hidden">Warning</span>Use this service to order a birth or death certificate from 2010. You will need to use our older service for any other record.</strong>
-</div> -->
 
 <h2 class="govuk-heading-m">
         What are you searching for?
       </h2>
+
 <!--nun jucks for the radios routing-->
-<form class="form" action="" method="post">
+<form class="form" action="/beta/round12BackUpDesign/add-another-flow/add-another-item" method="post">
 
 {{ govukRadios({
-  name: "addanother",
-  value: data['addanother'],
+  name: "addanother12",
+  value: data['addanother12'],
   fieldset: {
     legend: {
       text: "",
@@ -77,11 +72,11 @@
   items: [
     {
       value: "birth",
-      text: "A birth certificate registered on or after 1 January 2010"
+      text: "A birth certificate registered on or after 1 July 2009"
     },
     {
       value: "death",
-      text: "A death certificate registered on or after 1 January 2010"
+      text: "A death certificate registered on or after 1 July 2009"
     },
     {
       divider: "or"
@@ -98,14 +93,13 @@
       How to order on the older service:
     </span>
   </summary>
-  <div class="govuk-details__text">
-   <ol class="govuk-list govuk-list--number">
+<ol class="govuk-list govuk-list--number">
   <li>Check out any current items in your basket, so you do not lose them.</li>
   <li>After you have paid, you will see the option to ‘search again’.</li>
-  <li>After selecting ‘search again’, you will get the option to order certificates registered before 2010.</li>
+  <li>After selecting ‘search again’, you will get the option to order certificates registered before 1 July 2009.</li>
 </ol>
-  </div>
 </details>
+
 {{ govukButton({
   text: "Continue"
 }) }}

@@ -986,7 +986,7 @@ router.post('/beta/round12/triage/triage-question-3', function(request, response
         response.redirect("/beta/round12/triage/direct-to-rolo.html")
     } 
 })
-// --------------------------------------------------- ROUND 12 js END---------------------------------------------------- //
+
 
 // ------------------------- Add another traige routing -------------------------  //
 
@@ -1026,6 +1026,79 @@ router.post('/beta/round12/add-another-flow/triage-question-2-death-add-another'
 })
 // ------------------------- Add another traige routing END -------------------------  //
 
+// --------------------------------------------------- ROUND 12 js END---------------------------------------------------- //
+
+
+// --------------------------------------------------- ROUND 12 js back up design---------------------------------------------------- //
+
+// ------------------------- BETA triage round 12 ---------------------------- //
+router.post('/beta/round12BackUpDesign/triage/triage-question-1', function(request, response) {
+    var triageq1 = request.session.data['certTypeBeta4']
+    if (triageq1 == "birth"){
+        response.redirect("/beta/round12BackUpDesign/triage/triage-question-2")
+    } 
+     else if (triageq1 == "death"){
+        response.redirect("/beta/round12BackUpDesign/triage/death-triage-question-2")
+    } 
+    else {
+        response.redirect("/beta/round12BackUpDesign/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 2nd page
+router.post('/beta/round12BackUpDesign/triage/triage-question-2', function(request, response) {
+    var triageq2 = request.session.data['certTypeBeta2']
+    if (triageq2 == "yes"){
+        response.redirect("/beta/round12BackUpDesign/triage/triage-question-3")
+    } 
+    else if (triageq2 == "no"){
+        response.redirect("/beta/round12BackUpDesign/triage/direct-to-rolo.html")
+    } 
+    else {
+        response.redirect("/beta/round12BackUpDesign/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 3RD page delivery method
+router.post('/beta/round12BackUpDesign/triage/triage-question-3', function(request, response) {
+    var triageq3 = request.session.data['certTypeBeta3']
+    if (triageq3 == "standard"){
+        response.redirect("/beta/round12BackUpDesign/login/login-or-sign-in")
+    } 
+    else if (triageq3 == "no"){
+        response.redirect("/beta/round12BackUpDesign/triage/direct-to-rolo.html")
+    } 
+})
+
+// ------------------------- Routing question page for add another item ----------------------------//
+router.post('/beta/round12BackUpDesign/add-another-flow/add-another-item', function(request, response) {
+
+	var addanother = request.session.data['addanother12']
+	if ( addanother == "birth"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother == "death"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("../gov-pay/basket-2-items")
+	}
+})
+
+//3rd cert 2008
+router.post('/beta/round12BackUpDesign/add-another-flow/3rd-cert-add-another-item', function(request, response) {
+
+	var addanother12 = request.session.data['addanother12']
+	if ( addanother12 == "birth12"){
+		response.redirect("home-page-birth")
+	} 
+    else if ( addanother12 == "death3"){
+		response.redirect("home-page-death.html")
+	} 
+    else {
+		response.redirect("../gov-pay/basket-2-items")
+	}
+})
 
 
 // BETA JS

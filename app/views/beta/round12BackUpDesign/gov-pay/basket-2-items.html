@@ -1,0 +1,225 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+ {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (2)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Your basket</h1>
+      </div>
+    </div>
+
+<!----------------left col----------->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Item summary</h2>
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Birth certificate: Thomas Evans, 2015        </span> 
+              </h2>
+            </div>
+
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+             <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Item details 
+    </h2>
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove from basket</a>
+    </p>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Shipping method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Standard UK (2nd class post)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of copies
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+               <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Your reference
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+{{ data['orderReferenceBirth'] or "" }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £12.50
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+
+      
+    </dl>
+  </div>
+</div>
+            </div>
+          </div>
+        
+        <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Birth certificate: Olivia Brown, 2010       </span> 
+              </h2>
+            </div>
+
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+             <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Item details 
+    </h2>
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove from basket</a>
+    </p>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Shipping method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Standard UK (2nd class post)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of copies
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+
+               <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Your reference
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+{{ data['orderReferenceBirth2nd'] or "" }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="../order-details/order-reference">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+                      </dd>
+                    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £16
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <!-- <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a> -->
+        </dd>
+      </div>
+
+      
+    </dl>
+  </div>
+</div>
+
+      </div>
+       
+      </div>  
+        
+        </div>
+       
+      </div>
+
+<!----------------right col----------->
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Order summary</h3>
+
+        <form class="form" action="" method="post">
+        <p><b>Number of items:</b> 2<br>
+        <b>Total cost:</b> £28.50</p>
+        
+        <h3 class="govuk-heading-s">How to pay</h3>
+        <img src="/public/img/cards.png" style="margin-bottom:30px;">
+     <a href="../delivery-details/use-name-for-delivery.html" style="text-decoration:none;" class="govuk-button">Continue to payment</a>
+      <a href="../add-another-flow/3rd-cert-add-another-item" style="text-decoration:none;" class="govuk-button govuk-button--secondary">Add another item </a>
+
+
+
+      </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+      
+  
+
+  
+
+{% endblock %}
