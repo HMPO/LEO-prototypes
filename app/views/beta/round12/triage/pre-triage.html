@@ -1,0 +1,49 @@
+{% set govukRebrand = true %}
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Continue to find out which service you can use
+      </h1>
+
+      <form class="form" action="" method="post">
+
+        <p class="govuk-body">We are developing a new service which is currently only available for some orders.</p>
+
+       <h3 class="govuk-heading-m">What is available in the new service:</h3> 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>birth certificates from 1 July 2010 onwards </li>
+          <li>death certificates from 1 July 2010 onwards </li>
+          <li>for everything else, you will need to use the old service</li>
+        </ul>
+
+       
+        <p class="govuk-body">You will be asked some questions to find out which service you can use.</p>
+        
+    
+        <div class="govuk-button-group">
+        <a href="triage-question-1.html" class="govuk-button"> Continue</a> 
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

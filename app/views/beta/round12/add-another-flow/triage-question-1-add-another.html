@@ -1,0 +1,86 @@
+{% set govukRebrand = true %}
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+Order a certificate– {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/beta/round12/add-another-flow/triage-question-1-add-another" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of record are you searching for?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="birth" name="certTypeBeta4" type="radio" value="birth">
+                <label class="govuk-label govuk-radios__label" for="birth">
+                  Birth
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="death" name="certTypeBeta4" type="radio" value="death">
+                <label class="govuk-label govuk-radios__label" for="death">
+                  Death
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="marriage" name="certTypeBeta4" type="radio" value="I don't know">
+                <label class="govuk-label govuk-radios__label" for="marriage">
+                  Marriage or civil partnership
+                </label>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="adoption" name="certTypeBeta4" type="radio" value="I don't know">
+                <label class="govuk-label govuk-radios__label" for="adoption">
+                  Adoption
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="other" name="certTypeBeta4" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="other">
+                  Other
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  For example, a birth or death that was registered abroad
+                </div>
+              </div>              
+              
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
