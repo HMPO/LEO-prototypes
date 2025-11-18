@@ -13,7 +13,58 @@
       <hr>
       <p class="govuk-body">Dear {{data['accountNameFirst'] }} {{data['accountNameSecond'] }},</p>
      
- <h2 class="govuk-heading-m">Order summary</h2>
+      <h1 class="govuk-heading-l">Certificates ordered</h1>
+      <h2 class="govuk-heading-m">Birth Certificate for Martin Brown</h2>
+      <p class="govuk-body"><strong>Order details </strong><br>
+        Birth certificate: Martin Brown<br>
+        District of birth: Nottingham<br>
+        Quarter: Q3<br>
+        Number of copies: 1<br>
+        Date of birth: 21 July 2017<br>
+        Mother's first name: Dorothy Brown<br>
+        Mother's maiden name: Smith<br>
+        Mother's last name when they gave birth: Brown<br>
+        Other parent's full name: Not supplied<br>
+      </p>
+
+      <p class="govuk-body"><strong>Reference</strong><br>
+        Your personal reference: {{data['orderReferenceBirth'] }}
+      </p>
+
+      <p class="govuk-body"><strong>Delivery information</strong><br>
+        Dispatch date: Monday 24 November<br>
+        Estimated delivery date: Thursday 27 November
+      </p>
+
+<h1 class="govuk-heading-l">Certificates we are helping you find </h1>
+ <p class="govuk-body"><strong>We send certificates by second class post.</strong></p>
+  <p class="govuk-body"><strong>If we can't find a certificate, you will get a refund of £8.50 within 5 working days.</strong></p>
+
+
+  <p class="govuk-body"><strong>Order details </strong><br>
+    Name: Olivia Brown<br>
+    District of birth: Not supplied<br>
+    Quarter: Not supplied<br>
+    Number of copies: 1<br>
+    Date of birth: 19 January 2010<br>
+    Mother's first name: Barbara<br>
+    Mother's maiden name: Not supplied<br>
+    Mother's last name when they gave birth: Brown<br>
+    Other parent's full name: Not supplied<br>
+    </p>
+
+      <p class="govuk-body"><strong>Reference</strong><br>
+        Your personal reference: {{ data['orderReferenceBirth2nd'] or "" }}
+      </p>
+
+      <p class="govuk-body"><strong>Delivery information</strong><br>
+        Estimated dispatch date: Monday 8 December <br>
+        Estimated delivery date: Thursday 11 December 
+      </p>
+
+
+
+ <!-- <h2 class="govuk-heading-m">Order summary</h2>
 <p class="govuk-body">Order number: HDJ123F</br>
 Number of items: 2</br>
 Total paid: £28.50</br>
@@ -63,7 +114,7 @@ Total paid: £28.50</br>
 
 <hr>
 <br>
-      
+      -->
 <h2 class="govuk-heading-m">Contact us</h2>
 
 <p class="govuk-body">Find out how to contact us: <a href="https://www.gov.uk/general-register-office">https://www.gov.uk/general-register-office</a></p>
@@ -75,5 +126,5 @@ Total paid: £28.50</br>
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
       <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
   </div>
-</div>
+</div> 
 {% endblock %}
