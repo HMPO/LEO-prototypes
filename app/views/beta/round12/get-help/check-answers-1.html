@@ -78,7 +78,7 @@
                   Mother's maiden name
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['maidenName']}}
+                  {{ data['maidenName'] or "Not supplied" }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link govuk-link--no-visited-state" href="change/maiden-name">Change<span class="govuk-visually-hidden"> name</span></a>
