@@ -1,0 +1,79 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><b>From:</b> General Register Office<br>
+      <b>Subject:</b> Receipt and order confirmation - HDJ123F</p>
+      <hr>
+      <p class="govuk-body">Dear {{data['accountNameFirst'] }} {{data['accountNameSecond'] }},</p>
+     
+ <h2 class="govuk-heading-m">Order summary</h2>
+<p class="govuk-body">Order number: HDJ123F</br>
+Number of items: 2</br>
+Total paid: £28.50</br>
+    Delivery address: 	6 Broad St, Birmingham B15 1SU<br>
+    Billing address: 	6 Broad St, Birmingham B15 1SU</br>
+<br>
+<hr>
+<br>
+<h3 class="govuk-heading-m">Item summary for Martin Brown</h3>
+<p class="govuk-body">Dispatch date: Monday 24 November.</br>
+  Estimated delivery date: Thursday 27 November.</p>
+
+<p class="govuk-body"><strong>Birth certificate: Martin Brown, 2017</strong> <br>
+    District of birth: Nottingham</br>
+    Quarter: Q3<br>
+    Number of copies: 1</br>
+    Your personal reference: {{data['orderReference'] }}<br>
+
+<p class="govuk-body"><strong>Additional details</strong> <br>
+    Date of birth: 21 July 2017</br>
+    Mother's first name: Dorothy Brown<br>
+    Mother's maiden name: Smith<br>
+    Mother's last name when they gave birth: Brown</br>
+    Other parent's full name: Not supplied<br>
+</p>
+      
+
+      <h3 class="govuk-heading-m">Item summary for Olivia</h3>
+      <p class="govuk-body">You provided the following details for our team to search for you.</p>
+      <p class="govuk-body">If we can find a record that matches, it will be sent by standard UK shipping (second class post) and should be dispatched by Monday 8 December.</p>
+      <p>Estimated delivery date: Thursday 11th December.</p>
+      <p class="govuk-body">You would be refunded £8.50 if we cannot find a record that matches these details.</p>
+
+      <p class="govuk-body"><strong>Birth certificate (get help searching): Olivia Brown, 2010</strong> <br>
+    District of birth: {{data['input-autocomplete'] or "Not supplied" }}</br>
+    Quarter: {{ data['radios'] or "Not supplied"}}<br>
+    Number of copies: 1</br>
+    Your personal reference: {{data['orderReference'] }}<br>
+</p>
+ <p class="govuk-body"><strong>Additional details</strong> <br>
+    Date of birth: 19 January 2010</br>
+    Mother's first name: Barbara<br>
+    Mother's maiden name: Not supplied<br>
+    Mother's last name when they gave birth: Brown</br>
+    Other parent's full name: Not supplied<br>
+</p>
+
+<hr>
+<br>
+      
+<h2 class="govuk-heading-m">Contact us</h2>
+
+<p class="govuk-body">Find out how to contact us: <a href="https://www.gov.uk/general-register-office">https://www.gov.uk/general-register-office</a></p>
+
+      <p class="govuk-body govuk-!-margin-top-7">
+          Regards,<br />
+          General Register Office
+      </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+      <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
+  </div>
+</div>
+{% endblock %}
