@@ -1,0 +1,59 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<form action="/search-year" method="post" class="form">
+ <!-- year -->
+  <span class="govuk-caption-l">Search for a record: page 3 of 5</span>
+<h1 class="govuk-heading-l">What year was the birth registered?</h1>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+     Search by the date the birth was registered, not their date of birth. Births can be registered 6 weeks after the baby is born.
+  </strong>
+</div>
+ <div id="account-number-hint" class="govuk-hint">
+    For example, 2010
+  </div>
+         <div class="govuk-form-group">
+               <input class="govuk-input govuk-input--width-4" name="year" id="year">
+            </div>
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}

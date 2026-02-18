@@ -1,0 +1,41 @@
+{% set govukRebrand = true %}
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="../gov-pay/basket-2-items" method="post">
+<h1 class="govuk-heading-l">Based on your answers, you have to use our older service</h1>
+<h1 class="govuk-heading-m">Next steps:</h1>
+    <ol class="govuk-list govuk-list--number">
+      <li>Check out and pay for certificates in your basket.</li>
+      <li>Select 'search again' to order certificates registered on or before 30 June 2009
+.</li>
+    </ol>
+
+        
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

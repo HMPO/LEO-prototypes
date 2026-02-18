@@ -1,0 +1,77 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+   {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+
+<h1 class="govuk-heading-l">What is Martin Brown's mother's name?</h1>  
+
+<!-- Form start -->
+<form action="father-parent-names" method="post" class="form">
+  
+ <!-- Names -->
+
+ <!-- Names -->
+ <div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="mothersFirstName">
+     First name</label>
+  <input class="govuk-input" id="mothersFirstName" name="mothersFirstName" type="text"
+     value="">
+</div>
+
+<!-- last names -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="mothersMaidenName">
+     Maiden name</label>
+  <input class="govuk-input" id="mothersMaidenName" name="mothersMaidenName" type="text"
+     value="{{ data['maidenName']}}">
+</div>
+
+<!-- last name at the time of birth -->
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label" for="lastNameAtBirth">
+     Last name when they gave birth (optional)</label>
+  <input class="govuk-input" id="lastNameAtBirth" name="lastNameAtBirth" type="text"
+     value="">
+</div>
+
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}

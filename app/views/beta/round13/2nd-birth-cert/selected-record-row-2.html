@@ -1,0 +1,149 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+ <span class="govuk-caption-xl">Selected item</span>
+   <h1 class="govuk-heading-xl">Olivia Brown</h1>
+      
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key" style=>
+           Full name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Olivia Brown
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Mother's maiden name
+            </dt>
+            <dd class="govuk-summary-list__value">
+            
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sex
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Female
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+            </dd>
+          </div>
+
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year birth registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             2010
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Quarter birth registered
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Q1 (January, February, March)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+
+<div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              District of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Hampshire (172-1A) 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+
+
+ <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Entry number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              	508746198
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+             </dd>
+      </dd>
+          </div>
+</dl>
+
+<p class="govuk-body"><a href="search-results">Back to search results</a></p>
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button" style="margin-top:25px;">
+      Order item
+    </button>
+  </div>
+
+</form>
+
+
+
+   </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,149 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+
+
+
+
+<form action="district" method="post" class="form">
+
+<!-- quarter -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+     <span class="govuk-caption-l">Search for a record: page 4 of 5</span>
+<h1 class="govuk-heading-l">What month was the birth registered?</h1>
+    </legend>
+    <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+     Search by the date the birth was registered, not their date of birth. Births can be registered 6 weeks after the baby is born.
+  </strong>
+</div>
+    <div class="govuk-radios" data-module="govuk-radios">
+
+  <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="q1" name="radios" type="radio" value="January, February or March (quarter 1)">
+        <label class="govuk-label govuk-radios__label" for="q1">
+          January, February or March (quarter 1)
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="q2" name="radios" type="radio" value="April, May or June (quarter 2)">
+        <label class="govuk-label govuk-radios__label" for="q2">
+          April, May or June (quarter 2)
+        </label>
+      </div> 
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="q3" name="radios" type="radio" value="July, August or September (quarter 3)">
+        <label class="govuk-label govuk-radios__label" for="q3">
+          July, August or September (quarter 3)
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="q4" name="radios" type="radio" value="October, November or December (quarter 4)">
+        <label class="govuk-label govuk-radios__label" for="q4">
+          October, November or December (quarter 4)
+        </label>
+      </div>
+
+<div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-6" name="radios" type="radio" value=" Not supplied">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+          I don't know
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+
+<!-- 
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What month was the birth registered?
+      </h1>
+    </legend>
+    <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+     Search by the date the birth was registered, not their date of birth. Births can be registered 6 weeks after the baby is born.
+  </strong>
+</div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          England
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Scotland
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+          Wales
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+          Northern Ireland
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div> -->
+   </div>
+</div>
+{% endblock %}

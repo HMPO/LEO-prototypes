@@ -1,0 +1,93 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><b>From:</b> General Register Office<br>
+      <b>Subject:</b> Receipt and order confirmation - HDJ123F</p>
+      <hr>
+      <p class="govuk-body">Dear {{data['accountNameFirst'] }} {{data['accountNameSecond'] }},</p>
+      <h1 class="govuk-heading-l">Order summary</h1>
+<p class="govuk-body">Order number: HDJ123F</br>
+Number of items: 2</br>
+Total paid: £28.50</br>
+    Delivery address: 6 Broad St, Birmingham B15 1SU<br>
+    Billing address: 6 Broad St, Birmingham B15 1SU</br>
+        <br>
+     <hr>
+ 
+      <h1 class="govuk-heading-l">Certificates ordered</h1>
+      <h2 class="govuk-heading-m">Birth Certificate for Martin Brown</h2>
+      <p class="govuk-body"><strong>Order details </strong><br>
+        Birth certificate: Martin Brown<br>
+        District of birth: Nottingham<br>
+        Quarter: Q3<br>
+        Number of copies: 1<br>
+        Date of birth: 21 July 2017<br>
+        Mother's first name: Dorothy Brown<br>
+        Mother's maiden name: Smith<br>
+        Mother's last name when they gave birth: Brown<br>
+        Other parent's full name: Not supplied<br>
+      </p>
+
+      <p class="govuk-body"><strong>Reference</strong><br>
+        Your personal reference: {{data['orderReferenceBirth'] }}
+      </p>
+
+      <p class="govuk-body"><strong>Delivery information</strong><br>
+        Dispatch date: Monday 24 November<br>
+        Estimated delivery date: Thursday 27 November
+      </p>
+
+       <p class="govuk-body"><strong>Postage</strong><br>
+        Standard UK £12.50
+      </p>
+
+<h1 class="govuk-heading-l">Certificates we are helping you find </h1>
+ <p class="govuk-body"><strong>Certificates are sent by second class post.</strong></p>
+  <p class="govuk-body"><strong>If we can't find a certificate you'll be refunded £8.50.</strong></p>
+
+
+  <p class="govuk-body"><strong>Order details </strong><br>
+    Name: Olivia Brown<br>
+    District of birth: Not supplied<br>
+    Quarter: Q1<br>
+    Number of copies: 1<br>
+    Date of birth: 19 January 2010<br>
+    Mother's first name: Barbara<br>
+    Mother's maiden name: Not supplied<br>
+    Mother's last name when they gave birth: Brown<br>
+    Other parent's full name: Not supplied<br>
+    </p>
+
+      <p class="govuk-body"><strong>Reference</strong><br>
+        Your personal reference: {{ data['orderReferenceBirth2nd'] or "" }}
+      </p>
+
+      <p class="govuk-body"><strong>Delivery information</strong><br>
+        Estimated dispatch date: Monday 8 December <br>
+        Estimated delivery date: Thursday 11 December 
+      </p>
+
+        <p class="govuk-body"><strong>Total cost</strong><br>
+        Get Help including postage costs: £16.00
+      </p>
+
+<h2 class="govuk-heading-m">Contact us</h2>
+
+<p class="govuk-body"><a href="https://www.gov.uk/general-register-office">Contact the General Register Office</a> if you need help or further information about your order. </p>
+
+      <p class="govuk-body govuk-!-margin-top-7">
+          Regards,<br />
+          General Register Office
+      </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+      <p class="govuk-body">Do not reply to this email. This is an automated message from an unmonitored account.</p>
+  </div>
+</div> 
+{% endblock %}

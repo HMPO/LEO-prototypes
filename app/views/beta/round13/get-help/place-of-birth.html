@@ -1,0 +1,77 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+ <!-- Heading -->
+      <h1 class="govuk-heading-l">
+         Where was Olivia Brown born?</h1>
+
+
+
+<form action="mothers-names" method="post" class="form">
+ <!-- Guidance -->
+      <p class="govuk-body">This could be any of the following:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the city, town or county where they were born</li>
+        <li>the name of the hospital where they were born</li>
+        </ul>
+
+     <!-- <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                 Place of death
+              </h2>
+           </legend> -->
+          
+
+            <div class="govuk-form-group">
+          <label class="govuk-label" for="placeOfBirth">
+              Place of birth
+          </label>
+  <input class="govuk-input govuk-!-width-full" id="placeOfBirth" name="placeOfBirth" type="text">
+</div>
+
+
+                  
+          
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+               Continue
+            </button>
+         </div>
+
+         
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}

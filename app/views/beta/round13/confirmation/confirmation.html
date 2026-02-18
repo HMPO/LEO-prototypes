@@ -1,0 +1,91 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+
+{% set navigationItems = [
+   {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+{% set homepageLink = "../email" %}
+
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="triage-question-1" method="post">
+
+
+            <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Payment successful
+  </h1>
+  <div class="govuk-panel__body">
+    Your order number<br><strong>HDJ213F</strong>
+  </div>
+</div>
+<p></p>
+
+
+<h2 class="govuk-heading-m">What happens next</h2>
+<p class="govuk-body">A receipt and order confirmation will be sent to your email.<p>
+  <div class="container">
+      <table class="govuk-table" role="table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Order summary</caption>
+        <thead class="govuk-table__head" role="rowgroup">
+          <tr class="govuk-table__row" role="row">
+            <th class="govuk-table__header" role="columnheader" scope="col">Certificate type</th>
+                  <th class="govuk-table__header" role="columnheader" scope="col">Number of items</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Dispatched date</th>
+            <th class="govuk-table__header" role="columnheader" scope="col">Esitmated delivery date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" role="row">
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Certificate type</span>Birth</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Number of items</span>1</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Dispatched date</span> Monday 24 November</td>
+                        <td role="cell"><span class="responsive-table__heading"aria-hidden="true">Esitmated delivery date</span> Thursday 27 November</td>
+          </tr>     
+                 <tr class="govuk-table__row" role="row">
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Certificate type</span>Birth</td>
+              <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Number of items</span>1</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Dispatched date</span> Monday 8 December</td>
+            <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Esitmated delivery date</span> Thursday 11th December</td>
+          </tr>       
+        </tbody>
+      </table>
+    </div>
+
+ <br><br>
+ 
+       <p><b>Number of items:</b> 2<br>
+        <b>Total cost:</b> £28.50</p> 
+
+    <br>
+<h2 class="govuk-heading-m">Order more certificates</h2>
+    <button a href="../triage/triage-question-1" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Search again
+</button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

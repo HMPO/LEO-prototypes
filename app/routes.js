@@ -1103,3 +1103,59 @@ router.post('/beta/round12BackUpDesign/add-another-flow/3rd-cert-add-another-ite
 
 // BETA JS
 
+// --------------------------------------------------- ROUND 13 js ---------------------------------------------------- //
+
+// ------------------------- BETA triage round 13 ---------------------------- //
+router.post('/beta/round13/triage/triage-question-1', function(request, response) {
+    var triageq1 = request.session.data['certTypeBeta4']
+    if (triageq1 == "birth"){
+        response.redirect("/beta/round13/triage/triage-question-2")
+    } 
+     else if (triageq1 == "death"){
+        response.redirect("/beta/round13/triage/death-triage-question-2")
+    } 
+    else {
+        response.redirect("/beta/round13/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 2nd page
+router.post('/beta/round13/triage/triage-question-2', function(request, response) {
+    var triageq2 = request.session.data['certTypeBeta2']
+    if (triageq2 == "yes"){
+        response.redirect("/beta/round13/triage/triage-question-3")
+    } 
+    else if (triageq2 == "no"){
+        response.redirect("/beta/round13/triage/direct-to-rolo.html")
+    } 
+    else {
+        response.redirect("/beta/round13/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 3RD page delivery method
+router.post('/beta/round13/triage/triage-question-3', function(request, response) {
+    var triageq3 = request.session.data['certTypeBeta3']
+    if (triageq3 == "standard"){
+        response.redirect("/beta/round13/login/login-or-sign-in")
+    } 
+    else if (triageq3 == "no"){
+        response.redirect("/beta/round13/triage/direct-to-rolo.html")
+    } 
+})
+
+//--------- Round 13 Routing for year enter 2009 show 2 radios, enter 2010 onwards show all radios ----------//
+router.post('/search-year', function (req, res) {
+  // Get the answer from the session
+  var year = req.session.data['year']
+
+  // The conditional logic
+  if (year === "2009") {
+    res.redirect("/beta/round13/search/search-month")
+  } else if (year === "2010") {
+    res.redirect("/beta/round13/search/full-months-displayed")
+  } else {
+    // Optional: redirect to a default page if input is something else
+    res.redirect("/beta/round13/search/full-months-displayed")
+  }
+})
