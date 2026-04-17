@@ -1,0 +1,62 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Dispatch – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">Sender address: General Register Office<br>
+      Subject: Your item is on its way - Order number: HDJ234156789</p>
+     <br>
+<hr>
+<br>
+      <p>Dear, [Name]</p> 
+      <p>Your certificate is on it's on way.</p>
+<br>
+
+      <h3 class="govuk-heading-m">Order details</h3>
+      <p>
+        Order number: HDJ234156789<br>
+        Dispatch date: 16 March 2026<br>
+        Delivery method: Royal Mail Second Class<br>
+      </p>
+<br>
+<hr>
+<br>
+      <h3 class="govuk-heading-m">Tracking your order</h3>
+      <p>Your certificate has been sent by Royal Mail Second Class post.</p>
+      <p>We cannot provide a delivery date or further updates once the item has been posted.</p>
+<br>
+<hr>
+<br>     
+      <h3 class="govuk-heading-m">What happens next</h3>
+      <p>Allow 5 working days from the dispatch date for your order to arrive.</p>
+      <p>If your order has not arrived after 5 working days, <a href="#" class="govuk-link">contact us</a> and quote your order number.</p>
+<br>
+<hr>
+<br>
+       <h3 class="govuk-heading-m">If you ordered more than one certificate</h3>
+       <p>Copies of the same certificate are sent together and will arrive on the same day.</p>
+       <p>Different certificates may arrive separately.</p>
+       <p>We will email you when each certificate has been posted.</p>
+<br>
+<hr>
+<br>
+        <h3 class="govuk-heading-m">Dispatched certificates</h3>
+        <p>The following certificates are on the way:</p>
+        <p>Certificate type: Birth<br>
+        Name on certificate: John Joe Smith<br>
+        Entry number: 508786756<br>
+        Personal reference: Smith family tree<br>
+        Number of copies ordered: 1
+      </p>
+
+<br>
+<br>
+<p>Kind regards,</p>
+<p>General Register Office</p>
+      
+{% endblock %}

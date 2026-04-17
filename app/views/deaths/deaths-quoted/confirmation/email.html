@@ -1,0 +1,81 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Confirmation email – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">Sender address: General Register Office<br>
+      Subject: Order confirmation - General Register Office - Order number: HDJ234156789</p>
+      <hr>
+      <p>Dear, [Name]</p>
+      <p>Thank you for ordering from the General Register Office (GRO).</p>
+      <!-- <p class="govuk-body">Dear {{data['accountNameFirst'] }} {{data['accountNameSecond'] }},</p> -->
+     
+ <h3 class="govuk-heading-m">Order confirmation</h3>
+<p class="govuk-body">Your order reference number is: HDJ234156789<br>
+Order date: 10 March 2026
+</p>
+<br>
+<hr>
+<br>
+
+      <h3 class="govuk-heading-m">What happens next</h3>
+      <p class="govuk-body">We’ll prepare your order within 4 working days.</p>
+      <p>If you order after 4pm or at the weekend, we’ll start processing your order on the next working day.</p>
+      <p class="govuk-body">We will email you when your order has been posted.</p>
+      <p>If you ordered multiple copies of the same certificate, they will be sent together.</p>
+      <p>Different certificates from the same order may arrive separately. You will receive a dispatch email for each certificate sent.</p>
+<br>
+<hr>
+<br>
+ <h3 class="govuk-heading-m">Tracking your order</h3>
+
+ <p>We cannot provide updates while your order is being prepared.</p>
+ <p>Your dispatch email will confirm when your item has been posted and provide delivery information</p>
+
+ <br>
+<hr>
+<br>
+ <h3 class="govuk-heading-m">Order details</h3>
+
+ <p>Certificate type: Birth<br>
+  Name on certificate: John Joe Smith<br>
+  Entry number: 508786756<br>
+  Personal reference: Smith family tree<br>
+  Number of copies ordered: 1
+</p>
+
+ <p>Certificate type: Birth<br>
+  Name on certificate: Harry Miller Smith<br>
+  Entry number: 508786756<br>
+  Personal reference: Smith family tree<br>
+  Number of copies ordered: 1
+</p>
+
+ <p>Certificate type: Birth<br>
+  Name on certificate: George Theo Smith<br>
+  Entry number: 508786756<br>
+  Personal reference: Smith family tree<br>
+  Number of copies ordered: 1
+</p>
+<br>
+<hr>
+<br>
+<h3 class="govuk-heading-m">Delivery details</h3>
+<p>Delivery address:<br>
+[Name]<br>
+[Number and street name]<br>
+[Town/City]<br>
+[County]<br>
+[Postcode]<br>
+</p>
+<br>
+<br>
+<p>Kind regards,</p>
+<p>General Register Office</p>
+      
+{% endblock %}

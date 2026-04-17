@@ -1,0 +1,40 @@
+{% set govukRebrand = true %}
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       Based on your answers, you have to use our older service
+      </h1>
+
+      <form class="form" action="https://www.gro.gov.uk/gro/content/certificates/login.asp" method="post">
+
+        <p class="govuk-body">We are developing a new service which is currently only available for some orders.</p>
+        
+
+       
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

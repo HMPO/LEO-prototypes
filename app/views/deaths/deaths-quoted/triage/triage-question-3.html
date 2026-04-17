@@ -1,0 +1,81 @@
+{% set govukRebrand = true %}
+{% extends "layouts/main-2.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/deaths/deaths-quoted/triage/triage-question-3" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What service do you need?
+              </h1>
+            </legend>
+            
+          <p>Orders placed after 4pm or at the weekend start being prepared on the next working day. Prices include administrative costs.</p>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="standard">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Standard: £12.50
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Prepared within 4 working days. Sent by Royal Mail 2nd Class.
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Priority from: £38.50
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Prepared within 1 working day. Price and postage will be confirmed based on delivery method.
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="certTypeBeta3" name="certTypeBeta3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="certTypeBeta3">
+                  Overseas
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Prepared within 4 working days. Price and postage will be confirmed based on delivery requirements.
+                </div>
+              </div>
+            
+              
+            </div>
+          </fieldset>
+        </div>
+
+        
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1159,3 +1159,64 @@ router.post('/search-year', function (req, res) {
     res.redirect("/beta/round13/search/full-months-displayed")
   }
 })
+
+
+
+
+// --------------------------------------------------- Deaths-quoted js ---------------------------------------------------- //
+
+// -------------------------triage ---------------------------- //
+// Triage - 1st page
+router.post('/deaths/deaths-quoted/triage/triage-question-1', function(request, response) {
+    var triageq1 = request.session.data['certTypeBeta4']
+    if (triageq1 == "birth"){
+        response.redirect("/deaths/deaths-quoted/triage/triage-question-2")
+    } 
+     else if (triageq1 == "death"){
+        response.redirect("/deaths/deaths-quoted/triage/triage-question-2")
+    } 
+    else {
+        response.redirect("/deaths/deaths-quoted/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 2nd page
+router.post('/deaths/deaths-quoted/triage/triage-question-2', function(request, response) {
+    var triageq2 = request.session.data['certTypeBeta2']
+    if (triageq2 == "yes"){
+        response.redirect("/deaths/deaths-quoted/triage/triage-question-3")
+    } 
+    else if (triageq2 == "no"){
+        response.redirect("/deaths/deaths-quoted/triage/direct-to-rolo.html")
+    } 
+    else {
+        response.redirect("/deaths/deaths-quoted/triage/direct-to-rolo.html")
+    }
+})
+
+// Triage - 3RD page delivery method
+router.post('/deaths/deaths-quoted/triage/triage-question-3', function(request, response) {
+    var triageq3 = request.session.data['certTypeBeta3']
+    if (triageq3 == "standard"){
+        response.redirect("/deaths/deaths-quoted/login/login-or-sign-in")
+    } 
+    else if (triageq3 == "no"){
+        response.redirect("/deaths/deaths-quoted/triage/direct-to-rolo.html")
+    } 
+})
+
+//--------- DEATHS quoted Routing for year enter 2009 show 2 radios, enter 2010 onwards show all radios ----------//
+router.post('/deaths/deaths-quoted/search/search-year', function (req, res) {
+  // Get the answer from the session
+  var deathyear = req.session.data['deathyear']
+
+  // The conditional logic
+  if (deathyear === "2009") {
+    res.redirect("/deaths/deaths-quoted/search/search-month")
+  } else if (deathyear === "2010") {
+    res.redirect("/deaths/deaths-quoted/search/full-months-displayed")
+  } else {
+    // Optional: redirect to a default page if input is something else
+    res.redirect("/deaths/deaths-quoted/search/full-months-displayed")
+  }
+})
