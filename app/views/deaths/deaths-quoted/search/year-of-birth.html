@@ -1,8 +1,10 @@
 {% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
 
+{% set oneLoginLink = "../your-services-one-login" %}
+
 {% set navigationItems = [
   {
-    href: "/beta/round7/account/my-account",
+    href: "../account/my-account",
     text: 'My account',
     id: 'id3'
   },
@@ -10,13 +12,14 @@
       href: "#",
       text: 'Basket (0)',
       id: 'id3'
-    }]
+    }
+    ]
   %} 
 
-{% set homepageLink = "../../index.html" %}
+{% set homepageLink = "../../../index.html" %}
 
 {% block pageTitle %}
-  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,19 +32,24 @@
 
 {% block content %}
 
+
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-two-thirds">
 
+<!-- Heading -->
+<span class="govuk-caption-l">Search for a record: page 3 of 6</span>
+<h1 class="govuk-heading-l">What year were they born? (optional)</h1>  
+
+<!-- Form start -->
 <form action="search-year" method="post" class="form">
+  
  <!-- year -->
-  <span class="govuk-caption-l">Search for a record: page 4 of 6</span>
-<h1 class="govuk-heading-l">What year was the death registered?</h1>
- <div id="account-number-hint" class="govuk-hint">
-    For example, 2010
-  </div>
-         <div class="govuk-form-group">
-               <input class="govuk-input govuk-input--width-4" name="deathyear" id="deathyear">
-            </div>
+ <div class="govuk-form-group">
+  <div id="first-name-hint" class="govuk-hint">
+    For example, 1949
+    </div>
+    <input class="govuk-input govuk-input--width-4" name="yearBirth" id="yearBirth">
+ </div>
 
          <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue

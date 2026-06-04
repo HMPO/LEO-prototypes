@@ -1,0 +1,82 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+    href: "/beta/round7/account/my-account",
+    text: 'My account',
+    id: 'id3'
+  },
+  {
+      href: "#",
+      text: 'Basket (0)',
+      id: 'id3'
+    }]
+  %} 
+
+
+
+{% set homepageLink = "../../index.html" %}
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+<!-- Heading -->
+<span class="govuk-caption-l">Search for a record: page 2 of 6</span>
+<h1 class="govuk-heading-l">What is their sex?</h1>  
+
+<!-- Form start -->
+<form action="maiden-name" method="post" class="form">
+  
+
+<!-- sex -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+   
+
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="sexRadios" type="radio" value="Female">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Female
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="sexRadios" type="radio" value="Male">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Male
+        </label>
+      </div>
+
+  </fieldset>
+</div>
+
+ <!-- mothers maiden name 
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="maidenName" for="maidenName">What was their mother's maiden name? (optional)</label>
+ <! <div id="changedName-hint" class="govuk-hint">Hint text needed??</div> 
+  <input class="govuk-input" id="maidenName" name="maidenName" type="text"
+     value="">
+</div> -->
+
+         <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+   </div>
+</div>
+{% endblock %}

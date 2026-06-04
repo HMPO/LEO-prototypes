@@ -1,0 +1,155 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set navigationItems = [
+  {
+      href: "#",
+      text: 'Basket (1)',
+      id: 'id3'
+    }]
+  %} 
+
+  {% set homepageLink = "../../../../../../index.html" %}
+
+
+{% block pageTitle %}
+  Order a certificate – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% set serviceName = "Order a certificate" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+<form action="name" method="post" class="form">
+
+            <h1 class="govuk-heading-l">Check your answers</h1>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+               
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Age at death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  15
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+                     <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Date of death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  09 July 2015
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+                 <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Details known for place of death
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Where they died, Last known address
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Where they died
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Manchester Royal Infirmary
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Last known address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                   6 New Road, Manchester
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+                </dd>
+              </div>
+
+                <!-- <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  First parent's full name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Mary Smith 
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+                  <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Second parent's full name
+                </dt>
+                <dd class="govuk-summary-list__value">
+               Daniel Smith
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Your relationship
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Aunt
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div> -->
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Occupation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Not supplied
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                </dd>
+              </div>
+
+            </dl>
+
+
+           
+           <p>These answers will be used for our search. If we cannot find a record that matches your answers, you will get a partial refund.</p>
+
+         <!-- Buttons -->
+         <div class="govuk-button-group">
+          <a href="../order-details/how-many.html" class="govuk-button">Continue</a>
+        </div>
+         </div>
+      </form>
+   </div>
+</div>
+
+
+{% endblock %}

@@ -37,37 +37,33 @@
    <div class="govuk-grid-column-two-thirds">
 
 <!-- Heading -->
-<span class="govuk-caption-l">Search for a record: page 1 of 6</span>
-<h1 class="govuk-heading-l">What was their name?</h1>  
+<span class="govuk-caption-l">Search for a record: page 2 of 6</span>
+<h1 class="govuk-heading-l">What was their sex?</h1>  
 
 <!-- Form start -->
-<form action="sex" method="post" class="form">
-  
- <!-- Names -->
+<form action="year-of-birth" method="post" class="form">
+
+
+<!-- sex -->
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="first-name">
-     First name (optional)</label>
-  <input class="govuk-input" id="first-name" name="first-name" type="text"
-     value="">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="sexRadios" type="radio" value="Female">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Female
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="sexRadios" type="radio" value="Male">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Male
+        </label>
+      </div>
+
+  </fieldset>
 </div>
-
-<!-- Middle names -->
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="middleName">
-     Middle names (optional)</label>
-  <input class="govuk-input" id="middleName" name="middleName" type="text"
-     value="">
-</div>
-
-<!-- Surname -->
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-label" for="surname">
-     Last name</label>
-
-  <input class="govuk-input" id="surname" name="surname" type="text"
-     value="">
-</div>
-
 
          <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue
